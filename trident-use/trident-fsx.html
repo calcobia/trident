@@ -1022,11 +1022,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-09 16:26:10 +0000">03/09/2022</time>
+    <time datetime="2022-03-09 18:25:50 +0000">03/09/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1261,7 +1269,17 @@ Do not specify <code>dataLIF</code> for the <code>ontap-san</code> and <code>ont
 <img src="/us-en/trident/images/warning.svg" alt="Warning">
 </td>
 <td class="content">
-When using Amazon FSx for NetApp ONTAP with Astra Trident, the <code>limitAggregateUsage</code> parameter will not work with the <code>vsadmin</code> and <code>fsxadmin</code> user accounts. The configuration operation will fail if you specify this parameter.
+<div class="title">Amazon FSx for ONTAP</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>limitAggregateUsage</code> parameter will not work with the <code>vsadmin</code> and <code>fsxadmin</code> user accounts. The configuration operation will fail if you specify this parameter.</p>
+</li>
+<li>
+<p>Amazon FSx for NetApp ONTAP volumes come preconfigured with a SnapMirror. Trident cannot modify or break them. To delete PVCs, you need to manually delete the PV and the FSx for NetApp ONTAP volume.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
