@@ -1022,7 +1022,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-09 18:25:50 +0000">03/09/2022</time>
+    <time datetime="2022-03-10 15:29:03 +0000">03/10/2022</time>
     
   
 
@@ -1246,17 +1246,22 @@ For all volumes created on an ADS backend, Astra Trident will copy all the label
 <div class="paragraph">
 <p>This is the absolute minimum backend configuration.</p>
 </div>
+<details>
+<summary class="title">Expand example</summary>
+<div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>{
+<pre class="highlight"><code class="language-CLI" data-lang="CLI">{
     "version": 1,
     "storageDriverName": "astrads-nas",
     "cluster": "astrads-sti-c6220-09-10-11-12",
     "namespace": "test",
     "kubeconfig": "eyJjdXJyZW50LWNvbnRleHQiOiJmZWRlcmFsLWNvbnRleHQiLCJhcGlWZXJzaW9uIjoidjEiLCJjbHVzdGVycyI6W3siY2x1c3RlciI6eyJhcGktdmVyc2lvbiI6InYxIiwic2VydmVyIjoiaHR0cDovL2Nvdy5vcmc6ODA4MCJ9LCJuYW1lIjoiY293LWNsdXN0ZXIifSx7ImNsdXN0ZXIiOnsiY2VydGlmaWNhdGUtYXV0aG9yaXR5IjoicGF0aC90by9teS9jYWZpbGUiLCJzZXJ2ZXIiOiJodHRwczovL2hvcnNlLm9yZzo0NDQzIn0sIm5hbWUiOiJob3JzZS1jbHVzdGVyIn0seyJjbHVzdGVyIjp7Imluc2VjdXJlLXNraXAtdGxzLXZlcmlmeSI6dHJ1ZSwic2VydmVyIjoiaHR0cHM6Ly9waWcub3JnOjQ0MyJ9LCJuYW1lIjoicGlnLWNsdXN0ZXIifV0sImNvbnRleHRzIjpbeyJjb250ZXh0Ijp7ImNsdXN0ZXIiOiJob3JzZS1jbHVzdGVyIiwibmFtZXNwYWNlIjoiY2hpc2VsLW5zIiwidXNlciI6ImdyZWVuLXVzZXIifSwibmFtZSI6ImZlZGVyYWwtY29udGV4dCJ9LHsiY29udGV4dCI6eyJjbHVzdGVyIjoicGlnLWNsdXN0ZXIiLCJuYW1lc3BhY2UiOiJzYXctbnMiLCJ1c2VyIjoiYmxhY2stdXNlciJ9LCJuYW1lIjoicXVlZW4tYW5uZS1jb250ZXh0In1dLCJraW5kIjoiQ29uZmlnIiwicHJlZmVyZW5jZXMiOnsiY29sb3JzIjp0cnVlfSwidXNlcnMiOlt7Im5hbWUiOiJibHVlLXVzZXIiLCJ1c2VyIjp7InRva2VuIjoiYmx1ZS10b2tlbiJ9fSx7Im5hbWUiOiJncmVlbi11c2VyIiwidXNlciI6eyJjbGllbnQtY2VydGlmaWNhdGUiOiJwYXRoL3RvL215L2NsaWVudC9jZXJ0IiwiY2xpZW50LWtleSI6InBhdGgvdG8vbXkvY2xpZW50L2tleSJ9fV19"
-}</pre>
+}</code></pre>
 </div>
 </div>
+</div>
+</details>
 </div>
 </div>
 <div class="sect1">
@@ -1265,9 +1270,12 @@ For all volumes created on an ADS backend, Astra Trident will copy all the label
 <div class="paragraph">
 <p>This example shows a backend file that applies the same aspects to all Astra Trident-created storage.</p>
 </div>
+<details>
+<summary class="title">Expand example</summary>
+<div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>{
+<pre class="highlight"><code class="language-CLI" data-lang="CLI">{
     "version": 1,
         "storageDriverName": "astrads-nas",
         "cluster": "astrads-sti-c6220-09-10-11-12",
@@ -1279,9 +1287,11 @@ For all volumes created on an ADS backend, Astra Trident will copy all the label
             "snapshotReserve": "10"
         },
         "labels": {"cloud": "on-prem", "creator": "ads-cluster-1", "performance": "bronze"}
-}</pre>
+}</code></pre>
 </div>
 </div>
+</div>
+</details>
 </div>
 </div>
 <div class="sect1">
@@ -1290,9 +1300,12 @@ For all volumes created on an ADS backend, Astra Trident will copy all the label
 <div class="paragraph">
 <p>This example shows the backend definition file configured with virtual storage pools along with StorageClasses that refer back to them.</p>
 </div>
+<details>
+<summary class="title">Expand example</summary>
+<div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>{
+<pre class="highlight"><code class="language-CLI" data-lang="CLI">{
     "version": 1,
     "storageDriverName": "astrads-nas",
     "cluster": "astrads-sti-c6220-09-10-11-12",
@@ -1322,15 +1335,20 @@ For all volumes created on an ADS backend, Astra Trident will copy all the label
             "defaults": {"qosPolicy": "bronze"}
          }
      ]
-}</pre>
+}</code></pre>
 </div>
 </div>
+</div>
+</details>
 <div class="paragraph">
 <p>The following StorageClass definitions refer to the storage pools above. By using the <code>parameters.selector</code> field, you can specify for each StorageClass the virtual pool that is used to host a volume. The volume will have the aspects defined in the chosen virtual pool.</p>
 </div>
+<details>
+<summary class="title">Expand example</summary>
+<div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>apiVersion: storage.k8s.io/v1
+<pre class="highlight"><code class="language-CLI" data-lang="CLI">apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: ads
@@ -1370,9 +1388,11 @@ provisioner: csi.trident.netapp.io
 parameters:
   backendType: astrads-nas
   selector: performance=bronze
-allowVolumeExpansion: true</pre>
+allowVolumeExpansion: true</code></pre>
 </div>
 </div>
+</div>
+</details>
 </div>
 </div>
 <div class="sect1">
