@@ -1037,7 +1037,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-16 13:52:15 +0000">03/16/2022</time>
+    <time datetime="2022-03-17 12:57:53 +0000">03/17/2022</time>
     
   
 
@@ -1047,6 +1047,14 @@
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/balaramesh">
+    <img  class="avatar avatar-small"
+          alt="balaramesh"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/25675836?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1130,14 +1138,19 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Download the installer bundle from the <a href="https://github.com/netapp/trident/releases">Trident GitHub</a> page. The installer bundle includes the Helm chart in the <code>/helm</code> directory.</p>
+<p>Add Trident&#8217;s Helm repository:</p>
+<div class="listingblock">
+<div class="content">
+<pre>helm repo add netapp-trident https://netapp.github.io/trident-helm-chart</pre>
+</div>
+</div>
 </li>
 <li>
 <p>Use the <code>helm install</code> command and specify a name for your deployment.<br>
 See the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre>helm install &lt;name&gt; trident-operator-21.07.1.tgz --namespace &lt;namespace you want to use for Trident&gt;</pre>
+<pre>helm install &lt;release-name&gt; netapp-trident/trident-operator --version 22.1.0 --namespace &lt;trident-namespace&gt;</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1173,7 +1186,7 @@ If you did not already create a namespace for Trident, you can add the <code>--c
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ helm install &lt;name&gt; trident-operator-21.07.1.tgz --set tridentDebug=true</pre>
+<pre>$ helm install &lt;name&gt; netapp-trident/trident-operator --version 22.1.0 --set tridentDebug=true</pre>
 </div>
 </div>
 <div class="paragraph">
