@@ -333,7 +333,7 @@
 </div>
 <div class="n-pdf-body-container">
   <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_01_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_01_1_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1037,7 +1037,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-17 12:57:53 +0000">03/17/2022</time>
+    <time datetime="2022-03-18 16:03:34 +0000">03/18/2022</time>
     
   
 
@@ -1075,10 +1075,10 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 </div>
 </div>
 <div class="sect1">
-<h2 id="whats-new-in-22-01-0">What&#8217;s new in 22.01.0</h2>
+<h2 id="whats-new-in-22-01-1">What&#8217;s new in 22.01.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>NetApp is continually improving and enhancing its products and services. Here are some of the latest features in Astra Trident. For previous releases, see <a href="https://docs.netapp.com/us-en/trident/earlier-versions.html">Ealier versions of documentation</a>.</p>
+<p>NetApp is continually improving and enhancing its products and services. Here are some of the latest features in Astra Trident. For previous releases, see <a href="https://docs.netapp.com/us-en/trident/earlier-versions.html">Earlier versions of documentation</a>.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1094,8 +1094,51 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 <div class="sect2">
 <h3 id="fixes">Fixes</h3>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed issue with unpublishing volumes on deleted nodes. (<a href="https://github.com/NetApp/trident/issues/691">GitHub issue #691</a>)</p>
+</li>
+<li>
+<p>Fixed panic when accessing nil fields for aggregate space in ONTAP API responses.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes-in-22-01-0-since-22-10-1">Changes in 22.01.0 (since 22.10.1)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fixes-2">Fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Kubernetes:</strong> Increase node registration backoff retry time for large clusters.</p>
+</li>
+<li>
+<p>Fixed issue where azure-netapp-files driver could be confused by multiple resources with the same name.</p>
+</li>
+<li>
+<p>ONTAP SAN IPv6 Data LIFs now work if specified with brackets.</p>
+</li>
+<li>
+<p>Fixed issue where attempting to import an already imported volume returns EOF leaving PVC in pending state. (<a href="https://github.com/NetApp/trident/issues/489">GitHub issue #489</a>)</p>
+</li>
+<li>
+<p>Fixed issue when Astra Trident performance slows down when &gt; 32 snapshots are created on a SolidFire volume.</p>
+</li>
+<li>
+<p>Replaced SHA-1 with SHA-256 in SSL certificate creation.</p>
+</li>
+<li>
 <p>Fixed ANF driver to allow duplicate resource names and limit operations to a single location.</p>
+</li>
+<li>
+<p>Fixed ANF driver to allow duplicate resource names and limit operations to a single location.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -1148,7 +1191,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes-2">Fixes</h3>
+<h3 id="fixes-3">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1169,7 +1212,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 <h2 id="changes-in-21-10-0-since-astra-trident-21-07">Changes in 21.10.0 (since Astra Trident 21.07)</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-3">Fixes</h3>
+<h3 id="fixes-4">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
