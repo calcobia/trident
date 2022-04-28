@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="A Kubernetes cluster typically consists of two types of nodes, each responsible for different aspects of functionality.">
-  <meta name="keywords" content=" kubernetes, clusters, nodes, components, master, compute"><!-- Icons -->
+  <meta name="keywords" content=" kubernetes, clusters, nodes, components, master, compute, fsx, flexgroup, flexvolume, solidfire, hci, virtual storage pool, cvs, gcp, volumes"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -562,8 +562,6 @@
 
 
 
-
-
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -947,8 +945,6 @@
         Configure an ANF backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/ads.html">
         Configure an ADS backend
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/aws.html">
-        Configure a CVS for AWS backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/gcp.html">
         Configure a CVS for GCP backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/element.html">
@@ -1107,11 +1103,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-19 22:18:18 +0000">10/19/2021</time>
+    <time datetime="2022-04-28 17:35:24 +0000">04/28/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-rlithman">
     <img  class="avatar avatar-small"
           alt="netapp-rlithman"
@@ -1306,7 +1310,7 @@ The <code>solidfire-san</code> driver is also capable of cloning PVCs.
 <div class="sect2">
 <h3 id="choose-a-backend-driver-for-cloud-volumes-ontap">Choose a backend driver for Cloud Volumes ONTAP</h3>
 <div class="paragraph">
-<p>Cloud Volumes ONTAP provides data control along with enterprise-class storage features for various use cases, including file shares and block-level storage serving NAS and SAN protocols (NFS, SMB / CIFS, and iSCSI). The compatible drivers for Cloud Volume ONTAP are <code>ontap-nas</code>, <code>ontap-nas-economy</code>, <code>ontap-san</code> and <code>ontap-san-economy</code>. These are applicable for Cloud Volume ONTAP for AWS, Cloud Volume ONTAP for Azure, Cloud Volume ONTAP for GCP.</p>
+<p>Cloud Volumes ONTAP provides data control along with enterprise-class storage features for various use cases, including file shares and block-level storage serving NAS and SAN protocols (NFS, SMB / CIFS, and iSCSI). The compatible drivers for Cloud Volume ONTAP are <code>ontap-nas</code>, <code>ontap-nas-economy</code>, <code>ontap-san</code> and <code>ontap-san-economy</code>. These are applicable for Cloud Volume ONTAP for Azure, Cloud Volume ONTAP for GCP.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1406,52 +1410,6 @@ Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[2]</sup>
 <div class="verseblock">
 <pre class="content">Footnote:<br>
 Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>: Not managed by Astra Trident</pre>
-</div>
-</div>
-<div class="sect2">
-<h3 id="choose-a-backend-driver-for-cloud-volumes-service-with-aws">Choose a backend driver for Cloud Volumes Service with AWS</h3>
-<div class="paragraph">
-<p>Astra Trident uses the <code>aws-cvs</code> driver to link with the Cloud Volumes Service on the AWS backend. To configure the AWS backend on Trident, you are required specify <code>apiRegion</code>, <code>apiURL</code>, <code>apiKey</code>, and the <code>secretKey</code> in the backend file. These values can be found in the CVS web portal in Account settings/API access. The supported service levels are aligned with CVS and include <code>standard</code>, <code>premium</code>, and <code>extreme</code>. Currently, 100G is the minimum volume size that will be provisioned. Future releases of CVS may remove this restriction.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">CVS for AWS Driver</th>
-<th class="tableblock halign-left valign-top">Snapshots</th>
-<th class="tableblock halign-left valign-top">Clones</th>
-<th class="tableblock halign-left valign-top">Multi-attach</th>
-<th class="tableblock halign-left valign-top">QoS</th>
-<th class="tableblock halign-left valign-top">Expand</th>
-<th class="tableblock halign-left valign-top">Replication</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aws-cvs</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup></p></td>
-</tr>
-</tbody>
-</table>
-<div class="verseblock">
-<pre class="content">Footnote:<br>
-Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>: Not managed by Astra Trident</pre>
-</div>
-<div class="paragraph">
-<p>The <code>aws-cvs</code> driver uses virtual storage pools. Virtual storage pools abstract the backend, letting Trident decide volume placement. The administrator defines the virtual storage pools in the backend.json file(s). Storage classes identify the virtual storage pools with the use of labels.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1569,7 +1527,7 @@ Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>
 <h2 id="virtual-storage-pool-design">Virtual Storage Pool Design</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>While creating a backend, you can generally specify a set of parameters. It was impossible for the administrator to create another backend with the same storage credentials and with a different set of parameters. With the introduction of Virtual Storage Pools, this issue has been alleviated. Virtual Storage Pools is a level abstraction introduced between the backend and the Kubernetes Storage Class so that the administrator can define parameters along with labels which can be referenced through Kubernetes Storage Classes as a selector, in a backend-agnostic way. Virtual Storage Pools can be defined for all supported NetApp backends with Astra Trident. That list includes SolidFire/NetApp HCI, ONTAP, Cloud Volumes Service on AWS and GCP, as well as Azure NetApp Files.</p>
+<p>While creating a backend, you can generally specify a set of parameters. It was impossible for the administrator to create another backend with the same storage credentials and with a different set of parameters. With the introduction of Virtual Storage Pools, this issue has been alleviated. Virtual Storage Pools is a level abstraction introduced between the backend and the Kubernetes Storage Class so that the administrator can define parameters along with labels which can be referenced through Kubernetes Storage Classes as a selector, in a backend-agnostic way. Virtual Storage Pools can be defined for all supported NetApp backends with Astra Trident. That list includes SolidFire/NetApp HCI, ONTAP, Cloud Volumes Service on GCP, as well as Azure NetApp Files.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1586,7 +1544,7 @@ When defining Virtual Storage Pools, it is recommended to not attempt to rearran
 <div class="sect2">
 <h3 id="design-virtual-storage-pools-for-emulating-different-service-levelsqos">Design Virtual Storage Pools for emulating different service levels/QoS</h3>
 <div class="paragraph">
-<p>It is possible to design Virtual Storage Pools for emulating service classes. Using the virtual pool implementation for Cloud Volume Service for AWS, let us examine how we can setup up different service classes. Configure the AWS-CVS backend with multiple labels, representing different performance levels. Set <code>servicelevel</code> aspect to the appropriate performance level and add other required aspects under each labels. Now create different Kubernetes Storage Classes that would map to different virtual Storage Pools. Using the <code>parameters.selector</code> field, each StorageClass calls out which virtual pool(s) may be used to host a volume.</p>
+<p>It is possible to design Virtual Storage Pools for emulating service classes. Using the virtual pool implementation for Cloud Volume Service for Azure NetApp Files, let us examine how we can setup up different service classes. Configure the ANF backend with multiple labels, representing different performance levels. Set <code>servicelevel</code> aspect to the appropriate performance level and add other required aspects under each labels. Now create different Kubernetes Storage Classes that would map to different virtual Storage Pools. Using the <code>parameters.selector</code> field, each StorageClass calls out which virtual pool(s) may be used to host a volume.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1702,13 +1660,13 @@ Kubernetes in-tree provisioners do not support volume resize operations for NFS 
 <div class="sect2">
 <h3 id="import-an-existing-volume-into-kubernetes">Import an existing volume into Kubernetes</h3>
 <div class="paragraph">
-<p>Volume import provides the ability to import an existing storage volume into a Kubernetes environment. This is currently supported by the <code>ontap-nas</code>, <code>ontap-nas-flexgroup</code>, <code>solidfire-san</code>, <code>azure-netapp-files</code>, <code>aws-cvs</code>, and <code>gcp-cvs</code> drivers. This feature is useful when porting an existing application into Kubernetes or during disaster recovery scenarios.</p>
+<p>Volume import provides the ability to import an existing storage volume into a Kubernetes environment. This is currently supported by the <code>ontap-nas</code>, <code>ontap-nas-flexgroup</code>, <code>solidfire-san</code>, <code>azure-netapp-files</code>, and <code>gcp-cvs</code> drivers. This feature is useful when porting an existing application into Kubernetes or during disaster recovery scenarios.</p>
 </div>
 <div class="paragraph">
 <p>When using the ONTAP and <code>solidfire-san</code> drivers, use the command <code>tridentctl import volume &lt;backend-name&gt; &lt;volume-name&gt; -f /path/pvc.yaml</code> to import an existing volume into Kubernetes to be managed by Astra Trident. The PVC YAML or JSON file used in the import volume command points to a storage class which identifies Astra Trident as the provisioner. When using a NetApp HCI/SolidFire backend, ensure the volume names are unique. If the volume names are duplicated, clone the volume to a unique name so the volume import feature can distinguish between them.</p>
 </div>
 <div class="paragraph">
-<p>If the <code>aws-cvs</code>, <code>azure-netapp-files</code> or <code>gcp-cvs</code> driver is used, use the command <code>tridentctl import volume &lt;backend-name&gt; &lt;volume path&gt; -f /path/pvc.yaml</code> to import the volume into Kubernetes to be managed by Astra Trident. This ensures a unique volume reference.</p>
+<p>If the <code>azure-netapp-files</code> or <code>gcp-cvs</code> driver is used, use the command <code>tridentctl import volume &lt;backend-name&gt; &lt;volume path&gt; -f /path/pvc.yaml</code> to import the volume into Kubernetes to be managed by Astra Trident. This ensures a unique volume reference.</p>
 </div>
 <div class="paragraph">
 <p>When the above command is executed, Astra Trident will find the volume on the backend and read its size. It will automatically add (and overwrite if necessary) the configured PVC’s volume size. Astra Trident then creates the new PV and Kubernetes binds the PVC to the PV.</p>

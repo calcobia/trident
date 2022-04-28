@@ -562,8 +562,6 @@
 
 
 
-
-
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -947,8 +945,6 @@
         Configure an ANF backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/ads.html">
         Configure an ADS backend
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/aws.html">
-        Configure a CVS for AWS backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/gcp.html">
         Configure a CVS for GCP backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/element.html">
@@ -1107,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-27 21:29:52 +0000">04/27/2022</time>
+    <time datetime="2022-04-28 15:10:38 +0000">04/28/2022</time>
     
   
 
@@ -1216,7 +1212,7 @@ eseries-iscsi, ontap-san-economy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trident.netapp.io/cloneFromPVC</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cloneSourceVolume</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ontap-nas,<br>
-ontap-san, solidfire-san, aws-cvs, azure-netapp-files, gcp-cvs,<br>
+ontap-san, solidfire-san, azure-netapp-files, gcp-cvs,<br>
 ontap-san-economy</p></td>
 </tr>
 <tr>
@@ -1245,7 +1241,7 @@ ontap-nas-economy, ontap-nas-flexgroup, ontap-san</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trident.netapp.io/snapshotReserve</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">snapshotReserve</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ontap-nas,<br>
-ontap-nas-flexgroup, ontap-san, aws-cvs, gcp-cvs</p></td>
+ontap-nas-flexgroup, ontap-san, gcp-cvs</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trident.netapp.io/snapshotDirectory</p></td>
@@ -1469,7 +1465,7 @@ lists of storage pools within</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">backendType</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>ontap-nas, ontap-nas-economy, ontap-nas-flexgroup, ontap-san, solidfire-san, eseries-iscsi, aws-cvs, gcp-cvs, azure-netapp-files, ontap-san-economy</p>
+<p>ontap-nas, ontap-nas-economy, ontap-nas-flexgroup, ontap-san, solidfire-san, eseries-iscsi, gcp-cvs, azure-netapp-files, ontap-san-economy</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pool belongs to this type of backend</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Backend specified</p></td>
@@ -1481,7 +1477,7 @@ lists of storage pools within</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true, false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pool supports volumes with snapshots</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Volume with snapshots enabled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ontap-nas, ontap-san, solidfire-san, aws-cvs, gcp-cvs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ontap-nas, ontap-san, solidfire-san, gcp-cvs</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clones</p></td>
@@ -1489,7 +1485,7 @@ lists of storage pools within</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true, false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pool supports cloning volumes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Volume with clones enabled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ontap-nas, ontap-san, solidfire-san, aws-cvs, gcp-cvs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ontap-nas, ontap-san, solidfire-san, gcp-cvs</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">encryption</p></td>
@@ -1575,7 +1571,7 @@ volumes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true, false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enable or disable support for growing the PVC size</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ontap-nas, ontap-nas-economy, ontap-nas-flexgroup, ontap-san, ontap-san-economy, solidfire-san, aws-cvs, gcp-cvs, azure-netapp-files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ontap-nas, ontap-nas-economy, ontap-nas-flexgroup, ontap-san, ontap-san-economy, solidfire-san, gcp-cvs, azure-netapp-files</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.11+</p></td>
 </tr>
 <tr>
@@ -1884,7 +1880,7 @@ When deleting a PV with associated snapshots, the corresponding Trident volume i
 <td class="tableblock halign-left valign-top"><p class="tableblock">cloneSourceVolume</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ontap (nas, san) &amp; solidfire-* &amp; aws-cvs*: Name of the volume to clone from</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ontap (nas, san) &amp; solidfire-*: Name of the volume to clone from</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">splitOnClone</p></td>
@@ -1937,7 +1933,7 @@ When deleting a PV with associated snapshots, the corresponding Trident volume i
 </tbody>
 </table>
 <div class="paragraph">
-<p>Trident generates <code>internalName</code> when creating the volume. This consists of two steps. First, it prepends the storage prefix (either the default <code>trident</code> or the prefix in the backend configuration) to the volume name, resulting in a name of the form <code>&lt;prefix&gt;-&lt;volume-name&gt;</code>. It then proceeds to sanitize the name, replacing characters not permitted in the backend. For ONTAP backends, it replaces hyphens with underscores (thus, the internal name becomes <code>&lt;prefix&gt;_&lt;volume-name&gt;</code>). For Element backends, it replaces underscores with hyphens. For CVS (AWS), which imposes a 16-to-36-character limit on the unique volume creation token, Trident generates a random string for the internal name of each volume.</p>
+<p>Trident generates <code>internalName</code> when creating the volume. This consists of two steps. First, it prepends the storage prefix (either the default <code>trident</code> or the prefix in the backend configuration) to the volume name, resulting in a name of the form <code>&lt;prefix&gt;-&lt;volume-name&gt;</code>. It then proceeds to sanitize the name, replacing characters not permitted in the backend. For ONTAP backends, it replaces hyphens with underscores (thus, the internal name becomes <code>&lt;prefix&gt;_&lt;volume-name&gt;</code>). For Element backends, it replaces underscores with hyphens.</p>
 </div>
 <div class="paragraph">
 <p>You can use volume configurations to directly provision volumes using the REST API, but in Kubernetes deployments we expect most users to use the standard Kubernetes <code>PersistentVolumeClaim</code> method. Trident creates this volume object automatically as part of the provisioning<br>

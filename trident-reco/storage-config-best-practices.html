@@ -562,8 +562,6 @@
 
 
 
-
-
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -947,8 +945,6 @@
         Configure an ANF backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/ads.html">
         Configure an ADS backend
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/aws.html">
-        Configure a CVS for AWS backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/gcp.html">
         Configure a CVS for GCP backend
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/element.html">
@@ -1107,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-27 22:02:10 +0000">04/27/2022</time>
+    <time datetime="2022-04-27 22:15:28 +0000">04/27/2022</time>
     
   
 
@@ -1518,60 +1514,6 @@ Trident with the enhanced CSI provisioner supports the use of CHAP authenticatio
 </div>
 <div class="paragraph">
 <p>However, if CHAP cannot be enabled and VAGs are required, create the access group and add the host initiators and volumes to the access group. Each IQN that you add to an access group can access each volume in the group with or without CHAP authentication. If the iSCSI initiator is configured to use CHAP authentication, account-based access control is used. If the iSCSI initiator is not configured to use CHAP authentication, then Volume Access Group access control is used.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="snapshot-consistency-groups">Snapshot consistency groups</h3>
-<div class="paragraph">
-<p>Setting up snapshot consistency groups are also ideal for applications that span multiple volumes. The purpose of a consistency group is to take simultaneous snapshot images of multiple volumes, thus ensuring consistent copies of a collection of volumes at a particular point in time. You should use SANtricity System Manager to create consistency groups.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="cloud-volumes-service-for-aws-best-practices">Cloud Volumes Service for AWS best practices</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Learn the best practices for configuring Cloud Volumes Service on AWS for Trident.</p>
-</div>
-<div class="sect2">
-<h3 id="create-an-export-policy">Create an export policy</h3>
-<div class="paragraph">
-<p>To ensure that only the authorized set of nodes have access to the volume provisioned through Cloud Volumes Service, set appropriate rules for the export policy while creating a Cloud Volumes Service. When provisioning volumes on Cloud Volume Services through Trident, make sure to use the <code>exportRule</code> parameter in the backend file to give access to the required Kubernetes nodes.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="create-a-snapshot-policy">Create a snapshot policy</h3>
-<div class="paragraph">
-<p>Create a snapshot policy for the volumes provisioned through Cloud Volume Service to ensure that snapshots are taken at required intervals. This guarantees data backup at regular intervals and enables data to be restored in the event of a data loss or data corruption. You can set the snapshot policy for volumes hosted by Cloud Volume Service by selecting the appropriate schedule on the volumes details page.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="choose-the-appropriate-service-level-storage-capacity-and-storage-bandwidth">Choose the appropriate service level, storage capacity, and storage bandwidth</h3>
-<div class="paragraph">
-<p>Cloud Volume Services for AWS offers different service levels, such as, standard, premium, and extreme. These service levels cater to different storage capacity and storage bandwidth requirements. Ensure that you select the appropriate service level based on your business needs.</p>
-</div>
-<div class="paragraph">
-<p>You should select the required size of the allocated storage during volume creation based on the specific needs of the application. There are two factors that need to be taken into consideration while deciding on the allocated storage:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The storage requirements of the specific application</p>
-</li>
-<li>
-<p>The bandwidth that you require at the peak or the edge</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The storage bandwidth depends on the combination of the service level and the allocated capacity that you have selected. Therefore, select the right service level and allocated capacity keeping the required bandwidth in mind.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="limit-the-maximum-size-of-volumes-created-by-trident-2">Limit the maximum size of volumes created by Trident</h3>
-<div class="paragraph">
-<p>It i possible to restrict the maximum size of volumes created by Trident on Cloud Volume Services for AWS by using the <code>limitVolumeSize</code> parameter in the backend configuration file. Setting this parameter ensures that provisioning fails if the requested volume size is above the set value.</p>
 </div>
 </div>
 </div>
