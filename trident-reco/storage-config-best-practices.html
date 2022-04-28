@@ -1107,11 +1107,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-09-20 12:57:23 +0000">09/20/2021</time>
+    <time datetime="2022-04-27 22:02:10 +0000">04/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1120,7 +1128,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each storage platform in NetApp&#8217;s portfolio has unique capabilities that benefit applications, containerized or not. Trident works with each of the major platforms: ONTAP, Element, and E-Series. There is not one platform which is better suited for all applications and scenarios than another, however, the needs of the application and the team administering the device should be taken into account when choosing a platform.</p>
+<p>Each storage platform in NetApp&#8217;s portfolio has unique capabilities that benefit applications, containerized or not. Trident works with ONTAP and Element. There is not one platform which is better suited for all applications and scenarios than another, however, the needs of the application and the team administering the device should be taken into account when choosing a platform.</p>
 </div>
 <div class="paragraph">
 <p>You should follow the baseline best practices for the host operating system with the protocol that you are leveraging. Optionally, you might want to consider incorporating application best practices, when available, with backend, storage class, and PVC settings to optimize storage for specific applications.</p>
@@ -1512,32 +1520,6 @@ Trident with the enhanced CSI provisioner supports the use of CHAP authenticatio
 <p>However, if CHAP cannot be enabled and VAGs are required, create the access group and add the host initiators and volumes to the access group. Each IQN that you add to an access group can access each volume in the group with or without CHAP authentication. If the iSCSI initiator is configured to use CHAP authentication, account-based access control is used. If the iSCSI initiator is not configured to use CHAP authentication, then Volume Access Group access control is used.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="e-series-best-practices">E-Series best practices</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Learn the best practices for configuring E-Series storage for Trident.</p>
-</div>
-<div class="sect2">
-<h3 id="e-series-disk-pools-and-volume-groups">E-Series disk pools and volume groups</h3>
-<div class="paragraph">
-<p>Create disk pools and volume groups based on your requirement and determine how the total storage capacity should be organized into volumes and shared among hosts. Both the disk pool and the volume group consist of a set of drives that are logically grouped to provide one or more volumes to an application host. All of the drives in a disk pool or volume group should be of the same media type.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="e-series-host-groups">E-Series host groups</h3>
-<div class="paragraph">
-<p>Trident uses host groups to access the volumes (LUNs) that it provisions. By default, Trident uses the host group called <code>trident</code> unless you specify a different host group name in the configuration. Trident, by itself does not create or manage host groups. You have to create the host group before the E-Series storage backend is set up on Trident. Ensure that all the Kubernetes worker nodes iSCSI IQN names are updated in the host group.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="e-series-snapshot-schedule">E-Series snapshot schedule</h3>
-<div class="paragraph">
-<p>Create a snapshot schedule and assign the volume created by Trident to a snapshot schedule so that volume backups can be taken at the required interval. Based on the snapshots taken as per the snapshot policy, rollback operations can be done on volumes by restoring a snapshot image to the base volume. You should use SANtricity System Manager to create the snapshot schedule.</p>
-</div>
-</div>
 <div class="sect2">
 <h3 id="snapshot-consistency-groups">Snapshot consistency groups</h3>
 <div class="paragraph">
@@ -1636,16 +1618,6 @@ Trident with the enhanced CSI provisioner supports the use of CHAP authenticatio
 </li>
 <li>
 <p><a href="https://docs.netapp.com/us-en/hci/docs/concept_nde_access_overview.html" target="_blank" rel="noopener">Access the NetApp Deployment Engine</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>E-Series</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.netapp.com/ess-11/topic/com.netapp.doc.ssm-exp-ic-lin/home.html" target="_blank" rel="noopener">Installing and configuring for Linux</a></p>
 </li>
 </ul>
 </div>

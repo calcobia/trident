@@ -1107,7 +1107,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-09 17:29:28 +0000">02/09/2022</time>
+    <time datetime="2022-04-27 21:29:52 +0000">04/27/2022</time>
     
   
 
@@ -1937,7 +1937,7 @@ When deleting a PV with associated snapshots, the corresponding Trident volume i
 </tbody>
 </table>
 <div class="paragraph">
-<p>Trident generates <code>internalName</code> when creating the volume. This consists of two steps. First, it prepends the storage prefix (either the default <code>trident</code> or the prefix in the backend configuration) to the volume name, resulting in a name of the form <code>&lt;prefix&gt;-&lt;volume-name&gt;</code>. It then proceeds to sanitize the name, replacing characters not permitted in the backend. For ONTAP backends, it replaces hyphens with underscores (thus, the internal name becomes <code>&lt;prefix&gt;_&lt;volume-name&gt;</code>). For Element backends, it replaces underscores with hyphens. For E-Series, which imposes a 30-character limit on all object names, Trident generates random string for the internal name of each volume. For CVS (AWS), which imposes a 16-to-36-character limit on the unique volume creation token, Trident generates a random string for the internal name of each volume.</p>
+<p>Trident generates <code>internalName</code> when creating the volume. This consists of two steps. First, it prepends the storage prefix (either the default <code>trident</code> or the prefix in the backend configuration) to the volume name, resulting in a name of the form <code>&lt;prefix&gt;-&lt;volume-name&gt;</code>. It then proceeds to sanitize the name, replacing characters not permitted in the backend. For ONTAP backends, it replaces hyphens with underscores (thus, the internal name becomes <code>&lt;prefix&gt;_&lt;volume-name&gt;</code>). For Element backends, it replaces underscores with hyphens. For CVS (AWS), which imposes a 16-to-36-character limit on the unique volume creation token, Trident generates a random string for the internal name of each volume.</p>
 </div>
 <div class="paragraph">
 <p>You can use volume configurations to directly provision volumes using the REST API, but in Kubernetes deployments we expect most users to use the standard Kubernetes <code>PersistentVolumeClaim</code> method. Trident creates this volume object automatically as part of the provisioning<br>
