@@ -356,7 +356,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_01_1_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-16 17:06:02 +0000">03/16/2022</time>
+    <time datetime="2022-04-29 00:48:50 +0000">04/29/2022</time>
     
   
 
@@ -1141,7 +1141,7 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 </div>
 </div>
 <div class="sect1">
-<h2 id="whats-new-in-22-01-1">What&#8217;s new in 22.01.1</h2>
+<h2 id="whats-new-in-22-04">What&#8217;s new in 22.04</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>NetApp is continually improving and enhancing its products and services. Here are some of the latest features in Astra Trident. For previous releases, see <a href="https://docs.netapp.com/us-en/trident/earlier-versions.html">Earlier versions of documentation</a>.</p>
@@ -1163,6 +1163,67 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 <div class="ulist">
 <ul>
 <li>
+<p>Improved parsing of iSCSI initiator names. (Issue [#681](<a href="https://github.com/NetApp/trident/issues/681)" class="bare">https://github.com/NetApp/trident/issues/681)</a>)</p>
+</li>
+<li>
+<p>Fixed issue where CSI storage class parameters weren&#8217;t allowed. (Issue [#598](<a href="https://github.com/NetApp/trident/issues/598)" class="bare">https://github.com/NetApp/trident/issues/598)</a>)</p>
+</li>
+<li>
+<p>Fixed duplicate key declaration in Trident CRD. (Issue [#671](<a href="https://github.com/NetApp/trident/issues/671)" class="bare">https://github.com/NetApp/trident/issues/671)</a>)</p>
+</li>
+<li>
+<p>Fixed inaccurate CSI Snapshot logs. (Issue [#629](<a href="https://github.com/NetApp/trident/issues/629)" class="bare">https://github.com/NetApp/trident/issues/629)</a>)</p>
+</li>
+<li>
+<p>Fixed issue with unpublishing volumes on deleted nodes. (Issue [#691](<a href="https://github.com/NetApp/trident/issues/691)" class="bare">https://github.com/NetApp/trident/issues/691)</a>)</p>
+</li>
+<li>
+<p>Added handling of filesystem inconsistencies on block devices. (Issue [#656](<a href="https://github.com/NetApp/trident/issues/656)" class="bare">https://github.com/NetApp/trident/issues/656)</a>)</p>
+</li>
+<li>
+<p>Fixed issue pulling auto-support images when setting the <code>imageRegistry</code> flag during installation. (Issue [#715](<a href="https://github.com/NetApp/trident/issues/715)" class="bare">https://github.com/NetApp/trident/issues/715)</a>)</p>
+</li>
+<li>
+<p>Fixed issue where ANF driver failed to clone a volume with multiple export rules.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancements">Enhancements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Inbound connections to Trident&#8217;s secure endpoints now require a minimum of TLS 1.3. (Issue [#698](<a href="https://github.com/NetApp/trident/issues/698)" class="bare">https://github.com/NetApp/trident/issues/698)</a>)</p>
+</li>
+<li>
+<p>Trident now adds HSTS headers to responses from its secure endpoints.</p>
+</li>
+<li>
+<p>Trident now attempts to enable the Azure NetApp Files unix permissions feature automatically.</p>
+</li>
+<li>
+<p><strong>Kubernetes</strong>: Trident daemonset now runs at system-node-critical priority class. (Issue [#694](<a href="https://github.com/NetApp/trident/issues/694)" class="bare">https://github.com/NetApp/trident/issues/694)</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="removals">Removals</h3>
+<div class="paragraph">
+<p>E-Series driver (disabled since 20.07) has been removed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes-in-22-01-1">Changes in 22.01.1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fixes-2">Fixes</h3>
+<div class="ulist">
+<ul>
+<li>
 <p>Fixed issue with unpublishing volumes on deleted nodes. (<a href="https://github.com/NetApp/trident/issues/691">GitHub issue #691</a>)</p>
 </li>
 <li>
@@ -1174,10 +1235,10 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect1">
-<h2 id="changes-in-22-01-0-since-22-10-1">Changes in 22.01.0 (since 22.10.1)</h2>
+<h2 id="changes-in-22-01-0">Changes in 22.01.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-2">Fixes</h3>
+<h3 id="fixes-3">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1208,7 +1269,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements">Enhancements</h3>
+<h3 id="enhancements-2">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1242,7 +1303,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect1">
-<h2 id="changes-in-astra-trident-21-10-1">Changes in Astra Trident 21.10.1</h2>
+<h2 id="changes-in-21-10-1">Changes in 21.10.1</h2>
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -1257,7 +1318,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes-3">Fixes</h3>
+<h3 id="fixes-4">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1275,10 +1336,10 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </div>
 </div>
 <div class="sect1">
-<h2 id="changes-in-21-10-0-since-astra-trident-21-07">Changes in 21.10.0 (since Astra Trident 21.07)</h2>
+<h2 id="changes-in-21-10-0">Changes in 21.10.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-4">Fixes</h3>
+<h3 id="fixes-5">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1322,7 +1383,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements-2">Enhancements</h3>
+<h3 id="enhancements-3">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>

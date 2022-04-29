@@ -356,7 +356,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_01_1_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-14 16:43:11 +0000">04/14/2022</time>
+    <time datetime="2022-04-29 00:48:50 +0000">04/29/2022</time>
     
   
 
@@ -1125,6 +1125,18 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can deploy Astra Trident using the Trident operator or with <code>tridentctl</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Beginning with the 22.04 release, AES keys will no longer be regenerated every time Astra Trident is installed. With this release, Astra Trident will install a new secret object that persists across installations. This means, <code>tridentctl</code> in 22.04 can uninstall previous versions of Trident, but earlier versions cannot uninstall 22.04 installations.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
