@@ -169,7 +169,45 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Work with snapshots](https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-use/vol-snapshots.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.04">
+    <label>Version</label>
+    <span translate="no" class="notranslate">Astra Trident 22.04</span>
+    <img src="/us-en/trident/images/chevron_up.svg" class="custom-icon chevrondown invisible" />
+    <img src="/us-en/trident/images/chevron_down.svg" class="custom-icon chevronup" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2201/trident-use/vol-snapshots.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.01</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2110/trident-use/vol-snapshots.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2107/index.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.07</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Work with snapshots](https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-use/vol-snapshots.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -1105,7 +1143,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-27 22:15:28 +0000">04/27/2022</time>
+    <time datetime="2022-05-11 18:42:25 +0000">05/11/2022</time>
     
   
 
@@ -1144,30 +1182,60 @@ This feature is available from Kubernetes 1.17 (beta) and is GA from 1.20. To un
 <div class="title">What you&#8217;ll need</div>
 <ul>
 <li>
-<p>Creating volume snapshots requires an external snapshot controller to be created as well as some Custom Resource Definitions (CRDs). This is the responsibility of the Kubernetes orchestrator that is being used (for example: Kubeadm, GKE, OpenShift).</p>
+<p>Creating volume snapshots requires creating an external snapshot controller and Custom Resource Definitions (CRDs). This is the responsibility of the Kubernetes orchestrator being used (for example: Kubeadm, GKE, OpenShift).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>You can create an external snapshot-controller and snapshot CRDs as follows:</p>
+<p>If your Kubernetes distribution does not include the snapshot controller and CRDs, you can deploy them as follows.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Create volume snapshot CRDs:</p>
+<p>Create volume snapshot CRDs.</p>
+<div class="paragraph">
+<p>For Kubernetes 1.20 and above, use v1 snapshot CRDs with snapshot components of v5.0 or above. For Kubernetes versions 1.17-1.19, use v1beta1 with v3.0.3 snapshot components.</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">v5.0 components</div>
+<div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>$ cat snapshot-setup.sh
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ cat snapshot-setup.sh
 #!/bin/bash
 # Create volume snapshot CRDs
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml</pre>
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">v3.0.3 components</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ cat snapshot-setup.sh
+#!/bin/bash
+# Create volume snapshot CRDs
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v3.0.3/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v3.0.3/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v3.0.3/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </li>
 <li>
-<p>Create the snapshot-controller in the desired namespace. Edit the YAML manifests below to modify namespace.</p>
+<p>Create the snapshot controller in the desired namespace. Edit the YAML manifests below to modify namespace.</p>
+<div class="paragraph">
+<p>For Kubernetes 1.20 and above use v5.0 or above. For Kubernetes versions 1.17-1.19 use v3.0.3</p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1175,19 +1243,39 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snaps
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Don’t create a snapshot-controller if setting up on-demand volume snapshots in a GKE environment. GKE uses a built-in, hidden snapshot-controller.
+Don’t create a snapshot controller if setting up on-demand volume snapshots in a GKE environment. GKE uses a built-in, hidden snapshot-controller.
 </td>
 </tr>
 </table>
 </div>
-</li>
-</ol>
-</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">v5.0 controller</div>
+<div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml</pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml</code></pre>
 </div>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">v3.0.3 controller</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v3.0.3/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v3.0.3/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ol>
 </div>
 <div class="admonitionblock tip">
 <table>
