@@ -1135,7 +1135,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-14 20:57:56 +0000">03/14/2022</time>
+    <time datetime="2022-06-06 15:39:39 +0000">06/06/2022</time>
     
   
 
@@ -1164,7 +1164,17 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can deploy Astra Trident with the Trident operator. You can deploy the Trident operator either manually or using Helm.</p>
+<p>You can deploy Astra Trident using the Trident operator. You can deploy the Trident operator in one of two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using the Trident <a href="https://artifacthub.io/packages/helm/netapp-trident/trident-operator" target="_blank" rel="noopener">Helm Chart</a>: The Helm Chart deploys the Trident operator and installs Trident in one step.</p>
+</li>
+<li>
+<p>Manually: Trident provides a <a href="https://github.com/NetApp/trident/blob/master/deploy/bundle.yaml" target="_blank" rel="noopener">bundle.yaml</a> file that can be used to install the operator and create associated objects.</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1213,7 +1223,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 </div>
 </div>
 <div class="sect1">
-<h2 id="deploy-the-trident-operator-by-using-helm">Deploy the Trident operator by using Helm</h2>
+<h2 id="deploy-the-trident-operator-and-install-astra-trident-using-helm">Deploy the Trident operator and install Astra Trident using Helm</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perform the steps listed to deploy the Trident operator by using Helm.</p>
