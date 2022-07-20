@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-07 18:31:18 +0000">06/07/2022</time>
+    <time datetime="2022-07-20 17:41:39 +0000">07/20/2022</time>
     
   
 
@@ -1160,7 +1160,7 @@ To learn about the ports that Astra Trident uses, see <a href="../trident-refere
 <p>Anthos On-Prem (VMware) and Anthos on bare metal 1.9, 1.10, 1.11</p>
 </li>
 <li>
-<p>Kubernetes 1.18 or later (latest: 1.23)</p>
+<p>Kubernetes 1.18 - 1.24</p>
 </li>
 <li>
 <p>Mirantis Kubernetes Engine 3.4</p>
@@ -1179,24 +1179,12 @@ To learn about the ports that Astra Trident uses, see <a href="../trident-refere
 <p>Anthos On-Prem (VMware) and Anthos on bare metal 1.9, 1.10, 1.11</p>
 </li>
 <li>
-<p>Kubernetes 1.18 or later (latest: 1.23)</p>
+<p>Kubernetes 1.18 - 1.24</p>
 </li>
 <li>
 <p>OpenShift 4.7, 4.8, 4.9, 4.10</p>
 </li>
 </ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-Red Hat OpenShift Container Platform users might observe their initiatorname.iscsi file to be blank if using any version below 4.6.8. This is a bug that has been identified by RedHat to be fixed with OpenShift 4.6.8. See this <a href="https://access.redhat.com/errata/RHSA-2020:5259/" target="_blank" rel="noopener">bug fix announcement</a>. NetApp recommends that you use Astra Trident on OpenShift 4.6.8 and later.
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>Astra Trident also works with a host of other fully-managed and self-managed Kubernetes offerings, including Google Kubernetes Engine (GKE), Amazon Elastic Kubernetes Services (EKS), Azure Kubernetes Service (AKS), Rancher, and VMWare Tanzu Portfolio.</p>
@@ -1263,7 +1251,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CSI Trident</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1272,7 +1260,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Volume Snapshots</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1281,7 +1269,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">PVC from Volume Snapshots</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1290,7 +1278,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">iSCSI PV resize</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1299,7 +1287,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP Bidirectional CHAP</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1308,7 +1296,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic Export Policies</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1317,7 +1305,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Trident Operator</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1326,7 +1314,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Auto Worker Node Prep (beta)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1335,7 +1323,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CSI Topology</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.17 and later</p>
+<p>1.18 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1406,37 +1394,6 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">v1.17.0</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>netapp/trident:22.04.0</p>
-</li>
-<li>
-<p>netapp/trident-autosupport:22.04</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-provisioner:v2.2.2</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-attacher:v3.4.0</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-resizer:v1.4.0</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.3</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.5.0</p>
-</li>
-<li>
-<p>netapp/trident-operator:22.04.0 (optional)</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">v1.18.0</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
@@ -1632,7 +1589,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-On Kubernetes version 1.20 and later, use the validated <code>k8s.gcr.io/sig-storage/csi-snapshotter:v4.x</code> image only if the <code>v1</code> version is serving the <code>volumesnapshots.snapshot.storage.k8s.io</code> CRD. If the <code>v1beta1</code> version is serving the CRD with/without the <code>v1</code> version, use the validated <code>k8s.gcr.io/sig-storage/csi-snapshotter:v3.x</code> image.
+On Kubernetes version 1.20 and above, use the validated <code>k8s.gcr.io/sig-storage/csi-snapshotter:v4.x</code> image only if the <code>v1</code> version is serving the <code>volumesnapshots.snapshot.storage.k8s.io</code> CRD. If the <code>v1beta1</code> version is serving the CRD with/without the <code>v1</code> version, use the validated <code>k8s.gcr.io/sig-storage/csi-snapshotter:v3.x</code> image.
 </td>
 </tr>
 </table>

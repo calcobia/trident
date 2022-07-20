@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-11 18:42:25 +0000">05/11/2022</time>
+    <time datetime="2022-07-20 16:42:35 +0000">07/20/2022</time>
     
   
 
@@ -1154,7 +1154,7 @@ This feature is available from Kubernetes 1.17 (beta) and is GA from 1.20. To un
 <li>
 <p>Create volume snapshot CRDs.</p>
 <div class="paragraph">
-<p>For Kubernetes 1.20 and above, use v1 snapshot CRDs with snapshot components of v5.0 or above. For Kubernetes versions 1.17-1.19, use v1beta1 with v3.0.3 snapshot components.</p>
+<p>For Kubernetes 1.20 and above, use v1 snapshot CRDs with snapshot components of v5.0 or above. For Kubernetes versions 1.18 and 1.19, use v1beta1 with v3.0.3 snapshot components.</p>
 </div>
 <div class="exampleblock tabbed-block">
 <div class="content">
@@ -1194,7 +1194,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snaps
 <li>
 <p>Create the snapshot controller in the desired namespace. Edit the YAML manifests below to modify namespace.</p>
 <div class="paragraph">
-<p>For Kubernetes 1.20 and above use v5.0 or above. For Kubernetes versions 1.17-1.19 use v3.0.3</p>
+<p>For Kubernetes 1.20 and above use v5.0 or above. For Kubernetes versions 1.18 and 1.19 use v3.0.3</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1263,7 +1263,7 @@ CSI Snapshotter provides a <a href="https://github.com/kubernetes-csi/external-s
 <div class="listingblock">
 <div class="content">
 <pre>$ cat snap-sc.yaml
-#Use apiVersion v1 for Kubernetes 1.20 and above. For Kubernetes 1.17 - 1.19, use apiVersion v1beta1.
+#Use apiVersion v1 for Kubernetes 1.20 and above. For Kubernetes 1.18 and 1.19, use apiVersion v1beta1.
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshotClass
 metadata:
@@ -1283,7 +1283,7 @@ deletionPolicy: Delete</pre>
 <div class="listingblock">
 <div class="content">
 <pre>$ cat snap.yaml
-#Use apiVersion v1 for Kubernetes 1.20 and above. For Kubernetes 1.17 - 1.19, use apiVersion v1beta1.
+#Use apiVersion v1 for Kubernetes 1.20 and above. For Kubernetes 1.18 and 1.19, use apiVersion v1beta1.
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshot
 metadata:
