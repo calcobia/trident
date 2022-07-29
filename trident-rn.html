@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-28 18:22:34 +0000">07/28/2022</time>
+    <time datetime="2022-07-29 17:14:47 +0000">07/29/2022</time>
     
   
 
@@ -1146,7 +1146,17 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 <div class="sect2">
 <h3 id="fixes">Fixes</h3>
 <div class="paragraph">
+<p><strong>Kubernetes</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
 <p>Fixed issue to handle boolean and number values for node selector when configuring Trident with Helm or the Trident Operator. (<a href="https://github.com/NetApp/trident/issues/700" target="_blank" rel="noopener">GitHub issue #700</a>)</p>
+</li>
+<li>
+<p>Fixed issue in handling errors from non-CHAP path, so that kubelet will retry if it fails. <a href="https://github.com/NetApp/trident/issues/736" target="_blank" rel="noopener">GitHub issue #736</a>)</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -1179,11 +1189,34 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 <p><strong>Kubernetes:</strong> Updated minimum supported Kubernetes to 1.19.</p>
 </li>
 <li>
-<p>Astra Data Store (ADS) driver updated to v1beta1 CRDs, so this version of Trident requires ADS 22.5.0 or later.<br>
-Removals</p>
+<p>Astra Data Store (ADS) driver updated to v1beta1 CRDs, so this version of Trident requires ADS 22.5.0 or later.</p>
 </li>
 <li>
+<p>Backend config no longer allows multiple authentication types in single config.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="removals">Removals</h3>
+<div class="ulist">
+<ul>
+<li>
 <p>AWS CVS driver (deprecated since 22.04) has been removed.</p>
+</li>
+<li>
+<p>Kubernetes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Removed unnecessary SYS_ADMIN capability from node pods.</p>
+</li>
+<li>
+<p>Reduces nodeprep down to simple host info and active service discovery to do a best-effort<br>
+confirmation that NFS/iSCSI services are available on worker nodes.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1265,7 +1298,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect2">
-<h3 id="removals">Removals</h3>
+<h3 id="removals-2">Removals</h3>
 <div class="paragraph">
 <p>E-Series driver (disabled since 20.07) has been removed.</p>
 </div>
