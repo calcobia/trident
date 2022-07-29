@@ -170,9 +170,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.04">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.04</span>
+    <span translate="no" class="notranslate">Astra Trident 22.07</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -180,6 +180,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy-tridentctl.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-get-started/kubernetes-customize-deploy-tridentctl.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
@@ -195,13 +202,6 @@
       
       <a href="https://docs.netapp.com/us-en/trident-2110/trident-get-started/kubernetes-customize-deploy-tridentctl.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2107/trident-get-started/kubernetes-customize-deploy-tridentctl.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.07</span></span>
       </a>
                      
     </li>
@@ -390,7 +390,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -695,8 +695,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -833,6 +831,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -890,7 +890,7 @@
         <div class="na-navbar-padding"> Concepts</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
-        Intro to Astra Trident
+        Learn about Astra Trident
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
         ONTAP drivers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
@@ -988,8 +988,6 @@
         Import volumes
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
         Prepare the worker node
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/automatic-workernode.html">
-        Automatic worker node preparation
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
         Monitor Astra Trident
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -1048,6 +1046,8 @@
         Kubernetes and Astra Trident objects
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
         tridentctl commands and options
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
+        Pod Security Standards (PSS)
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
         Earlier versions
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/legal.html">
@@ -1103,11 +1103,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-09-18 22:57:03 +0000">09/18/2021</time>
+    <time datetime="2022-07-18 17:02:30 +0000">07/18/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1115,21 +1123,6 @@
 
 <div class="paragraph">
 <p>Trident installer enables you to customize attributes. For example, if you have copied the Trident image to a private repository, you can specify the image name by using <code>--trident-image</code>. If you have copied the Trident image as well as the needed CSI sidecar images to a private repository, it might be preferable to specify the location of that repository by using the <code>--image-registry</code> switch, which takes the form <code>&lt;registry FQDN&gt;[:port]</code>.</p>
-</div>
-<div class="paragraph">
-<p>To have Astra Trident automatically configure worker nodes for you, use <code>--enable-node-prep</code>. For more details on how it works, see <a href="../trident-use/automatic-workernode.html" target="_blank" rel="noopener">here</a>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-Automatic worker node preparation is a <strong>beta feature</strong> meant to be used in non-production environments only.
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>If you are using a distribution of Kubernetes, where <code>kubelet</code> keeps its data on a path other than the usual <code>/var/lib/kubelet</code>, you can specify the alternate path by using <code>--kubelet-dir</code>.</p>
@@ -1162,6 +1155,9 @@ Automatic worker node preparation is a <strong>beta feature</strong> meant to be
 </li>
 <li>
 <p><code>trident-serviceaccount.yaml</code></p>
+</li>
+<li>
+<p><code>trident-resourcequota.yaml</code></p>
 </li>
 </ul>
 </div>

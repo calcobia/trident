@@ -170,9 +170,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.04">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.04</span>
+    <span translate="no" class="notranslate">Astra Trident 22.07</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -180,6 +180,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-get-started/requirements.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
@@ -195,13 +202,6 @@
       
       <a href="https://docs.netapp.com/us-en/trident-2110/trident-get-started/requirements.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2107/trident-get-started/requirements.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.07</span></span>
       </a>
                      
     </li>
@@ -390,7 +390,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -695,8 +695,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -833,6 +831,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -890,7 +890,7 @@
         <div class="na-navbar-padding"> Concepts</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
-        Intro to Astra Trident
+        Learn about Astra Trident
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
         ONTAP drivers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
@@ -988,8 +988,6 @@
         Import volumes
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
         Prepare the worker node
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/automatic-workernode.html">
-        Automatic worker node preparation
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
         Monitor Astra Trident
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -1048,6 +1046,8 @@
         Kubernetes and Astra Trident objects
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
         tridentctl commands and options
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
+        Pod Security Standards (PSS)
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
         Earlier versions
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/legal.html">
@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-20 17:41:39 +0000">07/20/2022</time>
+    <time datetime="2022-07-25 18:32:11 +0000">07/25/2022</time>
     
   
 
@@ -1113,14 +1113,6 @@
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/gnarl">
-    <img  class="avatar avatar-small"
-          alt="gnarl"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/43803?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1160,13 +1152,13 @@ To learn about the ports that Astra Trident uses, see <a href="../trident-refere
 <p>Anthos On-Prem (VMware) and Anthos on bare metal 1.9, 1.10, 1.11</p>
 </li>
 <li>
-<p>Kubernetes 1.18 - 1.24</p>
+<p>Kubernetes 1.19 - 1.24</p>
 </li>
 <li>
 <p>Mirantis Kubernetes Engine 3.4</p>
 </li>
 <li>
-<p>OpenShift 4.7, 4.8, 4.9, 4.10</p>
+<p>OpenShift 4.7 (support ends August 24, 2022), 4.8, 4.9, 4.10</p>
 </li>
 </ul>
 </div>
@@ -1179,10 +1171,10 @@ To learn about the ports that Astra Trident uses, see <a href="../trident-refere
 <p>Anthos On-Prem (VMware) and Anthos on bare metal 1.9, 1.10, 1.11</p>
 </li>
 <li>
-<p>Kubernetes 1.18 - 1.24</p>
+<p>Kubernetes 1.19 - 1.24</p>
 </li>
 <li>
-<p>OpenShift 4.7, 4.8, 4.9, 4.10</p>
+<p>OpenShift 4.7 (support ends August 24, 2022), 4.8, 4.9, 4.10</p>
 </li>
 </ul>
 </div>
@@ -1206,7 +1198,7 @@ To learn about the ports that Astra Trident uses, see <a href="../trident-refere
 <p>Azure NetApp Files</p>
 </li>
 <li>
-<p>Astra Data Store</p>
+<p>Astra Data Store 22.05 or above</p>
 </li>
 <li>
 <p>Cloud Volumes ONTAP</p>
@@ -1221,7 +1213,7 @@ To learn about the ports that Astra Trident uses, see <a href="../trident-refere
 <p>NetApp All SAN Array (ASA)</p>
 </li>
 <li>
-<p>NetApp HCI/Element software 11 or later</p>
+<p>NetApp HCI/Element software 11 or above</p>
 </li>
 </ul>
 </div>
@@ -1251,7 +1243,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CSI Trident</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1260,7 +1252,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Volume Snapshots</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1269,7 +1261,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">PVC from Volume Snapshots</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1278,7 +1270,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">iSCSI PV resize</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1287,7 +1279,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP Bidirectional CHAP</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1296,7 +1288,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic Export Policies</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1305,7 +1297,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Trident Operator</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1314,7 +1306,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Auto Worker Node Prep (beta)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1323,7 +1315,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CSI Topology</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1.18 - 1.24</p>
+<p>1.19 - 1.24</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>No</p>
@@ -1348,10 +1340,10 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <p>RedHat CoreOS (RHCOS) versions as supported by OpenShift Container Platform</p>
 </li>
 <li>
-<p>RHEL or CentOS 7.4 or later</p>
+<p>RHEL or CentOS 7.9 or later (latest 9.10)</p>
 </li>
 <li>
-<p>Ubuntu 18.04 or later</p>
+<p>Ubuntu 18.04 or later (latest 22.04)</p>
 </li>
 </ul>
 </div>
@@ -1395,63 +1387,32 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">v1.18.0</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>netapp/trident:22.04.0</p>
-</li>
-<li>
-<p>netapp/trident-autosupport:22.04</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-provisioner:v2.2.2</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-attacher:v3.4.0</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-resizer:v1.4.0</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.3</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.5.0</p>
-</li>
-<li>
-<p>netapp/trident-operator:22.04.0 (optional)</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">v1.19.0</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>netapp/trident:22.04.0</p>
+<p>netapp/trident:22.07.0</p>
 </li>
 <li>
-<p>netapp/trident-autosupport:22.04</p>
+<p>netapp/trident-autosupport:22.07</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-provisioner:v2.2.2</p>
+<p>k8s.io/sig-storage/csi-provisioner:v2.2.2</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-attacher:v3.4.0</p>
+<p>k8s.io/sig-storage/csi-attacher:v3.5.0</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-resizer:v1.4.0</p>
+<p>k8s.io/sig-storage/csi-resizer:v1.5.0</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.3</p>
+<p>k8s.io/sig-storage/csi-snapshotter:v3.0.3</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.5.0</p>
+<p>k8s.io/sig-storage/csi-node-driver-registrar:v2.5.1</p>
 </li>
 <li>
-<p>netapp/trident-operator:22.04.0 (optional)</p>
+<p>netapp/trident-operator:22.07.0 (optional)</p>
 </li>
 </ul>
 </div></div></td>
@@ -1461,124 +1422,113 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>netapp/trident:22.04.0</p>
-</li>
-<li>
-<p>netapp/trident-autosupport:22.04</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-provisioner:v2.2.2</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-attacher:v3.4.0</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-resizer:v1.4.0</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.3</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.5.0</p>
-</li>
-<li>
-<p>netapp/trident-operator:22.04.0 (optional)</p>
+<p>netapp/trident:22.07.0</p>
 </li>
 </ul>
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* netapp/trident-autosupport:22.07<br>
+* k8s.io/sig-storage/csi-provisioner:v3.2.1<br>
+* k8s.io/sig-storage/csi-attacher:v3.5.0<br>
+* k8s.io/sig-storage/csi-resizer:v1.5.0<br>
+* k8s.io/sig-storage/csi-snapshotter:v6.0.1<br>
+* k8s.io/sig-storage/csi-node-driver-registrar:v2.5.1<br>
+* netapp/trident-operator:22.07.0 (optional)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">v1.21.0</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>netapp/trident:22.04.0</p>
+<p>netapp/trident:22.07.0</p>
 </li>
 <li>
-<p>netapp/trident-autosupport:22.04</p>
+<p>netapp/trident-autosupport:22.07</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-provisioner:v2.2.2</p>
+<p>k8s.io/sig-storage/csi-provisioner:v3.2.1</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-attacher:v3.4.0</p>
+<p>k8s.io/sig-storage/csi-attacher:v3.5.0</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-resizer:v1.4.0</p>
+<p>k8s.io/sig-storage/csi-resizer:v1.5.0</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.3</p>
+<p>k8s.io/sig-storage/csi-snapshotter:v6.0.1</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.5.0</p>
+<p>k8s.io/sig-storage/csi-node-driver-registrar:v2.5.1</p>
 </li>
 <li>
-<p>netapp/trident-operator:22.04.0 (optional)</p>
+<p>netapp/trident-operator:22.07.0 (optional)</p>
 </li>
 </ul>
 </div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">v1.22.0</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>netapp/trident:22.04.0</p>
-</li>
-<li>
-<p>netapp/trident-autosupport:22.04</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-provisioner:v2.2.2</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-attacher:v3.4.0</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-resizer:v1.4.0</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.3</p>
-</li>
-<li>
-<p>k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.5.0</p>
-</li>
-<li>
-<p>netapp/trident-operator:22.04.0 (optional)</p>
-</li>
-</ul>
-</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">v1.23.0</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>netapp/trident:22.04.0</p>
+<p>netapp/trident:22.07.0</p>
 </li>
 <li>
-<p>netapp/trident-autosupport:22.04</p>
+<p>netapp/trident-autosupport:22.07</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-provisioner:v2.2.2</p>
+<p>k8s.io/sig-storage/csi-provisioner:v3.2.1</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-attacher:v3.4.0</p>
+<p>k8s.io/sig-storage/csi-attacher:v3.5.0</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-resizer:v1.4.0</p>
+<p>k8s.io/sig-storage/csi-resizer:v1.5.0</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.3</p>
+<p>k8s.io/sig-storage/csi-snapshotter:v6.0.1</p>
 </li>
 <li>
-<p>k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.5.0</p>
+<p>k8s.io/sig-storage/csi-node-driver-registrar:v2.5.1</p>
 </li>
 <li>
-<p>netapp/trident-operator:22.04.0 (optional)</p>
+<p>netapp/trident-operator:22.07.0 (optional)</p>
 </li>
 </ul>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v1.23.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>netapp/trident:22.07.0</p>
+</li>
+<li>
+<p>netapp/trident-autosupport:22.07</p>
+</li>
+<li>
+<p>k8s.io/sig-storage/csi-provisioner:v3.2.1</p>
+</li>
+<li>
+<p>k8s.io/sig-storage/csi-attacher:v3.5.0</p>
+</li>
+<li>
+<p>k8s.io/sig-storage/csi-resizer:v1.5.0</p>
+</li>
+<li>
+<p>k8s.io/sig-storage/csi-snapshotter:v6.0.1</p>
+</li>
+<li>
+<p>k8s.io/sig-storage/csi-node-driver-registrar:v2.5.1</p>
+</li>
+<li>
+<p>netapp/trident-operator:22.07.0 (optional)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v1.24.0</p></td>
 </tr>
 </tbody>
 </table>
@@ -1589,7 +1539,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-On Kubernetes version 1.20 and above, use the validated <code>k8s.gcr.io/sig-storage/csi-snapshotter:v4.x</code> image only if the <code>v1</code> version is serving the <code>volumesnapshots.snapshot.storage.k8s.io</code> CRD. If the <code>v1beta1</code> version is serving the CRD with/without the <code>v1</code> version, use the validated <code>k8s.gcr.io/sig-storage/csi-snapshotter:v3.x</code> image.
+On Kubernetes version 1.20 and above, use the validated <code>registry.k8s.io/sig-storage/csi-snapshotter:v4.x</code> image only if the <code>v1</code> version is serving the <code>volumesnapshots.snapshot.storage.k8s.io</code> CRD. If the <code>v1beta1</code> version is serving the CRD with/without the <code>v1</code> version, use the validated <code>registry.k8s.io/sig-storage/csi-snapshotter:v3.x</code> image.
 </td>
 </tr>
 </table>

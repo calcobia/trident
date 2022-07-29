@@ -170,9 +170,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.04">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.04</span>
+    <span translate="no" class="notranslate">Astra Trident 22.07</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -180,6 +180,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-use/worker-node-prep.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-use/worker-node-prep.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
@@ -195,13 +202,6 @@
       
       <a href="https://docs.netapp.com/us-en/trident-2110/trident-use/worker-node-prep.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2107/trident-use/worker-node-prep.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.07</span></span>
       </a>
                      
     </li>
@@ -390,7 +390,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -695,8 +695,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -833,6 +831,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -890,7 +890,7 @@
         <div class="na-navbar-padding"> Concepts</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
-        Intro to Astra Trident
+        Learn about Astra Trident
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
         ONTAP drivers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
@@ -988,8 +988,6 @@
         Import volumes
       </a></li></ul></li><li class="  active "><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
         Prepare the worker node
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/automatic-workernode.html">
-        Automatic worker node preparation
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
         Monitor Astra Trident
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -1048,6 +1046,8 @@
         Kubernetes and Astra Trident objects
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
         tridentctl commands and options
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
+        Pod Security Standards (PSS)
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
         Earlier versions
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/legal.html">
@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-01 00:35:01 +0000">02/01/2022</time>
+    <time datetime="2022-06-15 21:50:40 +0000">06/15/2022</time>
     
   
 
@@ -1137,6 +1137,39 @@
 </td>
 <td class="content">
 You should always reboot your worker nodes after installing the NFS or iSCSI tools, or else attaching volumes to containers might fail.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="node-service-discovery">Node service discovery</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Beginning in 22.07, Astra Trident attempts to automatically detect if the node is capable of running iSCSI or NFS services. Astra Trident creates events for the node to identify the services discovered. You can review these events using the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>kubectl get event -A --field-selector involvedObject.name=&lt;Kubernetes node name&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Trident also identifies services enabled for each node on the Trident node CR. To view the discovered services, use the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>tridentctl get node -o wide -n &lt;Trident namespace&gt;</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Node service discovery identifies discovered services but does not guarantee services are properly configured. Conversely, the absence of a discovered service does not guarantee the volume mount will fail.
 </td>
 </tr>
 </table>
@@ -1207,16 +1240,12 @@ You should ensure that the NFS service is started up during boot time.
 </li>
 <li>
 <p>If using RHCOS version 4.5 or later, or RHEL or CentOS version 8.2 or later with the <code>solidfire-san</code> driver, ensure that the CHAP authentication algorithm is set to MD5 in <code>/etc/iscsi/iscsid.conf</code>.</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>sudo sed -i 's/^\(node.session.auth.chap_algs\).*/\1 = MD5/' /etc/iscsi/iscsid.conf</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>When using worker nodes that run RHEL/RedHat CoreOS with iSCSI PVs, make sure to specify the <code>discard</code> mountOption in the StorageClass to perform inline space reclamation. See <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_file_systems/discarding-unused-blocks_managing-file-systems" target="_blank" rel="noopener">RedHat’s documentation</a>.</p>
 </li>
@@ -1365,18 +1394,6 @@ Ensure <code>etc/multipath.conf</code> contains <code>find_multipaths no</code> 
 </td>
 <td class="content">
 For Ubuntu 18.04, you must discover target ports with <code>iscsiadm</code> before starting <code>open-iscsi</code> for the iSCSI daemon to start. You can alternatively modify the <code>iscsi</code> service to start <code>iscsid</code> automatically.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-If you want to learn more about automatic worker node preparation, which is a beta feature, see <a href="automatic-workernode.html" target="_blank" rel="noopener">here</a>.
 </td>
 </tr>
 </table>

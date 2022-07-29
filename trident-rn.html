@@ -170,9 +170,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.04">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.04</span>
+    <span translate="no" class="notranslate">Astra Trident 22.07</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -180,6 +180,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-rn.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-rn.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
@@ -195,13 +202,6 @@
       
       <a href="https://docs.netapp.com/us-en/trident-2110/trident-rn.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2107/trident-rn.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.07</span></span>
       </a>
                      
     </li>
@@ -390,7 +390,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -695,8 +695,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -833,6 +831,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -890,7 +890,7 @@
         <div class="na-navbar-padding"> Concepts</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
-        Intro to Astra Trident
+        Learn about Astra Trident
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
         ONTAP drivers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
@@ -988,8 +988,6 @@
         Import volumes
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
         Prepare the worker node
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/automatic-workernode.html">
-        Automatic worker node preparation
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
         Monitor Astra Trident
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -1048,6 +1046,8 @@
         Kubernetes and Astra Trident objects
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
         tridentctl commands and options
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
+        Pod Security Standards (PSS)
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
         Earlier versions
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/legal.html">
@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-29 00:48:50 +0000">04/29/2022</time>
+    <time datetime="2022-07-28 18:22:34 +0000">07/28/2022</time>
     
   
 
@@ -1141,7 +1141,63 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 </div>
 </div>
 <div class="sect1">
-<h2 id="whats-new-in-22-04">What&#8217;s new in 22.04</h2>
+<h2 id="whats-new-in-22-07">What&#8217;s new in 22.07</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fixes">Fixes</h3>
+<div class="paragraph">
+<p>Fixed issue to handle boolean and number values for node selector when configuring Trident with Helm or the Trident Operator. (<a href="https://github.com/NetApp/trident/issues/700" target="_blank" rel="noopener">GitHub issue #700</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancements">Enhancements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Transition from k8s.gcr.io to registry.k8s.io as default registry for CSI images</p>
+</li>
+<li>
+<p>ONTAP-SAN volumes will now use per-node igroups and only map LUNs to igroups while actively published to those nodes to improve our security posture. Existing volumes will be opportunistically switched to the new igroup scheme when Trident determines it is safe to do so without impacting active workloads.</p>
+</li>
+<li>
+<p>Included a ResourceQuota with Trident installations to ensure Trident DaemonSet is scheduled when PriorityClass consumption is limited by default.</p>
+</li>
+<li>
+<p>Added support for Network Features to ANF driver. (<a href="https://github.com/NetApp/trident/issues/717" target="_blank" rel="noopener">GitHub issue #717</a>)</p>
+</li>
+<li>
+<p>Added tech preview automatic MetroCluster switchover detection to ONTAP drivers. (<a href="https://github.com/NetApp/trident/issues/228" target="_blank" rel="noopener">GitHub issue #228</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deprecations">Deprecations</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Kubernetes:</strong> Updated minimum supported Kubernetes to 1.19.</p>
+</li>
+<li>
+<p>Astra Data Store (ADS) driver updated to v1beta1 CRDs, so this version of Trident requires ADS 22.5.0 or later.<br>
+Removals</p>
+</li>
+<li>
+<p>AWS CVS driver (deprecated since 22.04) has been removed.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="documentation">Documentation</h3>
+<div class="paragraph">
+<p>A new <a href="https://docs.netapp.com/us-en/trident/trident-reference/pod-security.html">Pod Security Standards</a> (PSS) section has been added detailing permissions enabled by Astra Trident on installation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes-in-22-04">Changes in 22.04</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>NetApp is continually improving and enhancing its products and services. Here are some of the latest features in Astra Trident. For previous releases, see <a href="https://docs.netapp.com/us-en/trident/earlier-versions.html">Earlier versions of documentation</a>.</p>
@@ -1159,29 +1215,29 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes">Fixes</h3>
+<h3 id="fixes-2">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Improved parsing of iSCSI initiator names. (Issue [#681](<a href="https://github.com/NetApp/trident/issues/681)" class="bare">https://github.com/NetApp/trident/issues/681)</a>)</p>
+<p>Improved parsing of iSCSI initiator names. (<a href="https://github.com/NetApp/trident/issues/681" target="_blank" rel="noopener">GitHub issue #681</a>)</p>
 </li>
 <li>
-<p>Fixed issue where CSI storage class parameters weren&#8217;t allowed. (Issue [#598](<a href="https://github.com/NetApp/trident/issues/598)" class="bare">https://github.com/NetApp/trident/issues/598)</a>)</p>
+<p>Fixed issue where CSI storage class parameters weren&#8217;t allowed. (<a href="https://github.com/NetApp/trident/issues/598" target="_blank" rel="noopener">GitHub issue #598</a>)</p>
 </li>
 <li>
-<p>Fixed duplicate key declaration in Trident CRD. (Issue [#671](<a href="https://github.com/NetApp/trident/issues/671)" class="bare">https://github.com/NetApp/trident/issues/671)</a>)</p>
+<p>Fixed duplicate key declaration in Trident CRD. (<a href="https://github.com/NetApp/trident/issues/671" target="_blank" rel="noopener">GitHub issue #671</a>)</p>
 </li>
 <li>
-<p>Fixed inaccurate CSI Snapshot logs. (Issue [#629](<a href="https://github.com/NetApp/trident/issues/629)" class="bare">https://github.com/NetApp/trident/issues/629)</a>)</p>
+<p>Fixed inaccurate CSI Snapshot logs. (<a href="https://github.com/NetApp/trident/issues/629" target="_blank" rel="noopener">GitHub issue #629</a>))</p>
 </li>
 <li>
-<p>Fixed issue with unpublishing volumes on deleted nodes. (Issue [#691](<a href="https://github.com/NetApp/trident/issues/691)" class="bare">https://github.com/NetApp/trident/issues/691)</a>)</p>
+<p>Fixed issue with unpublishing volumes on deleted nodes. (<a href="https://github.com/NetApp/trident/issues/691" target="_blank" rel="noopener">GitHub issue #691</a>)</p>
 </li>
 <li>
-<p>Added handling of filesystem inconsistencies on block devices. (Issue [#656](<a href="https://github.com/NetApp/trident/issues/656)" class="bare">https://github.com/NetApp/trident/issues/656)</a>)</p>
+<p>Added handling of filesystem inconsistencies on block devices. (<a href="https://github.com/NetApp/trident/issues/656" target="_blank" rel="noopener">GitHub issue #656</a>)</p>
 </li>
 <li>
-<p>Fixed issue pulling auto-support images when setting the <code>imageRegistry</code> flag during installation. (Issue [#715](<a href="https://github.com/NetApp/trident/issues/715)" class="bare">https://github.com/NetApp/trident/issues/715)</a>)</p>
+<p>Fixed issue pulling auto-support images when setting the <code>imageRegistry</code> flag during installation. (<a href="https://github.com/NetApp/trident/issues/715" target="_blank" rel="noopener">GitHub issue #715</a>)</p>
 </li>
 <li>
 <p>Fixed issue where ANF driver failed to clone a volume with multiple export rules.</p>
@@ -1190,11 +1246,11 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements">Enhancements</h3>
+<h3 id="enhancements-2">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Inbound connections to Trident&#8217;s secure endpoints now require a minimum of TLS 1.3. (Issue [#698](<a href="https://github.com/NetApp/trident/issues/698)" class="bare">https://github.com/NetApp/trident/issues/698)</a>)</p>
+<p>Inbound connections to Trident&#8217;s secure endpoints now require a minimum of TLS 1.3. (<a href="https://github.com/NetApp/trident/issues/698" target="_blank" rel="noopener">GitHub issue #698</a>)</p>
 </li>
 <li>
 <p>Trident now adds HSTS headers to responses from its secure endpoints.</p>
@@ -1203,7 +1259,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 <p>Trident now attempts to enable the Azure NetApp Files unix permissions feature automatically.</p>
 </li>
 <li>
-<p><strong>Kubernetes</strong>: Trident daemonset now runs at system-node-critical priority class. (Issue [#694](<a href="https://github.com/NetApp/trident/issues/694)" class="bare">https://github.com/NetApp/trident/issues/694)</a>)</p>
+<p><strong>Kubernetes</strong>: Trident daemonset now runs at system-node-critical priority class. (<a href="https://github.com/NetApp/trident/issues/694" target="_blank" rel="noopener">GitHub issue #694</a>)</p>
 </li>
 </ul>
 </div>
@@ -1220,7 +1276,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 <h2 id="changes-in-22-01-1">Changes in 22.01.1</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-2">Fixes</h3>
+<h3 id="fixes-3">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1238,7 +1294,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 <h2 id="changes-in-22-01-0">Changes in 22.01.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-3">Fixes</h3>
+<h3 id="fixes-4">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1269,7 +1325,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements-2">Enhancements</h3>
+<h3 id="enhancements-3">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1295,7 +1351,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect2">
-<h3 id="deprecations">Deprecations</h3>
+<h3 id="deprecations-2">Deprecations</h3>
 <div class="paragraph">
 <p>Trident REST interface can listen and serve only at 127.0.0.1 or [::1] addresses</p>
 </div>
@@ -1318,7 +1374,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes-4">Fixes</h3>
+<h3 id="fixes-5">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1339,7 +1395,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 <h2 id="changes-in-21-10-0">Changes in 21.10.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-5">Fixes</h3>
+<h3 id="fixes-6">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1383,7 +1439,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements-3">Enhancements</h3>
+<h3 id="enhancements-4">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>

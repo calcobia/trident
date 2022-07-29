@@ -170,9 +170,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.04">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.04</span>
+    <span translate="no" class="notranslate">Astra Trident 22.07</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -180,6 +180,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-use/anf.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-use/anf.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
@@ -195,13 +202,6 @@
       
       <a href="https://docs.netapp.com/us-en/trident-2110/trident-use/anf.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2107/trident-use/anf.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.07</span></span>
       </a>
                      
     </li>
@@ -390,7 +390,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -695,8 +695,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -833,6 +831,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -890,7 +890,7 @@
         <div class="na-navbar-padding"> Concepts</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
-        Intro to Astra Trident
+        Learn about Astra Trident
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
         ONTAP drivers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
@@ -988,8 +988,6 @@
         Import volumes
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
         Prepare the worker node
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/automatic-workernode.html">
-        Automatic worker node preparation
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
         Monitor Astra Trident
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -1048,6 +1046,8 @@
         Kubernetes and Astra Trident objects
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
         tridentctl commands and options
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
+        Pod Security Standards (PSS)
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
         Earlier versions
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/legal.html">
@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-23 17:07:24 +0000">06/23/2022</time>
+    <time datetime="2022-06-24 20:33:51 +0000">06/24/2022</time>
     
   
 
@@ -1287,6 +1287,11 @@ NOTE: Astra Trident does not support Manual QoS capacity pools.
 <td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>networkFeatures</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set of VNet features for a volume, may be <code>Basic</code> or <code>Standard</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>nfsMountOptions</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fine-grained control of NFS mount options.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">"nfsvers=3"</p></td>
@@ -1323,6 +1328,18 @@ If you encounter a “No capacity pools found” error when attempting to create
 </td>
 <td class="content">
 If you want to mount the volumes by using NFS version 4.1, you can include <code>nfsvers=4</code> in the comma-delimited mount options list to choose NFS v4.1. Any mount options set in a storage class override the mount options set in a backend configuration file.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+The <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/configure-network-features" target="_blank" rel="noopener">Network Features</a> functionality is not generally available in all regions and may have to be enabled in a subscription.  Specifying the <code>networkFeatures</code> config option when the functionality is not enabled will cause volume provisioning in Trident to fail.
 </td>
 </tr>
 </table>
@@ -1495,6 +1512,7 @@ them randomly.</p>
 ],
         "virtualNetwork": "my-virtual-network",
         "subnet": "my-subnet",
+        "networkFeatures": "Standard",
         "nfsMountOptions": "vers=3,proto=tcp,timeo=600",
         "limitVolumeSize": "500Gi",
         "defaults": {
@@ -1502,7 +1520,6 @@ them randomly.</p>
             "snapshotDir": "true",
             "size": "200Gi",
             "unixPermissions": "0777"
-=======
         }
     }</pre>
 </div>
@@ -1526,6 +1543,7 @@ them randomly.</p>
         "clientSecret": "SECRET",
         "location": "eastus",
         "resourceGroups": ["application-group-1"],
+        "networkFeatures": "Basic",
         "nfsMountOptions": "vers=3,proto=tcp,timeo=600",
         "labels": {
             "cloud": "azure"
@@ -1538,7 +1556,8 @@ them randomly.</p>
                     "performance": "gold"
                 },
                 "serviceLevel": "Ultra",
-                "capacityPools": ["ultra-1", "ultra-2"]
+                "capacityPools": ["ultra-1", "ultra-2"],
+                "networkFeatures": "Standard"
             },
             {
                 "labels": {

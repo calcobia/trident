@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="There are several resource objects that dictate the relationship between Kubernetes and Trident, Trident and storage, and Kubernetes and storage. Some of the...">
-  <meta name="keywords" content=" kubernetes objects, trident objects, persistent volume claim, storage class, backend, snapshot"><!-- Icons -->
+  <meta name="keywords" content=" kubernetes objects, trident objects, persistent volume claim, storage class, backend, snapshot, priority class, system-node-critical, daemonset, resource quota, resourcequota, system node critical"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -170,9 +170,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.04">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.04</span>
+    <span translate="no" class="notranslate">Astra Trident 22.07</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -180,6 +180,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-reference/objects.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-reference/objects.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
@@ -195,13 +202,6 @@
       
       <a href="https://docs.netapp.com/us-en/trident-2110/trident-reference/objects.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2107/trident-reference/objects.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.07</span></span>
       </a>
                      
     </li>
@@ -390,7 +390,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -693,8 +693,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -833,6 +831,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -890,7 +890,7 @@
         <div class="na-navbar-padding"> Concepts</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
-        Intro to Astra Trident
+        Learn about Astra Trident
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
         ONTAP drivers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
@@ -988,8 +988,6 @@
         Import volumes
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
         Prepare the worker node
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/automatic-workernode.html">
-        Automatic worker node preparation
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
         Monitor Astra Trident
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -1048,6 +1046,8 @@
         Kubernetes and Astra Trident objects
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
         tridentctl commands and options
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
+        Pod Security Standards (PSS)
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
         Earlier versions
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/legal.html">
@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-20 17:41:39 +0000">07/20/2022</time>
+    <time datetime="2022-07-20 17:59:05 +0000">07/20/2022</time>
     
   
 
@@ -1580,7 +1580,7 @@ volumes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Immediate, WaitForFirstConsumer</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Choose when volume binding and dynamic provisioning occurs</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.18 - 1.24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.19 - 1.24</p></td>
 </tr>
 </tbody>
 </table>
@@ -1610,7 +1610,7 @@ volumes</p></td>
 </div>
 </li>
 <li>
-<p>See <a href="https://docs.netapp.com/us-en/trident/trident-use/vol-expansion.html" target="_blank" rel="noopener">Expand volumes</a> for further details on volume expansion.</p>
+<p>See <a href="https://docs.netapp.com/us-en/trident/trident-use/vol-expansion.html">Expand volumes</a> for further details on volume expansion.</p>
 </li>
 <li>
 <p>The Trident installer bundle provides several example storage class definitions for use with Trident in <code>sample-input/storage-class-*.yaml</code>. Deleting a Kubernetes storage class causes the corresponding Trident storage class to be deleted as well.</p>
@@ -1725,7 +1725,7 @@ Trident creates <code>VolumeSnapshotContent</code> objects and registers them wi
 <p>When upgrading from a previous version of Trident (one that used <code>etcd</code> to maintain state), the Trident installer migrates data from the <code>etcd</code> key-value data store and creates corresponding CRD objects.</p>
 </li>
 <li>
-<p>When uninstalling Trident by using the <code>tridentctl uninstall</code> command, Trident pods are deleted but the created CRDs are not cleaned up. See <a href="../trident-managing-k8s/uninstall-trident.html" target="_blank" rel="noopener">Uninstall Trident</a> to understand how Trident can be completely removed and reconfigured from scratch.</p>
+<p>When uninstalling Trident by using the <code>tridentctl uninstall</code> command, Trident pods are deleted but the created CRDs are not cleaned up. See <a href="../trident-managing-k8s/uninstall-trident.html">Uninstall Trident</a> to understand how Trident can be completely removed and reconfigured from scratch.</p>
 </li>
 </ul>
 </div>
@@ -1776,7 +1776,7 @@ This is one of the two object types that you create and manage yourself. The oth
 </table>
 </div>
 <div class="paragraph">
-<p>For more information about how to construct these objects, see Backend configuration.</p>
+<p>For more information about how to construct these objects, see <a href="../trident-use/backends.html">configuring backends</a>.</p>
 </div>
 </div>
 </div>
@@ -2023,6 +2023,62 @@ In Kubernetes, these objects are managed automatically. You can view them to see
 <div class="paragraph">
 <p>When a Kubernetes <code>VolumeSnapshot</code> object request is created, Trident works by creating a snapshot object on the backing storage system. The <code>internalName</code> of this snapshot object is generated by combining the prefix <code>snapshot-</code> with the <code>UID</code> of the <code>VolumeSnapshot</code> object (for example, <code>snapshot-e8d8a0ca-9826-11e9-9807-525400f3f660</code>). <code>volumeName</code> and <code>volumeInternalName</code> are populated by getting the details of the backing<br>
 volume.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="astra-trident-resourcequota-object">Astra Trident <code>ResourceQuota</code> object</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Trident deamonset consumes a <code>system-node-critical</code> Priority Class&#8212;&#8203;the highest Priority Class available in Kubernetes&#8212;&#8203;to ensure Astra Trident can identify and clean up volumes during graceful node shutdown and allow Trident daemonset pods to preempt workloads with a lower priority in clusters where there is high resource pressure.</p>
+</div>
+<div class="paragraph">
+<p>To accomplish this, Astra Trident employs a <code>ResourceQuota</code> object to ensure a "system-node-critical" Priority Class on the Trident daemonset is satisfied. Prior to deployment and daemonset creation, Astra Trident looks for the <code>ResourceQuota</code> object and, if not discovered, applies it.</p>
+</div>
+<div class="paragraph">
+<p>If you need more control over the default Resource Quota and Priority Class, you can generate a <code>custom.yaml</code> or configure the <code>ResourceQuota</code> object using Helm chart.</p>
+</div>
+<div class="paragraph">
+<p>The following is an example of a `ResourceQuota`object prioritizing the Trident daemonset.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: &lt;version&gt;
+kind: ResourceQuota
+metadata:
+  name: trident-csi
+  labels:
+    app: node.csi.trident.netapp.io
+spec:
+  scopeSelector:
+     matchExpressions:
+       - operator : In
+         scopeName: PriorityClass
+         values: ["system-node-critical"]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more information on Resource Quotas, see <a href="https://kubernetes.io/docs/concepts/policy/resource-quotas/" target="_blank" rel="noopener">Kubernetes: Resource Quotas</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="clean-up-resourcequota-if-installation-fails">Clean up <code>ResourceQuota</code> if installation fails</h3>
+<div class="paragraph">
+<p>In the rare case where installation fails after the <code>ResourceQuota</code> object is created, first try <a href="../trident-managing-k8s/uninstall-trident.html">uninstalling</a> and then reinstall.</p>
+</div>
+<div class="paragraph">
+<p>If that doesn&#8217;t work, manually remove the <code>ResourceQuota</code> object.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remove-resourcequota">Remove <code>ResourceQuota</code></h3>
+<div class="paragraph">
+<p>If you prefer to control your own resource allocation, you can remove the Astra Trident <code>ResourceQuota</code> object using the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl delete quota trident-csi -n trident</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>

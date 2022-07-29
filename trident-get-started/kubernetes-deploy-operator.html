@@ -170,9 +170,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.04">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.04</span>
+    <span translate="no" class="notranslate">Astra Trident 22.07</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -180,6 +180,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-get-started/kubernetes-deploy-operator.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
@@ -195,13 +202,6 @@
       
       <a href="https://docs.netapp.com/us-en/trident-2110/trident-get-started/kubernetes-deploy-operator.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2107/trident-get-started/kubernetes-deploy-operator.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.07</span></span>
       </a>
                      
     </li>
@@ -390,7 +390,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_04_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -693,8 +693,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -831,6 +829,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -888,7 +888,7 @@
         <div class="na-navbar-padding"> Concepts</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
-        Intro to Astra Trident
+        Learn about Astra Trident
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
         ONTAP drivers
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
@@ -986,8 +986,6 @@
         Import volumes
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
         Prepare the worker node
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/automatic-workernode.html">
-        Automatic worker node preparation
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
         Monitor Astra Trident
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -1046,6 +1044,8 @@
         Kubernetes and Astra Trident objects
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
         tridentctl commands and options
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
+        Pod Security Standards (PSS)
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
         Earlier versions
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/legal.html">
@@ -1101,7 +1101,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-25 18:05:43 +0000">07/25/2022</time>
+    <time datetime="2022-07-25 18:32:11 +0000">07/25/2022</time>
     
   
 
@@ -1161,7 +1161,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 <div class="ulist">
 <ul>
 <li>
-<p>You have full privileges to a supported Kubernetes cluster running Kubernetes 1.18 - 1.24.</p>
+<p>You have full privileges to a supported Kubernetes cluster running Kubernetes 1.19 - 1.24.</p>
 </li>
 <li>
 <p>You have access to a supported NetApp storage system.</p>
@@ -1201,7 +1201,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 <div class="ulist">
 <ul>
 <li>
-<p>Kubernetes 1.18 - 1.24</p>
+<p>Kubernetes 1.19 - 1.24</p>
 </li>
 <li>
 <p>Helm version 3</p>
@@ -1224,7 +1224,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 See the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre>helm install &lt;release-name&gt; netapp-trident/trident-operator --version 22.4.0 --namespace &lt;trident-namespace&gt;</pre>
+<pre>helm install &lt;release-name&gt; netapp-trident/trident-operator --version 22.7.0 --namespace &lt;trident-namespace&gt;</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1260,7 +1260,7 @@ If you did not already create a namespace for Trident, you can add the <code>--c
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ helm install &lt;name&gt; netapp-trident/trident-operator --version 22.4.0 --set tridentDebug=true</pre>
+<pre>$ helm install &lt;name&gt; netapp-trident/trident-operator --version 22.7.0 --set tridentDebug=true</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1464,7 +1464,6 @@ Status:
     Autosupport Proxy:
     Autosupport Serial Number:
     Debug:                     true
-    Enable Node Prep:          false
     Image Pull Secrets:
     Image Registry:
     k8sTimeout:           30
