@@ -1103,7 +1103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-15 21:50:40 +0000">06/15/2022</time>
+    <time datetime="2022-08-19 19:53:07 +0000">08/19/2022</time>
     
   
 
@@ -1196,7 +1196,7 @@ Node service discovery identifies discovered services but does not guarantee ser
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NFS</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>RHEL/CentOS</p>
+<p>RHEL/CentOS 7</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>sudo yum install -y nfs-utils</code></p>
@@ -1205,7 +1205,7 @@ Node service discovery identifies discovered services but does not guarantee ser
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NFS</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Ubuntu/Debian</p>
+<p>Ubuntu</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>sudo apt-get install -y nfs-common</code></p>
@@ -1239,7 +1239,7 @@ You should ensure that the NFS service is started up during boot time.
 <p>Each node in the Kubernetes cluster must have a unique IQN. <strong>This is a necessary prerequisite</strong>.</p>
 </li>
 <li>
-<p>If using RHCOS version 4.5 or later, or RHEL or CentOS version 8.2 or later with the <code>solidfire-san</code> driver, ensure that the CHAP authentication algorithm is set to MD5 in <code>/etc/iscsi/iscsid.conf</code>.</p>
+<p>If using RHCOS version 4.5 or later, or other RHEL-compatible Linux distribution, with the <code>solidfire-san</code> driver, ensure that the CHAP authentication algorithm is set to MD5 in <code>/etc/iscsi/iscsid.conf</code>.</p>
 <div class="listingblock">
 <div class="content">
 <pre>sudo sed -i 's/^\(node.session.auth.chap_algs\).*/\1 = MD5/' /etc/iscsi/iscsid.conf</pre>
@@ -1326,7 +1326,7 @@ Ensure <code>etc/multipath.conf</code> contains <code>find_multipaths no</code> 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">iSCSI</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Ubuntu/Debian</p>
+<p>Ubuntu</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
 <ol class="arabic">
