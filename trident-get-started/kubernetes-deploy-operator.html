@@ -1101,7 +1101,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-10 13:32:38 +0000">08/10/2022</time>
+    <time datetime="2022-08-23 14:31:42 +0000">08/23/2022</time>
     
   
 
@@ -1215,7 +1215,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 <p>Add Trident&#8217;s Helm repository:</p>
 <div class="listingblock">
 <div class="content">
-<pre>helm repo add netapp-trident https://netapp.github.io/trident-helm-chart</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">helm repo add netapp-trident https://netapp.github.io/trident-helm-chart</code></pre>
 </div>
 </div>
 </li>
@@ -1224,7 +1224,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 See the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre>helm install &lt;release-name&gt; netapp-trident/trident-operator --version 22.7.0 --namespace &lt;trident-namespace&gt;</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">helm install &lt;release-name&gt; netapp-trident/trident-operator --version 22.4.0 --create-namespace &lt;trident-namespace&gt;</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1234,7 +1234,7 @@ See the following example:</p>
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-If you did not already create a namespace for Trident, you can add the <code>--create-namespace</code> parameter to the <code>helm install</code> command. Helm will then automatically create the namespace for you.
+If you already created a namespace for Trident, the <code>--create-namespace</code> parameter will not create an additional namespace.
 </td>
 </tr>
 </table>
@@ -1260,7 +1260,7 @@ If you did not already create a namespace for Trident, you can add the <code>--c
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ helm install &lt;name&gt; netapp-trident/trident-operator --version 22.7.0 --set tridentDebug=true</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">$ helm install &lt;name&gt; netapp-trident/trident-operator --version 22.7.0 --set tridentDebug=true</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1299,7 +1299,7 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>kubectl version</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl version</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1307,7 +1307,7 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>kubectl auth can-i '*' '*' --all-namespaces</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl auth can-i '*' '*' --all-namespaces</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1315,8 +1315,8 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>kubectl run -i --tty ping --image=busybox --restart=Never --rm -- \
-  ping &lt;management IP&gt;</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl run -i --tty ping --image=busybox --restart=Never --rm -- \
+  ping &lt;management IP&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -1340,9 +1340,9 @@ Beginning with 21.01, the Trident operator is cluster scoped. Using the Trident 
 <p>Download and extract the latest version of the Trident installer bundle from <a href="https://github.com/NetApp/trident/releases/latest" target="_blank" rel="noopener">the <em>Assets</em> section on GitHub</a>.</p>
 <div class="listingblock">
 <div class="content">
-<pre>wget https://github.com/NetApp/trident/releases/download/v22.04.0/trident-installer-22.04.0.tar.gz
+<pre class="highlight"><code class="language-cli" data-lang="cli">wget https://github.com/NetApp/trident/releases/download/v22.04.0/trident-installer-22.04.0.tar.gz
 tar -xf trident-installer-22.04.0.tar.gz
-cd trident-installer</pre>
+cd trident-installer</code></pre>
 </div>
 </div>
 </li>
@@ -1353,7 +1353,7 @@ cd trident-installer</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_post1.16.yaml</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_post1.16.yaml</code></pre>
 </div>
 </div>
 </li>
@@ -1377,7 +1377,7 @@ cd trident-installer</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl apply -f deploy/namespace.yaml</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">$ kubectl apply -f deploy/namespace.yaml</code></pre>
 </div>
 </div>
 </li>
@@ -1391,7 +1391,7 @@ cd trident-installer</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>kubectl kustomize deploy/ &gt; deploy/bundle.yaml</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl kustomize deploy/ &gt; deploy/bundle.yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1399,7 +1399,7 @@ cd trident-installer</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>kubectl create -f deploy/bundle.yaml</pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl create -f deploy/bundle.yaml</code></pre>
 </div>
 </div>
 </li>
@@ -1407,13 +1407,13 @@ cd trident-installer</pre>
 <p>To verify the status of the operator after you have deployed, do the following:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl get deployment -n &lt;operator-namespace&gt;
+<pre class="highlight"><code class="language-cli" data-lang="cli">$ kubectl get deployment -n &lt;operator-namespace&gt;
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 trident-operator   1/1     1            1           3m
 
 $ kubectl get pods -n &lt;operator-namespace&gt;
 NAME                              READY   STATUS             RESTARTS   AGE
-trident-operator-54cb664d-lnjxh   1/1     Running            0          3m</pre>
+trident-operator-54cb664d-lnjxh   1/1     Running            0          3m</code></pre>
 </div>
 </div>
 </li>
@@ -1442,7 +1442,7 @@ There should only be <strong>one instance</strong> of the operator in a Kubernet
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl create -f deploy/crds/tridentorchestrator_cr.yaml
+<pre class="highlight"><code class="language-cli" data-lang="cli">$ kubectl create -f deploy/crds/tridentorchestrator_cr.yaml
 tridentorchestrator.trident.netapp.io/trident created
 
 $ kubectl describe torc trident
@@ -1477,7 +1477,7 @@ Status:
 Events:
     Type Reason Age From Message ---- ------ ---- ---- -------Normal
     Installing 74s trident-operator.netapp.io Installing Trident Normal
-    Installed 67s trident-operator.netapp.io Trident installed</pre>
+    Installed 67s trident-operator.netapp.io Trident installed</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1539,13 +1539,13 @@ exists.</p></td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl get pod -n trident
+<pre class="highlight"><code class="language-cli" data-lang="cli">$ kubectl get pod -n trident
 NAME                                READY   STATUS    RESTARTS   AGE
 trident-csi-7d466bf5c7-v4cpw        5/5     Running   0           1m
 trident-csi-mr6zc                   2/2     Running   0           1m
 trident-csi-xrp7w                   2/2     Running   0           1m
 trident-csi-zh2jt                   2/2     Running   0           1m
-trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</pre>
+trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1553,12 +1553,12 @@ trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ ./tridentctl -n trident version
+<pre class="highlight"><code class="language-cli" data-lang="cli">$ ./tridentctl -n trident version
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
 | 21.04.0        | 21.04.0        |
-+----------------+----------------+</pre>
++----------------+----------------+</code></pre>
 </div>
 </div>
 <div class="paragraph">
