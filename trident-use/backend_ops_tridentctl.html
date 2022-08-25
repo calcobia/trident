@@ -207,7 +207,7 @@
     </li>
     
   </ul>
-</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Perform backend management with <code>tridentctl</code>](https://docs.netapp.com/us-en/trident/trident-use/backend_ops_tridentctl.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-use/backend_ops_tridentctl.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Perform backend management with <code>tridentctl</code>](https://docs.netapp.com/us-en/trident/trident-use/backend_ops_tridentctl.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-use/backend_ops_tridentctl.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -379,6 +379,7 @@
   <!-- Sidebar Column -->
   
   <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/us-en/trident/images/collapse.png" alt="Collapse navigation panel"></button>
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>Available PDFs<span>
@@ -882,175 +883,579 @@
 </script><div class="prod-nav" id="product-nav">
   <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/astra-family/"><img src="/us-en/trident/images/left_arrow.png" alt=""><pre>All Astra documentation</pre></a>
 </div><div class="sidebar-nav-container" id="mysidebardiv">
-  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/trident/index.html">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Trident docs"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/index.html">
         Astra Trident docs
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-rn.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Release notes"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-rn.html">
         Release notes
-      </a></li><li class="subfolders "><a href="#">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concepts"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Concepts</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Astra Trident"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/intro.html">
         Learn about Astra Trident
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP drivers"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/ontap-drivers.html">
         ONTAP drivers
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Provisioning"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/provisioning.html">
         Provisioning
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/snapshots.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Volume snapshots"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/snapshots.html">
         Volume snapshots
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/virtual-storage-pool.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Virtual storage pools"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/virtual-storage-pool.html">
         Virtual storage pools
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/vol-access-groups.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Volume access groups"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/vol-access-groups.html">
         Volume access groups
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Get started</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/quickstart.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Try it out"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/quickstart.html">
         Try it out
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/requirements.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requirements"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/requirements.html">
         Requirements
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deployment overview"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy.html">
         Deployment overview
-      </a></li><li class="subfolders "><a href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy with Trident operator"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
         <div class="na-navbar-padding"> Deploy with Trident operator</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Customize Trident operator deployment"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy.html">
         Customize Trident operator deployment
-      </a></li></ul></li><li class="subfolders "><a href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy with tridentctl"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
         <div class="na-navbar-padding"> Deploy with tridentctl</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy-tridentctl.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Customize tridentctl deployment"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy-tridentctl.html">
         Customize tridentctl deployment
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-postdeployment.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="What's next?"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-postdeployment.html">
         What's next?
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage Astra Trident"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Manage Astra Trident</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-trident.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade Astra Trident"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-trident.html">
         Upgrade Astra Trident
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-operator.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade with the operator"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-operator.html">
         Upgrade with the operator
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-tridentctl.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade with tridentctl"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-tridentctl.html">
         Upgrade with tridentctl
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/uninstall-trident.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Uninstall Astra Trident"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/uninstall-trident.html">
         Uninstall Astra Trident
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/downgrade-trident.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Downgrade Astra Trident"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/downgrade-trident.html">
         Downgrade Astra Trident
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Astra Trident"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Use Astra Trident</div>
       </a>
-      <ul><li class="subfolders "><a href="/us-en/trident/trident-use/backends.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure backends"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/backends.html">
         <div class="na-navbar-padding"> Configure backends</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure an ANF backend"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
         Configure an ANF backend
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/ads.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure an ADS backend"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ads.html">
         Configure an ADS backend
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/gcp.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure a CVS for GCP backend"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/gcp.html">
         Configure a CVS for GCP backend
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/element.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure a NetApp HCI or SolidFire backend"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/element.html">
         Configure a NetApp HCI or SolidFire backend
-      </a></li><li class="subfolders "><a href="/us-en/trident/trident-use/ontap-san.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure a backend with ONTAP SAN drivers"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/ontap-san.html">
         <div class="na-navbar-padding"> Configure a backend with ONTAP SAN drivers</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Preparation"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
         Preparation
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
         Configuration options and examples
-      </a></li></ul></li><li class="subfolders "><a href="/us-en/trident/trident-use/ontap-nas.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure a backend with ONTAP NAS drivers"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/ontap-nas.html">
         <div class="na-navbar-padding"> Configure a backend with ONTAP NAS drivers</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Preparation"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
         Preparation
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
         Configuration options and examples
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx.html">
         Use Astra Trident with Amazon FSx for NetApp ONTAP
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/backend-kubectl.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create backends with kubectl"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/backend-kubectl.html">
         Create backends with kubectl
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/backend_ops_kubectl.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Perform backend management with kubectl"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/backend_ops_kubectl.html">
         Perform backend management with kubectl
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/us-en/trident/trident-use/backend_ops_tridentctl.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Perform backend management with tridentctl"
+      data-li-level="2#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/backend_ops_tridentctl.html">
         Perform backend management with tridentctl
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/backend_options.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Move between backend management options"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/backend_options.html">
         Move between backend management options
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/manage-stor-class.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage storage classes"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/manage-stor-class.html">
         Manage storage classes
-      </a></li><li class="subfolders "><a href="/us-en/trident/trident-use/vol-operations.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Perform volume operations"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/vol-operations.html">
         <div class="na-navbar-padding"> Perform volume operations</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/csi-topology.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use CSI Topology"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/csi-topology.html">
         Use CSI Topology
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/vol-snapshots.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Work with snapshots"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/vol-snapshots.html">
         Work with snapshots
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/vol-expansion.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Expand volumes"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/vol-expansion.html">
         Expand volumes
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/vol-import.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Import volumes"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/vol-import.html">
         Import volumes
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare the worker node"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/worker-node-prep.html">
         Prepare the worker node
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor Astra Trident"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/monitor-trident.html">
         Monitor Astra Trident
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Trident for Docker"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Astra Trident for Docker</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-docker/prereqs-docker.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prerequisites for deployment"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/prereqs-docker.html">
         Prerequisites for deployment
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-docker/deploy-docker.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy Astra Trident"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/deploy-docker.html">
         Deploy Astra Trident
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-docker/upgrade-uninstall-docker.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade or uninstall Trident"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/upgrade-uninstall-docker.html">
         Upgrade or uninstall Trident
-      </a></li><li class="subfolders "><a href="/us-en/trident/trident-docker/volumes-docker.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Work with volumes"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-docker/volumes-docker.html">
         <div class="na-navbar-padding"> Work with volumes</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-docker/volume-driver-options.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Driver-specific volume options"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/volume-driver-options.html">
         Driver-specific volume options
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-docker/collect-logs-docker.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Collect logs"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/collect-logs-docker.html">
         Collect logs
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-docker/multiple-instances-docker.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage multiple Astra Trident instances"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/multiple-instances-docker.html">
         Manage multiple Astra Trident instances
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-docker/stor-config.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage configuration options"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/stor-config.html">
         Storage configuration options
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-docker/known-issues-docker.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Known issues"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/known-issues-docker.html">
         Known issues
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/faq.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FAQs"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/faq.html">
         FAQs
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/get-help.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Support"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/get-help.html">
         Support
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/troubleshooting.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Troubleshooting"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/troubleshooting.html">
         Troubleshooting
-      </a></li><li class="subfolders "><a href="#">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Best practices and recommendations"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Best practices and recommendations</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reco/deploy-reco.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deployment"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/deploy-reco.html">
         Deployment
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reco/storage-config-best-practices.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage configuration"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/storage-config-best-practices.html">
         Storage configuration
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reco/integrate-trident.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Trident integration"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/integrate-trident.html">
         Astra Trident integration
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reco/backup.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data protection"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/backup.html">
         Data protection
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reco/security-reco.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/security-reco.html">
         Security
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reference"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Reference</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/trident-ports.html">
+      <ul>
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Trident ports"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reference/trident-ports.html">
         Astra Trident ports
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/rest-api.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Astra Trident REST API"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reference/rest-api.html">
         Astra Trident REST API
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/trident-cl.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Command-line options"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reference/trident-cl.html">
         Command-line options
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/k8s-netapp.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp products integrated with Kubernetes"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reference/k8s-netapp.html">
         NetApp products integrated with Kubernetes
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/objects.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kubernetes and Astra Trident objects"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reference/objects.html">
         Kubernetes and Astra Trident objects
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="tridentctl commands and options"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reference/tridentctl.html">
         tridentctl commands and options
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Pod Security Standards (PSS) and Security Context Constraints (SCC)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reference/pod-security.html">
         Pod Security Standards (PSS) and Security Context Constraints (SCC)
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Earlier versions"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/earlier-versions.html">
         Earlier versions
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Legal notices"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1069,8 +1474,9 @@
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container --><article class="page-content">
+    <!-- Begin of page container --><article class="page-content" id="main">
       <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/us-en/trident/images/expand.png" alt="Expand navigation panel"></button>
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
