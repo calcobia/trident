@@ -1504,7 +1504,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-27 22:15:28 +0000">04/27/2022</time>
+    <time datetime="2022-08-30 19:29:29 +0000">08/30/2022</time>
     
   
 
@@ -1807,7 +1807,13 @@ Do not use <code>storagePrefix</code> (including the default) for Element backen
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>encryption</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Enable NetApp Volume Encryption, defaults to “false”</p>
+<p>Enables NetApp Volume Encryption (NVE) on the new volume; defaults to <code>false</code>. NVE must be licensed and enabled on the cluster to use this option.</p>
+</div>
+<div class="paragraph">
+<p>If NAE is enabled on the backend, any volume provisioned in Astra Trident will be NAE enabled.</p>
+</div>
+<div class="paragraph">
+<p>For more information, refer to: <a href="../trident-reco/security-reco.html">How Astra Trident works with NVE and NAE</a>.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>true</p>

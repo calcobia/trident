@@ -1504,7 +1504,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-01 14:51:04 +0000">08/01/2022</time>
+    <time datetime="2022-08-30 19:29:29 +0000">08/30/2022</time>
     
   
 
@@ -1855,7 +1855,11 @@ Astra Trident sets provisioning labels in the “Comments” field of all volume
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>encryption</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enable NetApp volume encryption</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable NetApp Volume Encryption (NVE) on the new volume; defaults to <code>false</code>. NVE must be licensed and enabled on the cluster to use this option.<br>
+<br>
+If NAE is enabled on the backend, any volume provisioned in Astra Trident will be NAE enabled.<br>
+<br>
+For more information, refer to: <a href="../trident-reco/security-reco.html">How Astra Trident works with NVE and NAE</a>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">“false”</p></td>
 </tr>
 <tr>

@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Use the recommendations listed here to ensure that your Astra Trident installation is secure.">
-  <meta name="keywords" content=" security, chap, trident, namespace"><!-- Icons -->
+  <meta name="keywords" content=" security, chap, trident, namespace, nve, nae, encryption, volume encryption, aggregate encryption"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -1504,11 +1504,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-09-18 05:13:22 +0000">09/18/2021</time>
+    <time datetime="2022-08-30 19:38:29 +0000">08/30/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1541,7 +1549,7 @@ You should ensure that you allow only administrators access to the Astra Trident
 </div>
 <div class="paragraph">
 <p>For ONTAP backends that use the SAN storage drivers, Astra Trident can set up bidirectional CHAP and manage CHAP usernames and secrets through <code>tridentctl</code>.<br>
-See <a href="../trident-use/ontap-san-prep.html" target="_blank" rel="noopener">here</a> to understand how Astra Trident configures CHAP on ONTAP backends.</p>
+See <a href="../trident-use/ontap-san-prep.html">here</a> to understand how Astra Trident configures CHAP on ONTAP backends.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1577,6 +1585,68 @@ The volumes that are created by CSI Trident are not associated with any Volume A
 </div>
 <div class="paragraph">
 <p>In the non-CSI frontend, the attachment of volumes as devices on the worker nodes is handled by Kubernetes. After volume creation, Astra Trident makes an API call to the NetApp HCI/SolidFire system to retrieve the secrets if the secret for that tenant does not already exist. Astra Trident then passes the secrets on to Kubernetes. The kubelet located on each node accesses the secrets via the Kubernetes API and uses them to run/enable CHAP between each node accessing the volume and the NetApp HCI/SolidFire system where the volumes are located.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-astra-trident-works-with-nve-and-nae">How Astra Trident works with NVE and NAE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>NetApp ONTAP provides data-at-rest encryption to protect sensitive data in the event a disk is stolen, returned, or repurposed. For details, refer to <a href="https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html" target="_blank" rel="noopener">Configure NetApp Volume Encryption overview</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If NAE is enabled on the backend, any volume provisioned in Astra Trident will be NAE-enabled.</p>
+</li>
+<li>
+<p>If NAE is not enabled on the backend, any volume provisioned in Astra Trident will be NVE-enabled unless you set the NVE encryption flag to <code>false</code> in the backend configuration.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Volumes created in Astra Trident on an NAE-enabled backend must be NVE or NAE encrypted.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can set the NVE encryption flag to <code>true</code> in the Trident backend configuration to override the NAE encryption and use a specific encryption key on a per volume basis.</p>
+</li>
+<li>
+<p>Setting the NVE encryption flag to <code>false</code> on an NAE-enabled backend will create an NAE-enabled volume. You cannot disable NAE encryption by setting the NVE encryption flag to <code>false</code>.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can manually create an NVE volume in Astra Trident by explicitly setting the NVE encryption flag to <code>true</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information on backend configuration options, refer to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/trident/trident-use/ontap-san-examples.html">ONTAP SAN configuration options</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/trident/trident-use/ontap-nas-examples.html">ONTAP NAS confiruation options</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
