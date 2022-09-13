@@ -1504,7 +1504,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 17:35:24 +0000">04/28/2022</time>
+    <time datetime="2022-09-13 15:12:52 +0000">09/13/2022</time>
     
   
 
@@ -1676,7 +1676,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[4]</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[3]</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[3]</sup></p></td>
 </tr>
 </tbody>
@@ -2055,7 +2055,7 @@ Kubernetes in-tree provisioners do not support volume resize operations for NFS 
 <div class="sect2">
 <h3 id="expand-volumes">Expand volumes</h3>
 <div class="paragraph">
-<p>Astra Trident supports resizing NFS and iSCSI PVs. This enables users to resize their volumes directly through the Kubernetes layer. Volume expansion is possible for all major NetApp storage platforms, including ONTAP, SolidFire/NetApp HCI and Cloud Volumes Service backends. To allow possible expansion later, set <code>allowVolumeExpansion</code> to <code>true</code> in your StorageClass associated with the volume. Whenever the Persistent Volume needs to be resized, edit the <code>spec.resources.requests.storage</code> annotation in the Persistent Volume Claim to the required volume size. Trident will utomatically take care of resizing the volume on the storage cluster.</p>
+<p>Astra Trident supports resizing NFS and iSCSI PVs. This enables users to resize their volumes directly through the Kubernetes layer. Volume expansion is possible for all major NetApp storage platforms, including ONTAP, SolidFire/NetApp HCI and Cloud Volumes Service backends. To allow possible expansion later, set <code>allowVolumeExpansion</code> to <code>true</code> in your StorageClass associated with the volume. Whenever the Persistent Volume needs to be resized, edit the <code>spec.resources.requests.storage</code> annotation in the Persistent Volume Claim to the required volume size. Trident will automatically take care of resizing the volume on the storage cluster.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2234,7 +2234,7 @@ The tables below only contain the variables which are relevant for storage confi
 <h2 id="metrics-service">Metrics service</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The metrics service provides valuable information to the administrator regarding the status, resource utilization, and availability of the OpenShift cluster. It is also necessary for pod autoscale functionality and many organizations use data from the metrics service for their charge back and/or show back applications.</p>
+<p>The metrics service provides valuable information to the administrator regarding the status, resource utilization, and availability of the OpenShift cluster. It is also necessary for pod auto-scale functionality and many organizations use data from the metrics service for their charge back and/or show back applications.</p>
 </div>
 <div class="paragraph">
 <p>Like with the logging service, and OpenShift as a whole, Ansible is used to deploy the metrics service. Also, like the logging service, the metrics service can be deployed during an initial setup of the cluster or after it’s operational using the component installation method. The following tables contain the variables which are important when configuring persistent storage for the metrics service.</p>
