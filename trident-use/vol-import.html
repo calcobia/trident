@@ -1504,7 +1504,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 14:57:40 +0000">04/28/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
@@ -1514,6 +1514,14 @@
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1635,7 +1643,7 @@ spec:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl import volume &lt;backendName&gt; &lt;volumeName&gt; -f &lt;path-to-pvc-file&gt;</pre>
+<pre>tridentctl import volume &lt;backendName&gt; &lt;volumeName&gt; -f &lt;path-to-pvc-file&gt;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1690,7 +1698,7 @@ The <code>ontap-nas</code> driver cannot import and manage qtrees. The <code>ont
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl import volume ontap_nas managed_volume -f &lt;path-to-pvc-file&gt;
+<pre>tridentctl import volume ontap_nas managed_volume -f &lt;path-to-pvc-file&gt;
 
 +------------------------------------------+---------+---------------+----------+--------------------------------------+--------+---------+
 |                   NAME                   |  SIZE   | STORAGE CLASS | PROTOCOL |             BACKEND UUID             | STATE  | MANAGED |
@@ -1704,7 +1712,7 @@ The <code>ontap-nas</code> driver cannot import and manage qtrees. The <code>ont
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl import volume nas_blog unmanaged_volume -f &lt;path-to-pvc-file&gt; --no-manage
+<pre>tridentctl import volume nas_blog unmanaged_volume -f &lt;path-to-pvc-file&gt; --no-manage
 
 +------------------------------------------+---------+---------------+----------+--------------------------------------+--------+---------+
 |                   NAME                   |  SIZE   | STORAGE CLASS | PROTOCOL |             BACKEND UUID             | STATE  | MANAGED |
@@ -1786,7 +1794,7 @@ It is recommended to import volumes that do not have existing active connections
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl import volume ontapsan_san_default ontap-san-managed -f pvc-basic-import.yaml -n trident -d
+<pre>tridentctl import volume ontapsan_san_default ontap-san-managed -f pvc-basic-import.yaml -n trident -d
 
 +------------------------------------------+--------+---------------+----------+--------------------------------------+--------+---------+
 |                   NAME                   |  SIZE  | STORAGE CLASS | PROTOCOL |             BACKEND UUID             | STATE  | MANAGED |
@@ -1818,7 +1826,7 @@ An ONTAP volume must be of type rw to be imported by Astra Trident. If a volume 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl import volume element_default element-managed -f pvc-basic-import.yaml -n trident -d
+<pre>tridentctl import volume element_default element-managed -f pvc-basic-import.yaml -n trident -d
 
 +------------------------------------------+--------+---------------+----------+--------------------------------------+--------+---------+
 |                   NAME                   |  SIZE  | STORAGE CLASS | PROTOCOL |             BACKEND UUID             | STATE  | MANAGED |
@@ -1861,7 +1869,7 @@ To import a volume backed by the NetApp Cloud Volumes Service in GCP, identify t
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl import volume gcpcvs_YEppr adroit-jolly-swift -f &lt;path-to-pvc-file&gt; -n trident
+<pre>tridentctl import volume gcpcvs_YEppr adroit-jolly-swift -f &lt;path-to-pvc-file&gt; -n trident
 
 +------------------------------------------+--------+---------------+----------+--------------------------------------+--------+---------+
 |                   NAME                   |  SIZE  | STORAGE CLASS | PROTOCOL |             BACKEND UUID             | STATE  | MANAGED |
@@ -1892,7 +1900,7 @@ The volume path is the portion of the volume’s export path after the :/. For e
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl import volume azurenetappfiles_40517 importvol1 -f &lt;path-to-pvc-file&gt; -n trident
+<pre>tridentctl import volume azurenetappfiles_40517 importvol1 -f &lt;path-to-pvc-file&gt; -n trident
 
 +------------------------------------------+---------+---------------+----------+--------------------------------------+--------+---------+
 |                   NAME                   |  SIZE   | STORAGE CLASS | PROTOCOL |             BACKEND UUID             | STATE  | MANAGED |

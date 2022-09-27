@@ -1502,11 +1502,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-27 22:15:28 +0000">04/27/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
     <img  class="avatar avatar-small"
           alt="juliantap"
@@ -1654,7 +1662,7 @@ When using the <code>solidfire-san</code> driver, the above example deletes and 
 <h3 id="example">Example</h3>
 <div class="listingblock">
 <div class="content">
-<pre>[me@host ~]$ docker volume inspect firstVolume
+<pre>docker volume inspect firstVolume
 
 [
     {
@@ -1675,14 +1683,14 @@ When using the <code>solidfire-san</code> driver, the above example deletes and 
     }
 ]
 
-[me@host ~]$ docker volume create -d ontap-nas --name clonedVolume -o from=firstVolume
+docker volume create -d ontap-nas --name clonedVolume -o from=firstVolume
 clonedVolume
 
-[me@host ~]$ docker volume rm clonedVolume
-[me@host ~]$ docker volume create -d ontap-nas --name volFromSnap -o from=firstVolume -o fromSnapshot=hourly.2017-02-10_1505
+docker volume rm clonedVolume
+docker volume create -d ontap-nas --name volFromSnap -o from=firstVolume -o fromSnapshot=hourly.2017-02-10_1505
 volFromSnap
 
-[me@host ~]$ docker volume rm volFromSnap</pre>
+docker volume rm volFromSnap</pre>
 </div>
 </div>
 </div>

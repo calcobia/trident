@@ -1504,11 +1504,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-27 22:15:28 +0000">04/27/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
     <img  class="avatar avatar-small"
           alt="juliantap"
@@ -1667,7 +1675,7 @@ Backends that were created with <code>tridentctl</code> do not have an associate
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl -n trident create -f backend-tbc-ontap-san-secret.yaml
+<pre>kubectl -n trident create -f backend-tbc-ontap-san-secret.yaml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -1809,7 +1817,7 @@ stringData:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl -n trident create -f backend-tbc-ontap-san.yaml</pre>
+<pre>kubectl -n trident create -f backend-tbc-ontap-san.yaml</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1839,7 +1847,7 @@ spec:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl -n trident get tbc backend-tbc-ontap-san
+<pre>kubectl -n trident get tbc backend-tbc-ontap-san
 NAME                    BACKEND NAME          BACKEND UUID                           PHASE   STATUS
 backend-tbc-ontap-san   ontap-san-backend     8d24fce7-6f60-4d4a-8ef6-bab2699e6ab8   Bound   Success</pre>
 </div>
@@ -1906,7 +1914,7 @@ backend-tbc-ontap-san   ontap-san-backend   8d24fce7-6f60-4d4a-8ef6-bab2699e6ab8
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl -n trident get tbc backend-tbc-ontap-san -o yaml</pre>
+<pre>kubectl -n trident get tbc backend-tbc-ontap-san -o yaml</pre>
 </div>
 </div>
 <div class="listingblock">

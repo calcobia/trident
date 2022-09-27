@@ -1504,11 +1504,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-15 01:43:27 +0000">10/15/2021</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1583,14 +1591,14 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl get backend ontap-nas-backend -n trident
+<pre>tridentctl get backend ontap-nas-backend -n trident
 +---------------------+----------------+--------------------------------------+--------+---------+
 |          NAME       | STORAGE DRIVER |                 UUID                 | STATE  | VOLUMES |
 +---------------------+----------------+--------------------------------------+--------+---------+
 | ontap-nas-backend   | ontap-nas      | 52f2eb10-e4c6-4160-99fc-96b3be5ab5d7 | online |      25 |
 +---------------------+----------------+--------------------------------------+--------+---------+
 
-$ cat ontap-nas-backend.json
+cat ontap-nas-backend.json
 
 {
     "version": 1,
@@ -1639,7 +1647,7 @@ $ cat ontap-nas-backend.json
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ cat tbc-ontap-nas-backend-secret.yaml
+<pre>cat tbc-ontap-nas-backend-secret.yaml
 
 apiVersion: v1
 kind: Secret
@@ -1650,7 +1658,7 @@ stringData:
   username: cluster-admin
   passWord: admin-password
 
-$ kubectl create -f tbc-ontap-nas-backend-secret.yaml -n trident
+kubectl create -f tbc-ontap-nas-backend-secret.yaml -n trident
 secret/backend-tbc-ontap-san-secret created</pre>
 </div>
 </div>
@@ -1681,7 +1689,7 @@ secret/backend-tbc-ontap-san-secret created</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ cat backend-tbc-ontap-nas.yaml
+<pre>cat backend-tbc-ontap-nas.yaml
 apiVersion: trident.netapp.io/v1
 kind: TridentBackendConfig
 metadata:
@@ -1719,7 +1727,7 @@ spec:
       encryption: 'false'
       unixPermissions: '0775'
 
-$ kubectl create -f backend-tbc-ontap-nas.yaml -n trident
+kubectl create -f backend-tbc-ontap-nas.yaml -n trident
 tridentbackendconfig.trident.netapp.io/tbc-ontap-nas-backend created</pre>
 </div>
 </div>
@@ -1731,12 +1739,12 @@ tridentbackendconfig.trident.netapp.io/tbc-ontap-nas-backend created</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl -n trident get tbc tbc-ontap-nas-backend -n trident
+<pre>kubectl -n trident get tbc tbc-ontap-nas-backend -n trident
 NAME                   BACKEND NAME          BACKEND UUID                           PHASE   STATUS
 tbc-ontap-nas-backend  ontap-nas-backend     52f2eb10-e4c6-4160-99fc-96b3be5ab5d7   Bound   Success
 
 #confirm that no new backends were created (i.e., TridentBackendConfig did not end up creating a new backend)
-$ tridentctl get backend -n trident
+tridentctl get backend -n trident
 +---------------------+----------------+--------------------------------------+--------+---------+
 |          NAME       | STORAGE DRIVER |                 UUID                 | STATE  | VOLUMES |
 +---------------------+----------------+--------------------------------------+--------+---------+
@@ -1763,11 +1771,11 @@ $ tridentctl get backend -n trident
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl get tbc backend-tbc-ontap-san -n trident -o wide
+<pre>kubectl get tbc backend-tbc-ontap-san -n trident -o wide
 NAME                    BACKEND NAME        BACKEND UUID                           PHASE   STATUS    STORAGE DRIVER   DELETION POLICY
 backend-tbc-ontap-san   ontap-san-backend   81abcb27-ea63-49bb-b606-0a5315ac5f82   Bound   Success   ontap-san        delete
 
-$ tridentctl get backend ontap-san-backend -n trident
+tridentctl get backend ontap-san-backend -n trident
 +-------------------+----------------+--------------------------------------+--------+---------+
 |       NAME        | STORAGE DRIVER |                 UUID                 | STATE  | VOLUMES |
 +-------------------+----------------+--------------------------------------+--------+---------+
@@ -1786,16 +1794,16 @@ $ tridentctl get backend ontap-san-backend -n trident
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl get tbc backend-tbc-ontap-san -n trident -o wide
+<pre>kubectl get tbc backend-tbc-ontap-san -n trident -o wide
 NAME                    BACKEND NAME        BACKEND UUID                           PHASE   STATUS    STORAGE DRIVER   DELETION POLICY
 backend-tbc-ontap-san   ontap-san-backend   81abcb27-ea63-49bb-b606-0a5315ac5f82   Bound   Success   ontap-san        delete
 
 # Patch value of deletionPolicy to retain
-$ kubectl patch tbc backend-tbc-ontap-san --type=merge -p '{"spec":{"deletionPolicy":"retain"}}' -n trident
+kubectl patch tbc backend-tbc-ontap-san --type=merge -p '{"spec":{"deletionPolicy":"retain"}}' -n trident
 tridentbackendconfig.trident.netapp.io/backend-tbc-ontap-san patched
 
 #Confirm the value of deletionPolicy
-$ kubectl get tbc backend-tbc-ontap-san -n trident -o wide
+kubectl get tbc backend-tbc-ontap-san -n trident -o wide
 NAME                    BACKEND NAME        BACKEND UUID                           PHASE   STATUS    STORAGE DRIVER   DELETION POLICY
 backend-tbc-ontap-san   ontap-san-backend   81abcb27-ea63-49bb-b606-0a5315ac5f82   Bound   Success   ontap-san        retain</pre>
 </div>
@@ -1820,10 +1828,10 @@ Do not proceed to the next step unless <code>deletionPolicy</code> is set to <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl delete tbc backend-tbc-ontap-san -n trident
+<pre>kubectl delete tbc backend-tbc-ontap-san -n trident
 tridentbackendconfig.trident.netapp.io "backend-tbc-ontap-san" deleted
 
-$ tridentctl get backend ontap-san-backend -n trident
+tridentctl get backend ontap-san-backend -n trident
 +-------------------+----------------+--------------------------------------+--------+---------+
 |       NAME        | STORAGE DRIVER |                 UUID                 | STATE  | VOLUMES |
 +-------------------+----------------+--------------------------------------+--------+---------+

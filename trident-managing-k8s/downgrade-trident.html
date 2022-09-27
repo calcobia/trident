@@ -1504,11 +1504,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-28 20:00:09 +0000">03/28/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
     <img  class="avatar avatar-small"
           alt="juliantap"
@@ -1614,12 +1622,12 @@ Make sure the <code>tridentorchestrator</code> is deleted.</p>
 <div class="listingblock">
 <div class="content">
 <pre>#Check to see if there are any tridentorchestrators present
-$ kubectl get torc
+kubectl get torc
 NAME        AGE
 trident     20h
 
 #Looks like there is a tridentorchestrator that needs deleting
-$ kubectl delete torc trident
+kubectl delete torc trident
 tridentorchestrator.trident.netapp.io "trident" deleted</pre>
 </div>
 </div>
@@ -1632,10 +1640,14 @@ tridentorchestrator.trident.netapp.io "trident" deleted</pre>
 <div class="listingblock">
 <div class="content">
 <pre>#Check to see if ``tridentorchestrators.trident.netapp.io`` CRD is present and delete it.
-$ kubectl get crd tridentorchestrators.trident.netapp.io
+
+kubectl get crd tridentorchestrators.trident.netapp.io
+
 NAME                                     CREATED AT
 tridentorchestrators.trident.netapp.io   2021-01-21T21:11:37Z
-$ kubectl delete crd tridentorchestrators.trident.netapp.io
+
+kubectl delete crd tridentorchestrators.trident.netapp.io
+
 customresourcedefinition.apiextensions.k8s.io "tridentorchestrators.trident.netapp.io" deleted</pre>
 </div>
 </div>
@@ -1656,7 +1668,7 @@ customresourcedefinition.apiextensions.k8s.io "tridentorchestrators.trident.neta
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ helm rollback trident [revision #]</pre>
+<pre>helm rollback trident [revision #]</pre>
 </div>
 </div>
 </div>
@@ -1703,14 +1715,14 @@ Before beginning the downgrade, you should take a snapshot of your Kubernetes cl
 <p>Uninstall Astra Trident with the existing <code>tridentctl</code> binary.  In this case, you will uninstall with the 21.07 binary.</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl version -n trident
+<pre>tridentctl version -n trident
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
 | 21.07.0        | 21.07.0        |
 +----------------+----------------+
 
-$ tridentctl uninstall -n trident
+tridentctl uninstall -n trident
 INFO Deleted Trident deployment.
 INFO Deleted Trident daemonset.
 INFO Deleted Trident service.
@@ -1728,8 +1740,8 @@ INFO Trident uninstallation succeeded.</pre>
 <p>After this is complete, obtain the Trident binary for the desired version (in this example, 20.07), and use it to install Astra Trident. You can generate custom YAMLs for a <a href="../trident-get-started/kubernetes-customize-deploy-tridentctl.html" target="_blank" rel="noopener">customized installation</a> if needed.</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ cd 20.07/trident-installer/
-$ ./tridentctl install -n trident-ns
+<pre>cd 20.07/trident-installer/
+./tridentctl install -n trident-ns
 INFO Created installer service account.            serviceaccount=trident-installer
 INFO Created installer cluster role.               clusterrole=trident-installer
 INFO Created installer cluster role binding.       clusterrolebinding=trident-installer

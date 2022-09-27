@@ -1504,11 +1504,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-09 20:24:13 +0000">06/09/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
     <img  class="avatar avatar-small"
           alt="juliantap"
@@ -1563,7 +1571,7 @@
 Use the <code>etcdctl snapshot restore</code> command to restore a specific snapshot taken to the <code>/var/lib/etcd</code> folder. After restoring, confirm if the <code>/var/lib/etcd</code> folder has been populated with the <code>member</code> folder. The following is an example of <code>etcdctl snapshot restore</code> command:</p>
 <div class="listingblock">
 <div class="content">
-<pre># etcdctl snapshot restore '/backup/etcd-snapshot-latest.db' ; mv /default.etcd/member/ /var/lib/etcd/</pre>
+<pre>etcdctl snapshot restore '/backup/etcd-snapshot-latest.db' ; mv /default.etcd/member/ /var/lib/etcd/</pre>
 </div>
 </div>
 </li>

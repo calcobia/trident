@@ -1502,7 +1502,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-22 19:15:37 +0000">08/22/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
@@ -1512,6 +1512,14 @@
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1661,7 +1669,7 @@ If you already created a namespace for Trident, the <code>--create-namespace</co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">$ helm install &lt;name&gt; netapp-trident/trident-operator --version 22.7.0 --set tridentDebug=true</code></pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">helm install &lt;name&gt; netapp-trident/trident-operator --version 22.7.0 --set tridentDebug=true</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1778,7 +1786,7 @@ cd trident-installer</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">$ kubectl apply -f deploy/namespace.yaml</code></pre>
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl apply -f deploy/namespace.yaml</code></pre>
 </div>
 </div>
 </li>
@@ -1808,11 +1816,11 @@ cd trident-installer</code></pre>
 <p>To verify the status of the operator after you have deployed, do the following:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">$ kubectl get deployment -n &lt;operator-namespace&gt;
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl get deployment -n &lt;operator-namespace&gt;
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 trident-operator   1/1     1            1           3m
 
-$ kubectl get pods -n &lt;operator-namespace&gt;
+kubectl get pods -n &lt;operator-namespace&gt;
 NAME                              READY   STATUS             RESTARTS   AGE
 trident-operator-54cb664d-lnjxh   1/1     Running            0          3m</code></pre>
 </div>
@@ -1843,10 +1851,10 @@ There should only be <strong>one instance</strong> of the operator in a Kubernet
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">$ kubectl create -f deploy/crds/tridentorchestrator_cr.yaml
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl create -f deploy/crds/tridentorchestrator_cr.yaml
 tridentorchestrator.trident.netapp.io/trident created
 
-$ kubectl describe torc trident
+kubectl describe torc trident
 Name:        trident
 Namespace:
 Labels:      &lt;none&gt;
@@ -1940,7 +1948,7 @@ exists.</p></td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">$ kubectl get pod -n trident
+<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl get pod -n trident
 NAME                                READY   STATUS    RESTARTS   AGE
 trident-csi-7d466bf5c7-v4cpw        5/5     Running   0           1m
 trident-csi-mr6zc                   2/2     Running   0           1m
@@ -1954,7 +1962,7 @@ trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</code></pre
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">$ ./tridentctl -n trident version
+<pre class="highlight"><code class="language-cli" data-lang="cli">./tridentctl -n trident version
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+

@@ -1504,7 +1504,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-22 16:23:54 +0000">06/22/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
@@ -1514,6 +1514,14 @@
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1673,7 +1681,7 @@ base64 -w 0 trustedca.pem &gt;&gt; trustedca_base64</pre>
 <p>Create backend using the values obtained from the previous step.</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ cat cert-backend.json
+<pre>cat cert-backend.json
 {
 "version": 1,
 "storageDriverName": "ontap-san",
@@ -1687,7 +1695,7 @@ base64 -w 0 trustedca.pem &gt;&gt; trustedca_base64</pre>
 "storagePrefix": "myPrefix_"
 }
 
-$ tridentctl create backend -f cert-backend.json -n trident
+tridentctl create backend -f cert-backend.json -n trident
 +------------+----------------+--------------------------------------+--------+---------+
 |    NAME    | STORAGE DRIVER |                 UUID                 | STATE  | VOLUMES |
 +------------+----------------+--------------------------------------+--------+---------+
@@ -1706,7 +1714,7 @@ $ tridentctl create backend -f cert-backend.json -n trident
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ cat cert-backend-updated.json
+<pre>cat cert-backend-updated.json
 {
 "version": 1,
 "storageDriverName": "ontap-san",
@@ -1720,7 +1728,7 @@ $ tridentctl create backend -f cert-backend.json -n trident
 }
 
 #Update backend with tridentctl
-$ tridentctl update backend SanBackend -f cert-backend-updated.json -n trident
+tridentctl update backend SanBackend -f cert-backend-updated.json -n trident
 +------------+----------------+--------------------------------------+--------+---------+
 |    NAME    | STORAGE DRIVER |                 UUID                 | STATE  | VOLUMES |
 +------------+----------------+--------------------------------------+--------+---------+
@@ -1877,7 +1885,7 @@ When updating the CHAP secrets for a backend, you must use <code>tridentctl</cod
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ cat backend-san.json
+<pre>cat backend-san.json
 {
     "version": 1,
     "storageDriverName": "ontap-san",
@@ -1894,7 +1902,7 @@ When updating the CHAP secrets for a backend, you must use <code>tridentctl</cod
     "chapUsername": "uh2aNCLSd6cNwxyz",
 }
 
-$ ./tridentctl update backend ontap_san_chap -f backend-san.json -n trident
+./tridentctl update backend ontap_san_chap -f backend-san.json -n trident
 +----------------+----------------+--------------------------------------+--------+---------+
 |   NAME         | STORAGE DRIVER |                 UUID                 | STATE  | VOLUMES |
 +----------------+----------------+--------------------------------------+--------+---------+

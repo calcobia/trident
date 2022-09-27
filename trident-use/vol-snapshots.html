@@ -1504,7 +1504,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-20 14:10:46 +0000">07/20/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
@@ -1514,6 +1514,14 @@
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1564,7 +1572,7 @@ This feature is available from Kubernetes 1.17 (beta) and is GA from 1.20. To un
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ cat snapshot-setup.sh
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">cat snapshot-setup.sh
 #!/bin/bash
 # Create volume snapshot CRDs
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
@@ -1579,7 +1587,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snaps
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ cat snapshot-setup.sh
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">cat snapshot-setup.sh
 #!/bin/bash
 # Create volume snapshot CRDs
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v3.0.3/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
@@ -1663,7 +1671,7 @@ CSI Snapshotter provides a <a href="https://github.com/kubernetes-csi/external-s
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ cat snap-sc.yaml
+<pre>cat snap-sc.yaml
 #Use apiVersion v1 for Kubernetes 1.20 and above. For Kubernetes 1.19, use apiVersion v1beta1.
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshotClass
@@ -1683,7 +1691,7 @@ deletionPolicy: Delete</pre>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>$ cat snap.yaml
+<pre>cat snap.yaml
 #Use apiVersion v1 for Kubernetes 1.20 and above. For Kubernetes 1.19, use apiVersion v1beta1.
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshot
@@ -1700,10 +1708,10 @@ spec:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl create -f snap.yaml
+<pre>kubectl create -f snap.yaml
 volumesnapshot.snapshot.storage.k8s.io/pvc1-snap created
 
-$ kubectl get volumesnapshots
+kubectl get volumesnapshots
 NAME                   AGE
 pvc1-snap              50s</pre>
 </div>
@@ -1716,7 +1724,7 @@ pvc1-snap              50s</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl describe volumesnapshots pvc1-snap
+<pre>kubectl describe volumesnapshots pvc1-snap
 Name:         pvc1-snap
 Namespace:    default
 .
@@ -1750,7 +1758,7 @@ Status:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ cat pvc-from-snap.yaml
+<pre>cat pvc-from-snap.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:

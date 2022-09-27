@@ -1504,7 +1504,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-20 17:59:05 +0000">07/20/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
@@ -1514,6 +1514,14 @@
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1574,7 +1582,7 @@ The <code>WaitForFirstConsumer</code> binding mode does not require topology lab
 <p>A Kubernetes cluster running 1.19 -1.24.</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl version
+<pre>kubectl version
 Client Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.3", GitCommit:"1e11e4a2108024935ecfcb2912226cedeafd99df", GitTreeState:"clean", BuildDate:"2020-10-14T12:50:19Z", GoVersion:"go1.15.2", Compiler:"gc", Platform:"linux/amd64"}
 Server Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.3", GitCommit:"1e11e4a2108024935ecfcb2912226cedeafd99df", GitTreeState:"clean", BuildDate:"2020-10-14T12:41:49Z", GoVersion:"go1.15.2", Compiler:"gc", Platform:"linux/amd64"}</pre>
 </div>
@@ -1584,7 +1592,7 @@ Server Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.3", GitCom
 <p>Nodes in the cluster should have labels that introduce topology awareness (<code>topology.kubernetes.io/region</code> and <code>topology.kubernetes.io/zone</code>). These labels <strong>should be present on nodes in the cluster</strong> before Astra Trident is installed for Astra Trident to be topology aware.</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl get nodes -o=jsonpath='{range .items[*]}[{.metadata.name}, {.metadata.labels}]{"\n"}{end}' | grep --color "topology.kubernetes.io"
+<pre>kubectl get nodes -o=jsonpath='{range .items[*]}[{.metadata.name}, {.metadata.labels}]{"\n"}{end}' | grep --color "topology.kubernetes.io"
 [node1, {"beta.kubernetes.io/arch":"amd64","beta.kubernetes.io/os":"linux","kubernetes.io/arch":"amd64","kubernetes.io/hostname":"node1","kubernetes.io/os":"linux","node-role.kubernetes.io/master":"","topology.kubernetes.io/region":"us-east1","topology.kubernetes.io/zone":"us-east1-a"}]
 [node2, {"beta.kubernetes.io/arch":"amd64","beta.kubernetes.io/os":"linux","kubernetes.io/arch":"amd64","kubernetes.io/hostname":"node2","kubernetes.io/os":"linux","node-role.kubernetes.io/worker":"","topology.kubernetes.io/region":"us-east1","topology.kubernetes.io/zone":"us-east1-b"}]
 [node3, {"beta.kubernetes.io/arch":"amd64","beta.kubernetes.io/os":"linux","kubernetes.io/arch":"amd64","kubernetes.io/hostname":"node3","kubernetes.io/os":"linux","node-role.kubernetes.io/worker":"","topology.kubernetes.io/region":"us-east1","topology.kubernetes.io/zone":"us-east1-c"}]</pre>
@@ -1740,12 +1748,12 @@ storageClassName: netapp-san-us-east1</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl create -f pvc.yaml
+<pre>kubectl create -f pvc.yaml
 persistentvolumeclaim/pvc-san created
-$ kubectl get pvc
+kubectl get pvc
 NAME      STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS          AGE
 pvc-san   Pending                                      netapp-san-us-east1   2s
-$ kubectl describe pvc
+kubectl describe pvc
 Name:          pvc-san
 Namespace:     default
 StorageClass:  netapp-san-us-east1
@@ -1819,10 +1827,10 @@ spec:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl get pods -o wide
+<pre>kubectl get pods -o wide
 NAME        READY   STATUS    RESTARTS   AGE   IP               NODE              NOMINATED NODE   READINESS GATES
 app-pod-1   1/1     Running   0          19s   192.168.25.131   node2             &lt;none&gt;           &lt;none&gt;
-$ kubectl get pvc -o wide
+kubectl get pvc -o wide
 NAME      STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS          AGE   VOLUMEMODE
 pvc-san   Bound    pvc-ecb1e1a0-840c-463b-8b65-b3d033e2e62b   300Mi      RWO            netapp-san-us-east1   48s   Filesystem</pre>
 </div>

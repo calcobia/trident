@@ -1504,7 +1504,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-09 16:44:58 +0000">06/09/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
@@ -1514,6 +1514,14 @@
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1572,7 +1580,7 @@ For a comprehensive list of troubleshooting articles, see the <a href="https://k
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre># kubectl patch torc trident -n &lt;namespace&gt; --type=merge -p '{"spec":{"debug":true}}'</pre>
+<pre>kubectl patch torc trident -n &lt;namespace&gt; --type=merge -p '{"spec":{"debug":true}}'</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1586,7 +1594,7 @@ For a comprehensive list of troubleshooting articles, see the <a href="https://k
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>$ helm upgrade &lt;name&gt; trident-operator-21.07.1-custom.tgz --set tridentDebug=true`</pre>
+<pre>helm upgrade &lt;name&gt; trident-operator-21.07.1-custom.tgz --set tridentDebug=true`</pre>
 </div>
 </div>
 </dd>
@@ -1671,7 +1679,7 @@ should take a look at the <code>TridentOrchestrator</code> status.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl describe torc trident-2
+<pre>kubectl describe torc trident-2
 Name:         trident-2
 Namespace:
 Labels:       &lt;none&gt;
@@ -1716,7 +1724,7 @@ create.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl get pods -n trident
+<pre>kubectl get pods -n trident
 
 NAME                                READY   STATUS             RESTARTS   AGE
 trident-csi-4p5kq                   1/2     ImagePullBackOff   0          5m18s

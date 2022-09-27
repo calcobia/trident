@@ -1504,11 +1504,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-09-19 22:15:24 +0000">09/19/2021</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1530,12 +1538,12 @@
 <div class="listingblock">
 <div class="content">
 <pre>#List the Helm release corresponding to the Astra Trident install.
-$ helm ls -n trident
+helm ls -n trident
 NAME          NAMESPACE       REVISION        UPDATED                                 STATUS          CHART                           APP VERSION
 trident       trident         1               2021-04-20 00:26:42.417764794 +0000 UTC deployed        trident-operator-21.07.1        21.07.1
 
 #Uninstall Helm release to remove Trident
-$ helm uninstall trident -n trident
+helm uninstall trident -n trident
 release "trident" uninstalled</pre>
 </div>
 </div>
@@ -1553,7 +1561,7 @@ release "trident" uninstalled</pre>
 <p><strong>Edit <code>TridentOrchestrator</code> to set the uninstall flag:</strong> You can edit <code>TridentOrchestrator</code> and set <code>spec.uninstall=true</code>. Edit the <code>TridentOrchestrator</code> CR and set the <code>uninstall</code> flag as shown below:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$  kubectl patch torc &lt;trident-orchestrator-name&gt; --type=merge -p '{"spec":{"uninstall":true}}'</pre>
+<pre>kubectl patch torc &lt;trident-orchestrator-name&gt; --type=merge -p '{"spec":{"uninstall":true}}'</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1569,7 +1577,7 @@ To completely remove Astra Trident (including the CRDs it creates) and effective
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl patch torc &lt;trident-orchestrator-name&gt; --type=merge -p '{"spec":{"wipeout":["crds"],"uninstall":true}}'</pre>
+<pre>kubectl patch torc &lt;trident-orchestrator-name&gt; --type=merge -p '{"spec":{"wipeout":["crds"],"uninstall":true}}'</pre>
 </div>
 </div>
 <div class="paragraph">

@@ -1502,11 +1502,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-10 13:31:15 +0000">08/10/2022</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
     <img  class="avatar avatar-small"
           alt="juliantap"
@@ -1681,7 +1689,7 @@ cd trident-installer</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ ./tridentctl install -n trident
+<pre>./tridentctl install -n trident
 ....
 INFO Starting Trident installation.                namespace=trident
 INFO Created service account.
@@ -1705,12 +1713,12 @@ INFO Trident installation succeeded.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ kubectl get pod -n trident
+<pre>kubectl get pod -n trident
 NAME                           READY   STATUS    RESTARTS   AGE
 trident-csi-679648bd45-cv2mx   4/4     Running   0          5m29s
 trident-csi-vgc8n              2/2     Running   0          5m29s
 
-$ ./tridentctl -n trident version
+./tridentctl -n trident version
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+

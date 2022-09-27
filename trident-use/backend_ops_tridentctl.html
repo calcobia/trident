@@ -1504,11 +1504,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-09-20 11:55:42 +0000">09/20/2021</time>
+    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1529,7 +1537,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl create backend -f &lt;backend-file&gt; -n trident</pre>
+<pre>tridentctl create backend -f &lt;backend-file&gt; -n trident</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1537,7 +1545,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl logs -n trident</pre>
+<pre>tridentctl logs -n trident</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1557,7 +1565,7 @@
 <p>Retrieve the backend name:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl get backend -n trident</pre>
+<pre>tridentctl get backend -n trident</pre>
 </div>
 </div>
 </li>
@@ -1565,7 +1573,7 @@
 <p>Delete the backend:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl delete backend &lt;backend-name&gt; -n trident</pre>
+<pre>tridentctl delete backend &lt;backend-name&gt; -n trident</pre>
 </div>
 </div>
 </li>
@@ -1597,7 +1605,7 @@ If Astra Trident has provisioned volumes and snapshots from this backend that st
 <p>To get a summary, run the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl get backend -n trident</pre>
+<pre>tridentctl get backend -n trident</pre>
 </div>
 </div>
 </li>
@@ -1605,7 +1613,7 @@ If Astra Trident has provisioned volumes and snapshots from this backend that st
 <p>To get all the details, run the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl get backend -o json -n trident</pre>
+<pre>tridentctl get backend -o json -n trident</pre>
 </div>
 </div>
 </li>
@@ -1621,7 +1629,7 @@ If Astra Trident has provisioned volumes and snapshots from this backend that st
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl update backend &lt;backend-name&gt; -f &lt;backend-file&gt; -n trident</pre>
+<pre>tridentctl update backend &lt;backend-name&gt; -f &lt;backend-file&gt; -n trident</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1629,7 +1637,7 @@ If Astra Trident has provisioned volumes and snapshots from this backend that st
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl logs -n trident</pre>
+<pre>tridentctl logs -n trident</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1645,7 +1653,7 @@ If Astra Trident has provisioned volumes and snapshots from this backend that st
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ tridentctl get backend -o json | jq '[.items[] | {backend: .name, storageClasses: [.storage[].storageClasses]|unique}]'</pre>
+<pre>tridentctl get backend -o json | jq '[.items[] | {backend: .name, storageClasses: [.storage[].storageClasses]|unique}]'</pre>
 </div>
 </div>
 <div class="paragraph">

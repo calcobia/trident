@@ -22,28 +22,28 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/backend-kubectl.html</loc>
       
-      <lastmod>2022-04-27T22:15:28+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/backend_ops_kubectl.html</loc>
       
-      <lastmod>2021-09-16T01:23:40+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/backend_ops_tridentctl.html</loc>
       
-      <lastmod>2021-09-20T11:55:42+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/backend_options.html</loc>
       
-      <lastmod>2021-10-15T01:43:27+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -57,21 +57,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-reco/backup.html</loc>
       
-      <lastmod>2022-06-09T20:24:13+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-docker/collect-logs-docker.html</loc>
       
-      <lastmod>2022-08-12T17:02:26+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/csi-topology.html</loc>
       
-      <lastmod>2022-07-20T17:59:05+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -92,7 +92,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-managing-k8s/downgrade-trident.html</loc>
       
-      <lastmod>2022-03-28T20:00:09+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -183,21 +183,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy.html</loc>
       
-      <lastmod>2022-07-20T14:14:10+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html</loc>
       
-      <lastmod>2022-08-22T19:15:37+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html</loc>
       
-      <lastmod>2022-08-10T13:31:15+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -267,7 +267,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/ontap-nas-prep.html</loc>
       
-      <lastmod>2022-06-22T16:23:54+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -288,7 +288,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/ontap-san-prep.html</loc>
       
-      <lastmod>2022-06-22T16:23:54+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -351,7 +351,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident//search.html</loc>
       
-      <lastmod>2022-09-15T17:15:44+00:00</lastmod>
+      <lastmod>2022-09-27T22:16:21+00:00</lastmod>
       
     </url>
   
@@ -414,21 +414,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/troubleshooting.html</loc>
       
-      <lastmod>2022-06-09T16:44:58+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html</loc>
       
-      <lastmod>2021-09-19T22:15:24+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html</loc>
       
-      <lastmod>2022-07-20T17:59:05+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -442,7 +442,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-tridentctl.html</loc>
       
-      <lastmod>2021-09-19T21:19:20+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -470,14 +470,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/vol-expansion.html</loc>
       
-      <lastmod>2022-04-27T22:15:28+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/vol-import.html</loc>
       
-      <lastmod>2022-04-28T14:57:40+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -491,7 +491,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html</loc>
       
-      <lastmod>2022-07-20T14:10:46+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
@@ -505,7 +505,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-docker/volumes-docker.html</loc>
       
-      <lastmod>2022-04-27T22:15:28+00:00</lastmod>
+      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
       
     </url>
   
