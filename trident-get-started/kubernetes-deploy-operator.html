@@ -143,6 +143,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/us-en/trident"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -907,7 +918,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Learn about Astra Trident"
@@ -958,7 +969,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Get started</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Try it out"
@@ -988,7 +999,7 @@
     ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
         <div class="na-navbar-padding"> Deploy with Trident operator</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Customize Trident operator deployment"
@@ -1004,7 +1015,7 @@
     ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
         <div class="na-navbar-padding"> Deploy with tridentctl</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Customize tridentctl deployment"
@@ -1027,7 +1038,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage Astra Trident</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade Astra Trident"
@@ -1071,7 +1082,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use Astra Trident</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure backends"
@@ -1080,7 +1091,7 @@
     ><a href="/us-en/trident/trident-use/backends.html">
         <div class="na-navbar-padding"> Configure backends</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure an ANF backend"
@@ -1110,7 +1121,7 @@
     ><a href="/us-en/trident/trident-use/ontap-san.html">
         <div class="na-navbar-padding"> Configure a backend with ONTAP SAN drivers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Preparation"
@@ -1133,7 +1144,7 @@
     ><a href="/us-en/trident/trident-use/ontap-nas.html">
         <div class="na-navbar-padding"> Configure a backend with ONTAP NAS drivers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Preparation"
@@ -1198,7 +1209,7 @@
     ><a href="/us-en/trident/trident-use/vol-operations.html">
         <div class="na-navbar-padding"> Perform volume operations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Use CSI Topology"
@@ -1249,7 +1260,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Astra Trident for Docker</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prerequisites for deployment"
@@ -1279,7 +1290,7 @@
     ><a href="/us-en/trident/trident-docker/volumes-docker.html">
         <div class="na-navbar-padding"> Work with volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Driver-specific volume options"
@@ -1344,7 +1355,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Best practices and recommendations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Deployment"
@@ -1388,7 +1399,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Reference</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Astra Trident ports"
@@ -1463,6 +1474,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
@@ -1504,7 +1516,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
+    <time datetime="2022-10-13 20:45:57 +0000">10/13/2022</time>
     
   
 
@@ -1626,7 +1638,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 <p>Add Trident&#8217;s Helm repository:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">helm repo add netapp-trident https://netapp.github.io/trident-helm-chart</code></pre>
+<pre>helm repo add netapp-trident https://netapp.github.io/trident-helm-chart</pre>
 </div>
 </div>
 </li>
@@ -1635,7 +1647,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 See the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">helm install &lt;release-name&gt; netapp-trident/trident-operator --version 22.4.0 --create-namespace &lt;trident-namespace&gt;</code></pre>
+<pre>helm install &lt;release-name&gt; netapp-trident/trident-operator --version 22.4.0 --create-namespace &lt;trident-namespace&gt;</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1671,7 +1683,7 @@ If you already created a namespace for Trident, the <code>--create-namespace</co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">helm install &lt;name&gt; netapp-trident/trident-operator --version 22.7.0 --set tridentDebug=true</code></pre>
+<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 22.7.0 --set tridentDebug=true</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1710,7 +1722,7 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl version</code></pre>
+<pre>kubectl version</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1718,7 +1730,7 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl auth can-i '*' '*' --all-namespaces</code></pre>
+<pre>kubectl auth can-i '*' '*' --all-namespaces</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1726,8 +1738,8 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl run -i --tty ping --image=busybox --restart=Never --rm -- \
-  ping &lt;management IP&gt;</code></pre>
+<pre>kubectl run -i --tty ping --image=busybox --restart=Never --rm -- \
+  ping &lt;management IP&gt;</pre>
 </div>
 </div>
 </div>
@@ -1751,9 +1763,9 @@ Beginning with 21.01, the Trident operator is cluster scoped. Using the Trident 
 <p>Download and extract the latest version of the Trident installer bundle from <a href="https://github.com/NetApp/trident/releases/latest" target="_blank" rel="noopener">the <em>Assets</em> section on GitHub</a>.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">wget https://github.com/NetApp/trident/releases/download/v22.04.0/trident-installer-22.04.0.tar.gz
+<pre>wget https://github.com/NetApp/trident/releases/download/v22.04.0/trident-installer-22.04.0.tar.gz
 tar -xf trident-installer-22.04.0.tar.gz
-cd trident-installer</code></pre>
+cd trident-installer</pre>
 </div>
 </div>
 </li>
@@ -1764,7 +1776,7 @@ cd trident-installer</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_post1.16.yaml</code></pre>
+<pre>kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_post1.16.yaml</pre>
 </div>
 </div>
 </li>
@@ -1788,7 +1800,7 @@ cd trident-installer</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl apply -f deploy/namespace.yaml</code></pre>
+<pre>kubectl apply -f deploy/namespace.yaml</pre>
 </div>
 </div>
 </li>
@@ -1802,7 +1814,7 @@ cd trident-installer</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl kustomize deploy/ &gt; deploy/bundle.yaml</code></pre>
+<pre>kubectl kustomize deploy/ &gt; deploy/bundle.yaml</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1810,7 +1822,7 @@ cd trident-installer</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl create -f deploy/bundle.yaml</code></pre>
+<pre>kubectl create -f deploy/bundle.yaml</pre>
 </div>
 </div>
 </li>
@@ -1818,13 +1830,18 @@ cd trident-installer</code></pre>
 <p>To verify the status of the operator after you have deployed, do the following:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl get deployment -n &lt;operator-namespace&gt;
-NAME               READY   UP-TO-DATE   AVAILABLE   AGE
-trident-operator   1/1     1            1           3m
+<pre>kubectl get deployment -n &lt;operator-namespace&gt;
 
-kubectl get pods -n &lt;operator-namespace&gt;
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+trident-operator   1/1     1            1           3m</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>kubectl get pods -n &lt;operator-namespace&gt;
+
 NAME                              READY   STATUS             RESTARTS   AGE
-trident-operator-54cb664d-lnjxh   1/1     Running            0          3m</code></pre>
+trident-operator-54cb664d-lnjxh   1/1     Running            0          3m</pre>
 </div>
 </div>
 </li>
@@ -1853,7 +1870,7 @@ There should only be <strong>one instance</strong> of the operator in a Kubernet
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl create -f deploy/crds/tridentorchestrator_cr.yaml
+<pre>kubectl create -f deploy/crds/tridentorchestrator_cr.yaml
 tridentorchestrator.trident.netapp.io/trident created
 
 kubectl describe torc trident
@@ -1888,7 +1905,7 @@ Status:
 Events:
     Type Reason Age From Message ---- ------ ---- ---- -------Normal
     Installing 74s trident-operator.netapp.io Installing Trident Normal
-    Installed 67s trident-operator.netapp.io Trident installed</code></pre>
+    Installed 67s trident-operator.netapp.io Trident installed</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1950,13 +1967,14 @@ exists.</p></td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl get pod -n trident
+<pre>kubectl get pod -n trident
+
 NAME                                READY   STATUS    RESTARTS   AGE
 trident-csi-7d466bf5c7-v4cpw        5/5     Running   0           1m
 trident-csi-mr6zc                   2/2     Running   0           1m
 trident-csi-xrp7w                   2/2     Running   0           1m
 trident-csi-zh2jt                   2/2     Running   0           1m
-trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</code></pre>
+trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1964,12 +1982,13 @@ trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</code></pre
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">./tridentctl -n trident version
+<pre>./tridentctl -n trident version
+
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
 | 21.04.0        | 21.04.0        |
-+----------------+----------------+</code></pre>
++----------------+----------------+</pre>
 </div>
 </div>
 <div class="paragraph">

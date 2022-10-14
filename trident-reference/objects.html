@@ -143,6 +143,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/us-en/trident"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -909,7 +920,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Concepts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Learn about Astra Trident"
@@ -960,7 +971,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Get started</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Try it out"
@@ -990,7 +1001,7 @@
     ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
         <div class="na-navbar-padding"> Deploy with Trident operator</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Customize Trident operator deployment"
@@ -1006,7 +1017,7 @@
     ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
         <div class="na-navbar-padding"> Deploy with tridentctl</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Customize tridentctl deployment"
@@ -1029,7 +1040,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage Astra Trident</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade Astra Trident"
@@ -1073,7 +1084,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use Astra Trident</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure backends"
@@ -1082,7 +1093,7 @@
     ><a href="/us-en/trident/trident-use/backends.html">
         <div class="na-navbar-padding"> Configure backends</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure an ANF backend"
@@ -1112,7 +1123,7 @@
     ><a href="/us-en/trident/trident-use/ontap-san.html">
         <div class="na-navbar-padding"> Configure a backend with ONTAP SAN drivers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Preparation"
@@ -1135,7 +1146,7 @@
     ><a href="/us-en/trident/trident-use/ontap-nas.html">
         <div class="na-navbar-padding"> Configure a backend with ONTAP NAS drivers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Preparation"
@@ -1200,7 +1211,7 @@
     ><a href="/us-en/trident/trident-use/vol-operations.html">
         <div class="na-navbar-padding"> Perform volume operations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Use CSI Topology"
@@ -1251,7 +1262,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Astra Trident for Docker</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prerequisites for deployment"
@@ -1281,7 +1292,7 @@
     ><a href="/us-en/trident/trident-docker/volumes-docker.html">
         <div class="na-navbar-padding"> Work with volumes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Driver-specific volume options"
@@ -1346,7 +1357,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Best practices and recommendations</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Deployment"
@@ -1390,7 +1401,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Reference</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Astra Trident ports"
@@ -1465,6 +1476,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
@@ -1506,7 +1518,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-20 17:59:05 +0000">07/20/2022</time>
+    <time datetime="2022-10-13 20:45:57 +0000">10/13/2022</time>
     
   
 
@@ -1757,7 +1769,7 @@ Trident creates <code>PersistentVolume</code> objects and registers them with th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: storage.k8s.io/v1beta1
+<pre>apiVersion: storage.k8s.io/v1beta1
 kind: StorageClass
 metadata:
   name: &lt;Name&gt;
@@ -1766,7 +1778,7 @@ mountOptions: &lt;Mount Options&gt;
 parameters:
   &lt;Trident Parameters&gt;
 allowVolumeExpansion: true
-volumeBindingMode: Immediate</code></pre>
+volumeBindingMode: Immediate</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2038,12 +2050,12 @@ volumes</p></td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: snapshot.storage.k8s.io/v1beta1
+<pre>apiVersion: snapshot.storage.k8s.io/v1beta1
 kind: VolumeSnapshotClass
 metadata:
   name: csi-snapclass
 driver: csi.trident.netapp.io
-deletionPolicy: Delete</code></pre>
+deletionPolicy: Delete</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2446,7 +2458,7 @@ volume.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: &lt;version&gt;
+<pre>apiVersion: &lt;version&gt;
 kind: ResourceQuota
 metadata:
   name: trident-csi
@@ -2457,7 +2469,7 @@ spec:
      matchExpressions:
        - operator : In
          scopeName: PriorityClass
-         values: ["system-node-critical"]</code></pre>
+         values: ["system-node-critical"]</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2479,7 +2491,7 @@ spec:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cli" data-lang="cli">kubectl delete quota trident-csi -n trident</code></pre>
+<pre>kubectl delete quota trident-csi -n trident</pre>
 </div>
 </div>
 </div>
