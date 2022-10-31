@@ -185,9 +185,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.10">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.07</span>
+    <span translate="no" class="notranslate">Astra Trident 22.10</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -195,6 +195,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-reference/tridentctl.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2207/trident-reference/tridentctl.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
       </a>
                      
@@ -408,7 +415,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_10_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -597,6 +604,31 @@
             Configure backends
           </a>
           
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Configure_an_ANF_backend.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Configure an ANF backend
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -1104,11 +1136,27 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure an ANF backend"
-      data-li-level="3#" 
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/anf.html">
+        <div class="na-navbar-padding"> Configure an ANF backend</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare to configure an ANF backend"
+      data-li-level="4#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
-        Configure an ANF backend
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-prep.html">
+        Prepare to configure an ANF backend
       </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ANF configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
+        ANF configuration options and examples
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a CVS for GCP backend"
       data-li-level="3#" 
@@ -1133,18 +1181,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP SAN drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP SAN drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP SAN configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
-        Configuration options and examples
+        ONTAP SAN configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a backend with ONTAP NAS drivers"
@@ -1156,18 +1204,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP NAS drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP NAS drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP NAS configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
-        Configuration options and examples
+        ONTAP NAS configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
@@ -1518,7 +1566,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-09 16:44:58 +0000">06/09/2022</time>
+    <time datetime="2022-10-17 23:25:29 +0000">10/17/2022</time>
     
   
 
@@ -1736,6 +1784,12 @@ Trident REST interface can be configured to listen and serve at 127.0.0.1 (for I
 <p><code>volume</code>: Get one or more volumes from Astra Trident.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><code>volume</code> flags:<br>
+* <code>`-h, --help</code>: Help for volumes.<br>
+* <code>--parentOfSubordinate string</code>: Limit query to subordinate source volume.<br>
+* <code>--subordinateOf string</code>: Limit query to subordinates of volume.</p>
 </div>
 </div>
 </div>

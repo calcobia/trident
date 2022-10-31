@@ -185,9 +185,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.10">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.07</span>
+    <span translate="no" class="notranslate">Astra Trident 22.10</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -195,6 +195,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-rn.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2207/trident-rn.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
       </a>
                      
@@ -408,7 +415,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_10_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -599,6 +606,31 @@
             Configure backends
           </a>
           
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Configure_an_ANF_backend.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Configure an ANF backend
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -1104,11 +1136,27 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure an ANF backend"
-      data-li-level="3#" 
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/anf.html">
+        <div class="na-navbar-padding"> Configure an ANF backend</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare to configure an ANF backend"
+      data-li-level="4#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
-        Configure an ANF backend
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-prep.html">
+        Prepare to configure an ANF backend
       </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ANF configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
+        ANF configuration options and examples
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a CVS for GCP backend"
       data-li-level="3#" 
@@ -1133,18 +1181,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP SAN drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP SAN drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP SAN configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
-        Configuration options and examples
+        ONTAP SAN configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a backend with ONTAP NAS drivers"
@@ -1156,18 +1204,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP NAS drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP NAS drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP NAS configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
-        Configuration options and examples
+        ONTAP NAS configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
@@ -1518,7 +1566,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-30 20:06:06 +0000">08/30/2022</time>
+    <time datetime="2022-10-28 15:42:07 +0000">10/28/2022</time>
     
   
 
@@ -1558,10 +1606,122 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 </div>
 </div>
 <div class="sect1">
-<h2 id="whats-new-in-22-07">What&#8217;s new in 22.07</h2>
+<h2 id="whats-new-in-22-10">What&#8217;s new in 22.10</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p><strong>You must read the following critical information before upgrading to Astra Trident 22.10.</strong></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/warning.svg" alt="Warning">
+</td>
+<td class="content">
+<div class="title"><strong>Critical information about Astra Trident 22.10</strong></div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kubernetes 1.25 is now supported in Trident. You must upgrade Astra Trident to 22.10 prior to upgrading to Kubernetes 1.25.</p>
+</li>
+<li>
+<p>Astra Trident now strictly enforces the use of multipathing configuration in SAN environments, with a recommended value of <code>find_multipaths: no</code> in multipath.conf file.</p>
+<div class="paragraph">
+<p>Use of non-multipathing configuration or use of <code>find_multipaths: yes</code> or <code>find_multipaths: smart</code> value in multipath.conf file will result in mount failures. Trident has recommended the use of <code>find_multipaths: no</code> since the 21.07 release.</p>
+</div>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="sect2">
 <h3 id="fixes">Fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed issue specific to ONTAP backend created using <code>credentials</code> field failing to come online during 22.07.0 upgrade (<a href="https://github.com/NetApp/trident/issues/759" target="_blank" rel="noopener">Issue #759</a>).</p>
+</li>
+<li>
+<p><strong>Docker:</strong> Fixed an issue causing the Docker volume plugin to fail to start in some environments (<a href="https://github.com/NetApp/trident/issues/548" target="_blank" rel="noopener">Issue #548</a> and <a href="https://github.com/NetApp/trident/issues/760" target="_blank" rel="noopener">Issue #760</a>).</p>
+</li>
+<li>
+<p>Fixed SLM issue specific to ONTAP SAN backends to ensure only subset of data LIFs belonging to reporting nodes are published.</p>
+</li>
+<li>
+<p>Fixed performance issue where unnecessary scans for iSCSI LUNs happened when attaching a volume.</p>
+</li>
+<li>
+<p>Removed granular retries within the Astra Trident iSCSI workflow to fail fast and reduce external retry intervals.</p>
+</li>
+<li>
+<p>Fixed issue where an error was returned when flushing an iSCSI device when the corresponding multipath device was already flushed.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancements">Enhancements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Kubernetes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added support for Kubernetes 1.25.</p>
+</li>
+<li>
+<p>Added a separate ServiceAccount, ClusterRole, and ClusterRoleBinding for the Trident Deployment and DaemonSet to allow future permissions enhancements.</p>
+</li>
+<li>
+<p>Added support for <a href="../trident-use/volume-share.html">cross-namespace volume sharing</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>All Trident <code>ontap-*</code> storage drivers now work with the ONTAP REST API.</p>
+</li>
+<li>
+<p>Added new operator yaml (<code>bundle_post_1_25.yaml</code>) without a <code>PodSecurityPolicy</code> to support Kubernetes 1.25.</p>
+</li>
+<li>
+<p>Added <a href="../trident-reco/security-reco.html#use-linux-unified-key-setup-luks">support for LUKS-encrypted volumes</a> for <code>ontap-san</code> and <code>ontap-san-economy</code> storage drivers.</p>
+</li>
+<li>
+<p>Added support for Windows Server 2019 nodes.</p>
+</li>
+<li>
+<p>Added <a href="../trident-use/anf.html">support for SMB volumes on Windows nodes</a> through the <code>azure-netapp-files</code> storage driver.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deprecations">Deprecations</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Kubernetes:</strong> Updated minimum supported Kubernetes to 1.20.</p>
+</li>
+<li>
+<p>Removed Astra Data Store (ADS) driver.</p>
+</li>
+<li>
+<p>Removed support for <code>yes</code> and <code>smart</code> options for <code>find_multipaths</code> when configuring worker node multipathing for iSCSI.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes-in-22-07">Changes in 22.07</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fixes-2">Fixes</h3>
 <div class="paragraph">
 <p><strong>Kubernetes</strong></p>
 </div>
@@ -1577,7 +1737,7 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements">Enhancements</h3>
+<h3 id="enhancements-2">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1599,7 +1759,7 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 </div>
 </div>
 <div class="sect2">
-<h3 id="deprecations">Deprecations</h3>
+<h3 id="deprecations-2">Deprecations</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1662,7 +1822,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes-2">Fixes</h3>
+<h3 id="fixes-3">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1693,7 +1853,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements-2">Enhancements</h3>
+<h3 id="enhancements-3">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1723,7 +1883,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 <h2 id="changes-in-22-01-1">Changes in 22.01.1</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-3">Fixes</h3>
+<h3 id="fixes-4">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1741,7 +1901,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 <h2 id="changes-in-22-01-0">Changes in 22.01.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-4">Fixes</h3>
+<h3 id="fixes-5">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1772,7 +1932,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements-3">Enhancements</h3>
+<h3 id="enhancements-4">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1798,7 +1958,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </div>
 </div>
 <div class="sect2">
-<h3 id="deprecations-2">Deprecations</h3>
+<h3 id="deprecations-3">Deprecations</h3>
 <div class="paragraph">
 <p>Trident REST interface can listen and serve only at 127.0.0.1 or [::1] addresses</p>
 </div>
@@ -1821,7 +1981,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes-5">Fixes</h3>
+<h3 id="fixes-6">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1842,7 +2002,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 <h2 id="changes-in-21-10-0">Changes in 21.10.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-6">Fixes</h3>
+<h3 id="fixes-7">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1886,7 +2046,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancements-4">Enhancements</h3>
+<h3 id="enhancements-5">Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>

@@ -185,9 +185,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.10">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.07</span>
+    <span translate="no" class="notranslate">Astra Trident 22.10</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -195,6 +195,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2207/trident-managing-k8s/upgrade-operator.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
       </a>
                      
@@ -408,7 +415,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_10_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -599,6 +606,31 @@
             Configure backends
           </a>
           
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Configure_an_ANF_backend.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Configure an ANF backend
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -1104,11 +1136,27 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure an ANF backend"
-      data-li-level="3#" 
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/anf.html">
+        <div class="na-navbar-padding"> Configure an ANF backend</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare to configure an ANF backend"
+      data-li-level="4#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
-        Configure an ANF backend
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-prep.html">
+        Prepare to configure an ANF backend
       </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ANF configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
+        ANF configuration options and examples
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a CVS for GCP backend"
       data-li-level="3#" 
@@ -1133,18 +1181,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP SAN drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP SAN drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP SAN configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
-        Configuration options and examples
+        ONTAP SAN configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a backend with ONTAP NAS drivers"
@@ -1156,18 +1204,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP NAS drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP NAS drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP NAS configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
-        Configuration options and examples
+        ONTAP NAS configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
@@ -1518,7 +1566,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
+    <time datetime="2022-10-25 17:44:42 +0000">10/25/2022</time>
     
   
 
@@ -1661,11 +1709,11 @@ If status shows <code>Updating</code>, ensure you resolve it before proceeding. 
 <p>Create the <code>TridentOrchestrator</code> CRD by using the manifest provided with the Trident installer.</p>
 <div class="listingblock">
 <div class="content">
-<pre># Download the release required [21.01]
-mkdir 21.07.1
-cd 21.07.1
-wget https://github.com/NetApp/trident/releases/download/v21.07.1/trident-installer-21.07.1.tar.gz
-tar -xf trident-installer-21.07.1.tar.gz
+<pre># Download the release required [22.10.0]
+mkdir 22.10.0
+cd 22.10.0
+wget https://github.com/NetApp/trident/releases/download/v22.10.0/trident-installer-22.10.0.tar.gz
+tar -xf trident-installer-22.10.0.tar.gz
 cd trident-installer
 kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_post1.16.yaml</pre>
 </div>
@@ -1741,7 +1789,7 @@ replicaset.apps/trident-csi-68d979fb85   1         1         1       105d</pre>
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Installing the cluster-scoped operator initiates the migration of <code>TridentProvisioner</code> objects to <code>TridentOrchestrator</code> objects, deletes <code>TridentProvisioner</code> objects and the <code>tridentprovisioner</code> CRD, and upgrades Astra Trident to the version of the cluster-scoped operator being used. In the example that follows, Trident is upgraded to 21.07.1.
+Installing the cluster-scoped operator initiates the migration of <code>TridentProvisioner</code> objects to <code>TridentOrchestrator</code> objects, deletes <code>TridentProvisioner</code> objects and the <code>tridentprovisioner</code> CRD, and upgrades Astra Trident to the version of the cluster-scoped operator being used. In the example that follows, Trident is upgraded to 22.10.0.
 </td>
 </tr>
 </table>
@@ -1762,7 +1810,7 @@ Upgrading Astra Trident by using the cluster-scoped operator results in the migr
 <div class="content">
 <pre>#Ensure you are in the correct directory
 pwd
-/root/21.07.1/trident-installer
+/root/22.10.0/trident-installer
 
 #Install the cluster-scoped operator in the **same namespace**
 kubectl create -f deploy/bundle.yaml
@@ -1793,7 +1841,7 @@ kubectl describe torc trident | grep Message -A 3
 Message:                Trident installed
 Namespace:              trident
 Status:                 Installed
-Version:                v21.07.1</pre>
+Version:                v22.10.0</pre>
 </div>
 </div>
 </li>
@@ -1817,11 +1865,11 @@ Version:                v21.07.1</pre>
 <p>Use the <code>helm upgrade</code> command. See the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre>helm upgrade &lt;name&gt; trident-operator-21.07.1.tgz</pre>
+<pre>helm upgrade &lt;name&gt; trident-operator-22.10.0.tgz</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>where <code>trident-operator-21.07.1.tgz</code> reflects the version that you want to upgrade to.</p>
+<p>where <code>trident-operator-22.10.0.tgz</code> reflects the version that you want to upgrade to.</p>
 </div>
 </li>
 <li>
@@ -1846,7 +1894,7 @@ To pass configuration data during the upgrade, use <code>--set</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>helm upgrade &lt;name&gt; trident-operator-21.07.1-custom.tgz --set tridentDebug=true</pre>
+<pre>helm upgrade &lt;name&gt; trident-operator-22.10.0-custom.tgz --set tridentDebug=true</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1879,11 +1927,11 @@ If you set any non-default options during the initial installation, ensure that 
 <p>Download the latest Astra Trident release.</p>
 <div class="listingblock">
 <div class="content">
-<pre># Download the release required [21.07.1]
-mkdir 21.07.1
-cd 21.07.1
-wget https://github.com/NetApp/trident/releases/download/v21.07.1/trident-installer-21.07.1.tar.gz
-tar -xf trident-installer-21.07.1.tar.gz
+<pre># Download the release required [22.10.0]
+mkdir 22.10.0
+cd 22.10.0
+wget https://github.com/NetApp/trident/releases/download/v22.10.0/trident-installer-22.10.0.tar.gz
+tar -xf trident-installer-22.10.0.tar.gz
 cd trident-installer</pre>
 </div>
 </div>
@@ -1943,7 +1991,7 @@ kubectl describe torc trident | grep Message -A 3
 Message:                Trident installed
 Namespace:              trident
 Status:                 Installed
-Version:                v21.07.1</pre>
+Version:                v22.10.0</pre>
 </div>
 </div>
 </li>

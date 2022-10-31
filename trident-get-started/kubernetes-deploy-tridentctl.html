@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can deploy Astra Trident by using `tridentctl`.">
-  <meta name="keywords" content=" deploy, astra trident, methods, tridentctl"><!-- Icons -->
+  <meta name="keywords" content=" deploy, astra trident, methods, tridentctl, windows"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -185,9 +185,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.10">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.07</span>
+    <span translate="no" class="notranslate">Astra Trident 22.10</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -195,6 +195,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2207/trident-get-started/kubernetes-deploy-tridentctl.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
       </a>
                      
@@ -408,7 +415,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_10_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -597,6 +604,31 @@
             Configure backends
           </a>
           
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Configure_an_ANF_backend.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Configure an ANF backend
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -1102,11 +1134,27 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure an ANF backend"
-      data-li-level="3#" 
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/anf.html">
+        <div class="na-navbar-padding"> Configure an ANF backend</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare to configure an ANF backend"
+      data-li-level="4#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
-        Configure an ANF backend
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-prep.html">
+        Prepare to configure an ANF backend
       </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ANF configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
+        ANF configuration options and examples
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a CVS for GCP backend"
       data-li-level="3#" 
@@ -1131,18 +1179,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP SAN drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP SAN drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP SAN configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
-        Configuration options and examples
+        ONTAP SAN configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a backend with ONTAP NAS drivers"
@@ -1154,18 +1202,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP NAS drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP NAS drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP NAS configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
-        Configuration options and examples
+        ONTAP NAS configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
@@ -1516,24 +1564,24 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
+    <time datetime="2022-10-28 16:17:08 +0000">10/28/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
-    <img  class="avatar avatar-small"
-          alt="netapp-mwallis"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/53353653?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
     <img  class="avatar avatar-small"
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1545,28 +1593,58 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can deploy Astra Trident by using <code>tridentctl</code>.</p>
+<p>You can deploy Astra Trident using <code>tridentctl</code>.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<img src="/us-en/trident/images/tip.svg" alt="Tip">
+<img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-If you have not already familiarized yourself with the <a href="../trident-concepts/intro.html" target="_blank" rel="noopener">basic concepts</a>, now is a great time to do that.
+<div class="ulist">
+<ul>
+<li>
+<p>If you have not already familiarized yourself with the <a href="../trident-concepts/intro.html">basic concepts</a>, now is a great time to do that.</p>
+</li>
+<li>
+<p>To customize your <code>tridentctl</code> deployment, refer to  <a href="kubernetes-customize-deploy-tridentctl.html">Customize tridentctl deployment</a>.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock tip">
+</div>
+</div>
+<div class="sect1">
+<h2 id="critical-information-about-astra-trident-22-10">Critical information about Astra Trident 22.10</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>You must read the following critical information before upgrading to Astra Trident 22.10.</strong></p>
+</div>
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<img src="/us-en/trident/images/tip.svg" alt="Tip">
+<img src="/us-en/trident/images/warning.svg" alt="Warning">
 </td>
 <td class="content">
-To customize your deployment, see <a href="kubernetes-customize-deploy-tridentctl.html" target="_blank" rel="noopener">here</a>.
+<div class="title"><strong>Critical information about Astra Trident 22.10</strong></div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kubernetes 1.25 is now supported in Trident. You must upgrade to Astra Trident 22.10 prior to upgrading to Kubernetes 1.25.</p>
+</li>
+<li>
+<p>Astra Trident now strictly enforces the use of multipathing configuration in SAN environments, with a recommended value of <code>find_multipaths: no</code> in multipath.conf file.</p>
+<div class="paragraph">
+<p>Use of non-multipathing configuration or use of <code>find_multipaths: yes</code> or <code>find_multipaths: smart</code> value in multipath.conf file will result in mount failures. Trident has recommended the use of <code>find_multipaths: no</code> since the 21.07 release.</p>
+</div>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
@@ -1578,42 +1656,27 @@ To customize your deployment, see <a href="kubernetes-customize-deploy-tridentct
 <div class="ulist">
 <ul>
 <li>
-<p>You have full privileges to a supported Kubernetes cluster.</p>
+<p>Full privileges to a supported Kubernetes cluster.</p>
 </li>
 <li>
-<p>You have access to a supported NetApp storage system.</p>
+<p>Access to a supported NetApp storage system.</p>
 </li>
 <li>
-<p>You have the capability to mount volumes from all of the Kubernetes worker nodes.</p>
+<p>Capability to mount volumes from all of the Kubernetes worker nodes.</p>
 </li>
 <li>
-<p>You have a Linux host with <code>kubectl</code> (or <code>oc</code>, if you are using OpenShift) installed and configured to manage the Kubernetes cluster that you want to use.</p>
+<p>A Linux host with <code>kubectl</code> (or <code>oc</code>, if you are using OpenShift) installed and configured to manage the Kubernetes cluster that you want to use.</p>
 </li>
 <li>
-<p>You have set the <code>KUBECONFIG</code> environment variable to point to your Kubernetes cluster configuration.</p>
+<p>The <code>KUBECONFIG</code> environment variable points to your Kubernetes cluster configuration.</p>
 </li>
 <li>
-<p>You have enabled the <a href="requirements.html" target="_blank" rel="noopener">feature gates required by Astra Trident</a>.</p>
+<p>The <a href="requirements.html">feature gates required by Astra Trident</a> are enabled.</p>
 </li>
 <li>
 <p>If you are using Kubernetes with Docker Enterprise, <a href="https://docs.docker.com/ee/ucp/user-access/cli/" target="_blank" rel="noopener">follow their steps to enable CLI access</a>.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Got all that? Great! Let&#8217;s get started.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/tip.svg" alt="Tip">
-</td>
-<td class="content">
-For information about customizing your deployment, see <a href="kubernetes-customize-deploy-tridentctl.html" target="_blank" rel="noopener">here</a>.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -1621,7 +1684,7 @@ For information about customizing your deployment, see <a href="kubernetes-custo
 <h2 id="step-1-qualify-your-kubernetes-cluster">Step 1: Qualify your Kubernetes cluster</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The first thing you need to do is log into the Linux host and verify that it is managing a <em>working</em>, <a href="requirements.html" target="_blank" rel="noopener">supported Kubernetes cluster</a> that you have the necessary privileges to.</p>
+<p>Log into the Linux host and verify it is managing a working, <a href="requirements.html" target="_blank" rel="noopener">supported Kubernetes cluster</a> and you have the necessary privileges.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1644,7 +1707,7 @@ With OpenShift, you use <code>oc</code> instead of <code>kubectl</code> in all o
 </div>
 </div>
 <div class="paragraph">
-<p>To see if you have Kubernetes cluster administrator privileges, run the following command:</p>
+<p>To verify Kubernetes cluster administrator privileges, run the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1684,12 +1747,12 @@ The Trident installer creates a Trident pod, configures the CRD objects that are
 <p>You can download and extract the latest version of the Trident installer bundle from <a href="https://github.com/NetApp/trident/releases/latest" target="_blank" rel="noopener">the <em>Assets</em> section on GitHub</a>.</p>
 </div>
 <div class="paragraph">
-<p>For example, if the latest version is 21.07.1:</p>
+<p>For example, if the latest version is 22.10.0:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wget https://github.com/NetApp/trident/releases/download/v21.07.1/trident-installer-21.07.1.tar.gz
-tar -xf trident-installer-21.07.1.tar.gz
+<pre>wget https://github.com/NetApp/trident/releases/download/v22.10.0/trident-installer-22.10.0.tar.gz
+tar -xf trident-installer-22.10.0.tar.gz
 cd trident-installer</pre>
 </div>
 </div>
@@ -1717,13 +1780,25 @@ INFO Created Trident daemonset.
 INFO Waiting for Trident pod to start.
 INFO Trident pod started.                          namespace=trident pod=trident-csi-679648bd45-cv2mx
 INFO Waiting for Trident REST interface.
-INFO Trident REST interface is up.                 version=21.07.1
+INFO Trident REST interface is up.                 version=22.10.0
 INFO Trident installation succeeded.
 ....</pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+To enable Astra Trident to run on Windows nodes, add the <code>--windows</code> flag to the install command: <code>$ ./tridentctl install --windows -n trident</code>.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p>It will look like this when the installer is complete. Depending on the number of nodes in your Kubernetes cluster, you might observe more pods:</p>
+<p>Output similar to the following displays when the installer is complete. Depending on the number of nodes in your Kubernetes cluster, there might be more pods present:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1736,24 +1811,24 @@ trident-csi-vgc8n              2/2     Running   0          5m29s
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
-| 21.07.1        | 21.07.1        |
+| 22.10.0        | 22.10.0        |
 +----------------+----------------+</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If you see output similar to the above example, you’ve completed this step, but Astra Trident is not yet fully configured. Go ahead and continue to the next step. See <a href="kubernetes-postdeployment.html" target="_blank" rel="noopener">post-deployment tasks</a>.</p>
+<p>To complete Astra Trident configuration, continue to <a href="kubernetes-postdeployment.html">post-deployment tasks</a>.</p>
 </div>
 <div class="paragraph">
-<p>However, if the installer does not complete successfully or you don’t see a <strong>Running</strong> <code>trident-csi-&lt;generated id&gt;</code>, the platform was not installed.</p>
+<p>If the installer does not complete successfully or <code>trident-csi-&lt;generated id&gt;</code> does not have a <strong>Running</strong> status, the platform was not installed.</p>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<img src="/us-en/trident/images/tip.svg" alt="Tip">
+<img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-For troubleshooting issues during deployment, see the <a href="../troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> section.
+For troubleshooting issues during deployment, refer to  <a href="../troubleshooting.html">troubleshooting</a>.
 </td>
 </tr>
 </table>

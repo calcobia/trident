@@ -185,9 +185,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.07">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 22.10">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.07</span>
+    <span translate="no" class="notranslate">Astra Trident 22.10</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -195,6 +195,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-docker/stor-config.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2207/trident-docker/stor-config.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
       </a>
                      
@@ -408,7 +415,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_07_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_10_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -597,6 +604,31 @@
             Configure backends
           </a>
           
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Configure_an_ANF_backend.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Configure an ANF backend
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -1104,11 +1136,27 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure an ANF backend"
-      data-li-level="3#" 
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/us-en/trident/trident-use/anf.html">
+        <div class="na-navbar-padding"> Configure an ANF backend</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare to configure an ANF backend"
+      data-li-level="4#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
-        Configure an ANF backend
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-prep.html">
+        Prepare to configure an ANF backend
       </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ANF configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
+        ANF configuration options and examples
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a CVS for GCP backend"
       data-li-level="3#" 
@@ -1133,18 +1181,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP SAN drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP SAN drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP SAN configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
-        Configuration options and examples
+        ONTAP SAN configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure a backend with ONTAP NAS drivers"
@@ -1156,18 +1204,18 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Preparation"
+      data-pdf-filename="Prepare to configure backend with ONTAP NAS drivers"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
-        Preparation
+        Prepare to configure backend with ONTAP NAS drivers
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configuration options and examples"
+      data-pdf-filename="ONTAP NAS configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
-        Configuration options and examples
+        ONTAP NAS configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
@@ -1518,7 +1566,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-30 19:29:29 +0000">08/30/2022</time>
+    <time datetime="2022-10-11 14:45:22 +0000">10/11/2022</time>
     
   
 
@@ -2171,7 +2219,7 @@ The <code>ontap-nas-economy</code> driver is not currently supported in Docker S
 <h2 id="cloud-volumes-service-cvs-on-gcp-configuration">Cloud Volumes Service (CVS) on GCP configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Trident now includes support for smaller volumes with the default CVS service type on <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-types" target="_blank" rel="noopener">GCP</a>. For backends created with <code>storageClass=software</code>, volumes will now have a minimum provisioning size of 300 GiB. <strong>NetApp recommends customers consume sub-1TiB volumes for non-production workloads</strong>. CVS currently provides this feature under Controlled Availability and does not provide technical support.</p>
+<p>Astra Trident supports volumes with the default CVS service type on <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-types" target="_blank" rel="noopener">GCP</a>. Astra Trident does not support CVS volumes less than 100 GiB regardless of the minimum allowed by the CVS service type. Therefore, Trident automatically creates a 100 GiB volume if the requested volume is smaller than the minimum size.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2180,41 +2228,22 @@ The <code>ontap-nas-economy</code> driver is not currently supported in Docker S
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Sign up for access to sub-1TiB volumes <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7_euiPtlV8bhsKWvwBl3gm9KUL4kOhD7lnbHC3LlQ7m02Dw/viewform" target="_blank" rel="noopener">here</a>.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/warning.svg" alt="Warning">
-</td>
-<td class="content">
-When deploying backends using the default CVS service type <code>storageClass=software</code>, you should obtain access to the sub-1TiB volumes feature on GCP for the Project Number(s) and Project ID(s) in question. This is necessary for Trident to provision sub-1TiB volumes. If not, volume creations <strong>will fail</strong> for PVCs that are &lt;600 GiB. Obtain access to sub-1TiB volumes using <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7_euiPtlV8bhsKWvwBl3gm9KUL4kOhD7lnbHC3LlQ7m02Dw/viewform" target="_blank" rel="noopener">this form</a>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Volumes created by Trident for the default CVS service level will be provisioned as follows:</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>PVCs that are smaller than 300 GiB will result in Trident creating a 300 GiB CVS volume.</p>
+<p>NetApp recommends customers consume sub-1TiB volumes for non-production workloads.</p>
 </li>
 <li>
-<p>PVCs that are between 300 GiB to 600 GiB will result in Trident creating a CVS volume of the requested size.</p>
+<p>When deploying backends using the default CVS service type <code>storageClass=software</code>, sign up for access to the sub-1TiB volumes feature on GCP for the relevant Project Number and Project ID. This is necessary for Trident to provision sub-1TiB volumes. If not, volume creation <strong>will fail</strong> for PVCs less than 600 GiB.</p>
 </li>
 <li>
-<p>PVCs that are between 600 GiB and 1 TiB will result in Trident creating a 1TiB CVS volume.</p>
-</li>
-<li>
-<p>PVCs that are greater than 1 TiB will result in Trident creating a CVS volume of the requested size.</p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc7_euiPtlV8bhsKWvwBl3gm9KUL4kOhD7lnbHC3LlQ7m02Dw/viewform">Sign up for access to sub-1TiB volumes.</a></p>
 </li>
 </ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>In addition to the global configuration values, when using CVS on GCP, these options are available.</p>
@@ -2324,18 +2353,6 @@ When deploying backends using the default CVS service type <code>storageClass=so
 </td>
 <td class="content">
 If using a shared VPC network, you should specify both <code>projectNumber</code> and <code>hostProjectNumber</code>. In that case, <code>projectNumber</code> is the service project and <code>hostProjectNumber</code> is the host project.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-The NetApp Cloud Volumes Service for GCP does not support CVS-Performance volumes less than 100 GiB in size, or CVS volumes less than 300 GiB in size. To make it easier to deploy applications, Trident automatically creates volumes of the minimum size if a too-small volume is requested.
 </td>
 </tr>
 </table>

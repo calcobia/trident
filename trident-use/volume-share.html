@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Known issues and limitations</title>
+  <title>Share an NFS volume across namespaces</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Known issues and limitations" />
+  <meta property="og:title" content="Share an NFS volume across namespaces" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-docker/known-issues-docker.html" />
-	<meta property="og:description" content="Find information about known issues when using Astra Trident with Docker." />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-use/volume-share.html" />
+	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/us-en/trident/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Find information about known issues when using Astra Trident with Docker.">
-  <meta name="keywords" content=" known issues, trident, trident for docker, docker"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta name="keywords" content=" volref, volume reference, share, pvc, pv, nfs, namespace"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -194,42 +194,42 @@
 
   <ul class="custom-dropdown-menu"><li>
       
-      <a href="https://docs.netapp.com/us-en/trident/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident/trident-use/volume-share.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2207/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2207/trident-use/volume-share.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2204/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-use/volume-share.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2201/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2201/trident-use/volume-share.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.01</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2110/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2110/trident-use/volume-share.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
       </a>
                      
     </li>
     
   </ul>
-</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Known issues and limitations](https://docs.netapp.com/us-en/trident/trident-docker/known-issues-docker.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-docker/known-issues-docker.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Share an NFS volume across namespaces](https://docs.netapp.com/us-en/trident/trident-use/volume-share.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-use/volume-share.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -352,15 +352,15 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/us-en/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/trident/trident-use/volume-share.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/trident/trident-use/volume-share.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/trident/trident-use/volume-share.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/trident/trident-use/volume-share.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/trident/trident-use/volume-share.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -801,8 +801,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
         </li>
@@ -1373,7 +1371,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Known issues"
       data-li-level="2#" 
-      class="  active "
+      class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/known-issues-docker.html">
         Known issues
       </a></li></ul></li><li 
@@ -1559,18 +1557,26 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Known issues and limitations</h1>
+  <h1 class="n-doc__component-detail-heading">Share an NFS volume across namespaces</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2021-09-20 11:55:42 +0000">09/20/2021</time>
+    <time datetime="2022-10-19 15:50:04 +0000">10/19/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1579,47 +1585,87 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Find information about known issues and limitations when using Astra Trident with Docker.</p>
+<p>The Astra TridentVolumeReference CR allows you to securely share ReadWriteMany (RWX) NFS volumes across one or more Kubernetes namespaces. This Kubernetes-native solution has the following benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Multiple levels of access control to ensure security</p>
+</li>
+<li>
+<p>Works with all Trident NFS volume drivers</p>
+</li>
+<li>
+<p>No reliance on tridentctl or any other non-native Kubernetes feature</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This diagram illustrates NFS volume sharing across two Kubernetes namespaces.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/cross-namespace-sharing.png" alt="A conceptual diagram of cross namespace sharing.">
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="upgrading-trident-docker-volume-plugin-to-20-10-and-later-from-older-versions-results-in-upgrade-failure-with-the-no-such-file-or-directory-error">Upgrading Trident Docker Volume Plugin to 20.10 and later from older versions results in upgrade failure with the no such file or directory error.</h2>
+<h2 id="quick-start">Quick start</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>You can set up NFS volume sharing in just a few steps.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png" alt="One"></span> Configure source PVC to share the volume</div>
+<p>The source namespace owner grants permission to access the data in the source PVC.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png" alt="Two"></span> Grant permission to create a CR in the destination namespace</div>
+<p>The cluster administrator grants permission to the owner of the destination namespace to create the TridentVolumeReference CR.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png" alt="Three"></span> Create TridentVolumeReference in the destination namespace</div>
+<p>The owner of the destination namespace creates the TridentVolumeReference CR to refer to the source PVC.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png" alt="Four"></span> Create the subordinate PVC in the destination namespace</div>
+<p>The owner of the destination namespace creates the subordinate PVC to use the data source from the source PVC.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configure-the-source-and-destination-namespaces">Configure the source and destination namespaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To ensure security, cross namespace sharing requires collaboration and action by the source namespace owner, cluster administrator, and destination namespace owner. The user role is designated in each step.</p>
+</div>
 <div class="olist arabic">
-<div class="title">Workaround</div>
+<div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Disable the plugin.</p>
+<p><strong>Source namespace owner:</strong> Create the PVC (<code>pvc1</code>) in the source namespace that grants permission to share with the destination namespace (<code>namespace2</code>) using the <code>shareToNamespace</code> annotation.</p>
 <div class="listingblock">
 <div class="content">
-<pre>docker plugin disable -f netapp:latest</pre>
+<pre>kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc1
+  namespace: namespace1
+  annotations:
+    trident.netapp.io/shareToNamespace: namespace2
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: trident-csi
+  resources:
+    requests:
+      storage: 100Gi</pre>
 </div>
 </div>
-</li>
-<li>
-<p>Remove the plugin.</p>
-<div class="listingblock">
-<div class="content">
-<pre>docker plugin rm -f netapp:latest</pre>
+<div class="paragraph">
+<p>Astra Trident creates the PV and its backend NFS storage volume.</p>
 </div>
-</div>
-</li>
-<li>
-<p>Reinstall the plugin by providing the extra <code>config</code> parameter.</p>
-<div class="listingblock">
-<div class="content">
-<pre>docker plugin install netapp/trident-plugin:20.10 --alias netapp --grant-all-permissions config=config.json</pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="volume-names-must-be-a-minimum-of-2-characters-in-length">Volume names must be a minimum of 2 characters in length.</h2>
-<div class="sectionbody">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1627,42 +1673,137 @@
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-This is a Docker client limitation. The client will interpret a single character name as being a Windows path. <a href="https://github.com/moby/moby/issues/25773" target="_blank" rel="noopener">See bug 25773</a>.
+<div class="ulist">
+<ul>
+<li>
+<p>You can share the PVC to multiple namespaces using a comma-delimited list. For example, <code>trident.netapp.io/shareToNamespace: namespace2,namespace3,namespace4</code>.</p>
+</li>
+<li>
+<p>You can share to all namespaces using <code>*</code>. For example, <code>trident.netapp.io/shareToNamespace: *</code></p>
+</li>
+<li>
+<p>You can update the PVC to include the <code>shareToNamespace</code> annotation at any time.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
 </div>
+</li>
+<li>
+<p><strong>Cluster admin:</strong> Create the custom role and kubeconfig to grant permission to the destination namespace owner to create the TridentVolumeReference CR in the destination namespace.</p>
+</li>
+<li>
+<p><strong>Destination namespace owner:</strong> Create a TridentVolumeReference CR in the destination namespace that refers to the source namespace <code>pvc1</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre>apiVersion: trident.netapp.io/v1
+kind: TridentVolumeReference
+metadata:
+  name: my-first-tvr
+  namespace: namespace2
+spec:
+  pvcName: pvc1
+  pvcNamespace: namespace1</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Destination namespace owner:</strong> Create a PVC (<code>pvc2</code>) in destination namespace (<code>namespace2</code>) using the <code>shareFromPVC</code> annotation to designate the source PVC.</p>
+<div class="listingblock">
+<div class="content">
+<pre>kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  annotations:
+    trident.netapp.io/shareFromPVC: namespace1/pvc1
+  name: pvc2
+  namespace: namespace2
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: trident-csi
+  resources:
+    requests:
+      storage: 100Gi</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+The size of the destination PVC must be less than or equal than the source PVC.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Results</div>
+<p>Astra Trident reads the <code>shareFromPVC</code> annotation on the destination PVC and creates the destination PV as a subordinate volume with no storage resource of its own that points to the source PV and shares the source PV storage resource. The destination PVC and PV appear bound as normal.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="docker-swarm-has-certain-behaviors-that-prevent-astra-trident-from-supporting-it-with-every-storage-and-driver-combination">Docker Swarm has certain behaviors that prevent Astra Trident from supporting it with every storage and driver combination.</h2>
+<h2 id="delete-a-shared-volume">Delete a shared volume</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can delete a volume that is shared across multiple namespaces. Astra Trident will remove access to the volume on the source namespace and maintain access for other namespaces that share the volume. When all namespaces that reference the volume are removed, Astra Trident deletes the volume.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-tridentctl-get-to-query-subordinate-volumes">Use <code>tridentctl get</code> to query subordinate volumes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using the <code>tridentctl</code> utility, you can run the <code>get</code> command to get subordinate volumes. For more information, refer to <a href="../trident-reference/tridentctl.html"><code>tridentctl</code> commands and options</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Usage:
+  tridentctl get [option]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Flags:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>`-h, --help</code>: Help for volumes.</p>
+</li>
+<li>
+<p><code>--parentOfSubordinate string</code>: Limit query to subordinate source volume.</p>
+</li>
+<li>
+<p><code>--subordinateOf string</code>: Limit query to subordinates of volume.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="limitations">Limitations</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Docker Swarm presently makes use of volume name instead of volume ID as its unique volume identifier.</p>
+<p>Astra Trident cannot prevent destination namespaces from writing to the shared volume. You should use file locking or other processes to prevent overwriting shared volume data.</p>
 </li>
 <li>
-<p>Volume requests are simultaneously sent to each node in a Swarm cluster.</p>
+<p>You cannot revoke access to the source PVC by removing the <code>shareToNamespace</code> or <code>shareFromNamepace</code> annotations or deleting the <code>TridentVolumeReference</code> CR. To revoke access, you must delete the subordinate PVC.</p>
 </li>
 <li>
-<p>Volume plugins (including Astra Trident) must run independently on each node in a Swarm cluster.<br>
-Due to the way ONTAP works and how the <code>ontap-nas</code> and <code>ontap-san</code> drivers function, they are the only ones that happen to be able to operate within these limitations.</p>
+<p>Snapshots, clones, and mirroring are not possible on subordinate volumes.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>The rest of the drivers are subject to issues like race conditions that can result in the creation of a large number of volumes for a single request without a clear “winner”; for example, Element has a feature that allows volumes to have the same name but different IDs.</p>
-</div>
-<div class="paragraph">
-<p>NetApp has provided feedback to the Docker team, but does not have any indication of future recourse.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="if-a-flexgroup-is-being-provisioned-ontap-does-not-provision-a-second-flexgroup-if-the-second-flexgroup-has-one-or-more-aggregates-in-common-with-the-flexgroup-being-provisioned">If a FlexGroup is being provisioned, ONTAP does not provision a second FlexGroup if the second FlexGroup has one or more aggregates in common with the FlexGroup being provisioned.</h2>
-<div class="sectionbody">
-
 </div>
 </div>
 

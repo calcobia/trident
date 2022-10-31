@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Known issues and limitations</title>
+  <title>Azure NetApp Files backend configuration options and examples</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Known issues and limitations" />
+  <meta property="og:title" content="Azure NetApp Files backend configuration options and examples" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-docker/known-issues-docker.html" />
-	<meta property="og:description" content="Find information about known issues when using Astra Trident with Docker." />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-use/anf-examples.html" />
+	<meta property="og:description" content="Learn about NFS and SMB backend configuration options for ANF and review configuration examples." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/trident/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Find information about known issues when using Astra Trident with Docker.">
-  <meta name="keywords" content=" known issues, trident, trident for docker, docker"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Learn about NFS and SMB backend configuration options for ANF and review configuration examples.">
+  <meta name="keywords" content=" trident backend, azure netapp files, smb volumes, smb, windows"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -194,42 +194,42 @@
 
   <ul class="custom-dropdown-menu"><li>
       
-      <a href="https://docs.netapp.com/us-en/trident/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident/trident-use/anf-examples.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2207/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2207/trident-use/anf-examples.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2204/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-use/anf-examples.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2201/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2201/trident-use/anf-examples.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.01</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2110/trident-docker/known-issues-docker.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2110/trident-use/anf-examples.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
       </a>
                      
     </li>
     
   </ul>
-</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Known issues and limitations](https://docs.netapp.com/us-en/trident/trident-docker/known-issues-docker.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-docker/known-issues-docker.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Azure NetApp Files backend configuration options and examples](https://docs.netapp.com/us-en/trident/trident-use/anf-examples.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-use/anf-examples.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -352,15 +352,15 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/us-en/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/trident/trident-use/anf-examples.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/trident/trident-use/anf-examples.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/trident/trident-use/anf-examples.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/trident/trident-use/anf-examples.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/trident/trident-docker/known-issues-docker.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/trident/trident-use/anf-examples.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -622,6 +622,8 @@
           
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
         </li>
@@ -801,8 +803,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
         </li>
@@ -1153,7 +1153,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="ANF configuration options and examples"
       data-li-level="4#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
         ANF configuration options and examples
       </a></li></ul></li><li 
@@ -1373,7 +1373,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Known issues"
       data-li-level="2#" 
-      class="  active "
+      class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-docker/known-issues-docker.html">
         Known issues
       </a></li></ul></li><li 
@@ -1559,18 +1559,26 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Known issues and limitations</h1>
+  <h1 class="n-doc__component-detail-heading">Azure NetApp Files backend configuration options and examples</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2021-09-20 11:55:42 +0000">09/20/2021</time>
+    <time datetime="2022-10-07 16:39:21 +0000">10/07/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1579,47 +1587,11 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Find information about known issues and limitations when using Astra Trident with Docker.</p>
+<p>Learn about NFS and SMB backend configuration options for ANF and review configuration examples.</p>
 </div>
+<div class="paragraph">
+<p>Astra Trident uses your backend configuration (subnet, virtual network, service level, and location), to create ANF volumes on capacity pools that are available in the requested location and match the requested service level and subnet.</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="upgrading-trident-docker-volume-plugin-to-20-10-and-later-from-older-versions-results-in-upgrade-failure-with-the-no-such-file-or-directory-error">Upgrading Trident Docker Volume Plugin to 20.10 and later from older versions results in upgrade failure with the no such file or directory error.</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<div class="title">Workaround</div>
-<ol class="arabic">
-<li>
-<p>Disable the plugin.</p>
-<div class="listingblock">
-<div class="content">
-<pre>docker plugin disable -f netapp:latest</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Remove the plugin.</p>
-<div class="listingblock">
-<div class="content">
-<pre>docker plugin rm -f netapp:latest</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Reinstall the plugin by providing the extra <code>config</code> parameter.</p>
-<div class="listingblock">
-<div class="content">
-<pre>docker plugin install netapp/trident-plugin:20.10 --alias netapp --grant-all-permissions config=config.json</pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="volume-names-must-be-a-minimum-of-2-characters-in-length">Volume names must be a minimum of 2 characters in length.</h2>
-<div class="sectionbody">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1627,7 +1599,7 @@
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-This is a Docker client limitation. The client will interpret a single character name as being a Windows path. <a href="https://github.com/moby/moby/issues/25773" target="_blank" rel="noopener">See bug 25773</a>.
+Astra Trident does not support Manual QoS capacity pools.
 </td>
 </tr>
 </table>
@@ -1635,34 +1607,538 @@ This is a Docker client limitation. The client will interpret a single character
 </div>
 </div>
 <div class="sect1">
-<h2 id="docker-swarm-has-certain-behaviors-that-prevent-astra-trident-from-supporting-it-with-every-storage-and-driver-combination">Docker Swarm has certain behaviors that prevent Astra Trident from supporting it with every storage and driver combination.</h2>
+<h2 id="backend-configuration-options">Backend configuration options</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Docker Swarm presently makes use of volume name instead of volume ID as its unique volume identifier.</p>
-</li>
-<li>
-<p>Volume requests are simultaneously sent to each node in a Swarm cluster.</p>
-</li>
-<li>
-<p>Volume plugins (including Astra Trident) must run independently on each node in a Swarm cluster.<br>
-Due to the way ONTAP works and how the <code>ontap-nas</code> and <code>ontap-san</code> drivers function, they are the only ones that happen to be able to operate within these limitations.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>ANF backends provide these configuration options.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>version</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Always 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>storageDriverName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the storage driver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"azure-netapp-files"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>backendName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom name or the storage backend</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Driver name + "_" + random characters</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subscriptionID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The subscription ID from your Azure subscription</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tenantID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The tenant ID from an App Registration</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clientID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The client ID from an App Registration</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clientSecret</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The client secret from an App Registration</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serviceLevel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One of <code>Standard</code>, <code>Premium</code>, or <code>Ultra</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"" (random)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>location</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the Azure location where the new volumes will be created</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourceGroups</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of resource groups for filtering discovered resources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"[]" (no filter)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>netappAccounts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of NetApp accounts for filtering discovered resources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"[]" (no filter)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>capacityPools</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of capacity pools for filtering discovered resources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"[]" (no filter, random)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>virtualNetwork</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of a virtual network with a delegated subnet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subnet</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of a subnet delegated to <code>Microsoft.Netapp/volumes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>networkFeatures</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set of VNet features for a volume, may be <code>Basic</code> or <code>Standard</code>.<br>
+<br>
+Network Features is not available in all regions and might have to be enabled in a subscription. Specifying  <code>networkFeatures</code>  when the functionality is not enabled causes volume provisioning to fail.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nfsMountOptions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fine-grained control of NFS mount options.<br>
+<br>
+Ignored for SMB volumes.<br>
+<br>
+To mount volumes using NFS version 4.1, include  <code>nfsvers=4</code>  in the comma-delimited mount options list to choose NFS v4.1.<br>
+<br>
+Mount options set in a storage class definition override mount options set in backend configuration.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"nfsvers=3"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>limitVolumeSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fail provisioning if the requested volume size is above this value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"" (not enforced by default)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>debugTraceFlags</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug flags to use when troubleshooting. Example, <code>\{"api": false, "method": true, "discovery": true}</code>. Do not use this unless you are troubleshooting and require a detailed log dump.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nasType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configure NFS or SMB volumes creation.<br>
+<br>
+Options are <code>nfs</code>, <code>smb</code> or null. Setting to null defaults to NFS volumes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nfs</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+For more information on Network Features, refer to <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/configure-network-features" target="_blank" rel="noopener">Configure network features for an Azure NetApp Files volume</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="required-permissions-and-resources">Required permissions and resources</h3>
+<div class="paragraph">
+<p>If you receive a “No capacity pools found” error when creating a PVC, it is likely your app registration doesn’t have the required permissions and resources (subnet, virtual network, capacity pool) associated. If debug is enabled, Astra Trident will log the Azure resources discovered when the backend is created. Verify an appropriate role is being used.</p>
 </div>
 <div class="paragraph">
-<p>The rest of the drivers are subject to issues like race conditions that can result in the creation of a large number of volumes for a single request without a clear “winner”; for example, Element has a feature that allows volumes to have the same name but different IDs.</p>
+<p>The values for <code>resourceGroups</code>, <code>netappAccounts</code>, <code>capacityPools</code>, <code>virtualNetwork</code>, and <code>subnet</code> can be specified using short or fully-qualified names. Fully-qualified names are recommended in most situations as short names can match multiple resources with the same name.</p>
 </div>
 <div class="paragraph">
-<p>NetApp has provided feedback to the Docker team, but does not have any indication of future recourse.</p>
+<p>The <code>resourceGroups</code>, <code>netappAccounts</code>, and <code>capacityPools</code> values are filters that restrict the set of discovered resources to those available to this storage backend and may be specified in any combination. Fully-qualified names follow this format:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource group</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;resource group&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NetApp account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;resource group&gt;/&lt;netapp account&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Capacity pool</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;resource group&gt;/&lt;netapp account&gt;/&lt;capacity pool&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virtual network</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;resource group&gt;/&lt;virtual network&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subnet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;resource group&gt;/&lt;virtual network&gt;/&lt;subnet&gt;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="volume-provisioning">Volume provisioning</h3>
+<div class="paragraph">
+<p>You can control default volume provisioning by specifying the following options in a special section of the configuration file. Refer to <a href="#example-configurations">Example configurations</a> for details.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exportRule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Export rules for new volumes.<br>
+<br>
+<code>exportRule</code> must be a comma-separated list of any combination of IPv4 addresses or IPv4 subnets in CIDR notation.<br>
+<br>
+Ignored for SMB volumes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"0.0.0.0/0"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>snapshotDir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controls visibility of the .snapshot directory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"false"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The default size of new volumes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"100G"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unixPermissions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The unix permissions of new volumes (4 octal digits).<br>
+<br>
+Ignored for SMB volumes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"" (preview feature, requires whitelisting in subscription)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+For all volumes created on an ANF backend, Astra Trident copies the labels present on a storage pool to the storage volume at the time it is provisioned. Storage administrators can define labels per storage pool and group all volumes created in a storage pool. This is a convenient way to differentiate volumes based on a set of customizable labels that are provided in the backend configuration.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="if-a-flexgroup-is-being-provisioned-ontap-does-not-provision-a-second-flexgroup-if-the-second-flexgroup-has-one-or-more-aggregates-in-common-with-the-flexgroup-being-provisioned">If a FlexGroup is being provisioned, ONTAP does not provision a second FlexGroup if the second FlexGroup has one or more aggregates in common with the FlexGroup being provisioned.</h2>
+<h2 id="example-configurations">Example configurations</h2>
 <div class="sectionbody">
+<details open>
+<summary class="title">Example 1: Minimal configuration</summary>
+<div class="content">
+<div class="paragraph">
+<p>This is the absolute minimum backend configuration. With this configuration, Astra Trident discovers all of your NetApp accounts, capacity pools, and subnets delegated to ANF in the configured location, and places new volumes on one of those pools and subnets randomly. Because <code>nasType</code> is omitted, the <code>nfs</code> default applies and the backend will provision for NFS volumes.</p>
+</div>
+<div class="paragraph">
+<p>This configuration is ideal when you are just getting started with ANF and trying things out, but in practice you are going to want to provide additional scoping for the volumes you provision.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "version": 1,
+    "storageDriverName": "azure-netapp-files",
+    "subscriptionID": "9f87c765-4774-fake-ae98-a721add45451",
+    "tenantID": "68e4f836-edc1-fake-bff9-b2d865ee56cf",
+    "clientID": "dd043f63-bf8e-fake-8076-8de91e5713aa",
+    "clientSecret": "SECRET",
+    "location": "eastus"
+}</pre>
+</div>
+</div>
+</div>
+</details>
+<details open>
+<summary class="title">Example 2: Specific service level configuration with capacity pool filters</summary>
+<div class="content">
+<div class="paragraph">
+<p>This backend configuration places volumes in Azure&#8217;s <code>eastus</code> location in an <code>Ultra</code> capacity pool. Astra Trident automatically discovers all of the subnets delegated to ANF in that location and places a new volume on one of them randomly.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    {
+        "version": 1,
+        "storageDriverName": "azure-netapp-files",
+        "subscriptionID": "9f87c765-4774-fake-ae98-a721add45451",
+        "tenantID": "68e4f836-edc1-fake-bff9-b2d865ee56cf",
+        "clientID": "dd043f63-bf8e-fake-8076-8de91e5713aa",
+        "clientSecret": "SECRET",
+        "location": "eastus",
+        "serviceLevel": "Ultra",
+        "capacityPools": [
+            "application-group-1/account-1/ultra-1",
+            "application-group-1/account-1/ultra-2"
+],
+    }</pre>
+</div>
+</div>
+</div>
+</details>
+<details open>
+<summary class="title">Example 3: Advanced configuration</summary>
+<div class="content">
+<div class="paragraph">
+<p>This backend configuration further reduces the scope of volume placement to a single subnet, and also modifies some volume provisioning defaults.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    {
+        "version": 1,
+        "storageDriverName": "azure-netapp-files",
+        "subscriptionID": "9f87c765-4774-fake-ae98-a721add45451",
+        "tenantID": "68e4f836-edc1-fake-bff9-b2d865ee56cf",
+        "clientID": "dd043f63-bf8e-fake-8076-8de91e5713aa",
+        "clientSecret": "SECRET",
+        "location": "eastus",
+        "serviceLevel": "Ultra",
+        "capacityPools": [
+            "application-group-1/account-1/ultra-1",
+            "application-group-1/account-1/ultra-2"
+],
+        "virtualNetwork": "my-virtual-network",
+        "subnet": "my-subnet",
+        "networkFeatures": "Standard",
+        "nfsMountOptions": "vers=3,proto=tcp,timeo=600",
+        "limitVolumeSize": "500Gi",
+        "defaults": {
+            "exportRule": "10.0.0.0/24,10.0.1.0/24,10.0.2.100",
+            "snapshotDir": "true",
+            "size": "200Gi",
+            "unixPermissions": "0777"
+        }
+    }</pre>
+</div>
+</div>
+</div>
+</details>
+<details open>
+<summary class="title">Example 4: Virtual storage pool configuration</summary>
+<div class="content">
+<div class="paragraph">
+<p>This backend configuration defines multiple storage pools in a single file. This is useful when you have multiple capacity pools supporting different service levels and you want to create storage classes in Kubernetes that represent those.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    {
+        "version": 1,
+        "storageDriverName": "azure-netapp-files",
+        "subscriptionID": "9f87c765-4774-fake-ae98-a721add45451",
+        "tenantID": "68e4f836-edc1-fake-bff9-b2d865ee56cf",
+        "clientID": "dd043f63-bf8e-fake-8076-8de91e5713aa",
+        "clientSecret": "SECRET",
+        "location": "eastus",
+        "resourceGroups": ["application-group-1"],
+        "networkFeatures": "Basic",
+        "nfsMountOptions": "vers=3,proto=tcp,timeo=600",
+        "labels": {
+            "cloud": "azure"
+        },
+        "location": "eastus",
 
+        "storage": [
+            {
+                "labels": {
+                    "performance": "gold"
+                },
+                "serviceLevel": "Ultra",
+                "capacityPools": ["ultra-1", "ultra-2"],
+                "networkFeatures": "Standard"
+            },
+            {
+                "labels": {
+                    "performance": "silver"
+                },
+                "serviceLevel": "Premium",
+                "capacityPools": ["premium-1"]
+            },
+            {
+                "labels": {
+                    "performance": "bronze"
+                },
+                "serviceLevel": "Standard",
+                "capacityPools": ["standard-1", "standard-2"]
+            }
+        ]
+    }</pre>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="sect1">
+<h2 id="storage-class-definitions">Storage Class definitions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following <code>StorageClass</code> definitions refer to the storage pools above.</p>
+</div>
+<div class="sect2">
+<h3 id="example-definitions-using-parameter-selector-field">Example definitions using <code>parameter.selector</code> field</h3>
+<div class="paragraph">
+<p>Using <code>parameter.selector</code> you can specify for each <code>StorageClass</code> the virtual pool that is used to host a volume. The volume will have the aspects defined in the chosen pool.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: gold
+provisioner: csi.trident.netapp.io
+parameters:
+  selector: "performance=gold"
+allowVolumeExpansion: true
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: silver
+provisioner: csi.trident.netapp.io
+parameters:
+  selector: "performance=silver"
+allowVolumeExpansion: true
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: bronze
+provisioner: csi.trident.netapp.io
+parameters:
+  selector: "performance=bronze"
+allowVolumeExpansion: true</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="example-definitions-for-smb-volumes">Example definitions for SMB volumes</h3>
+<div class="paragraph">
+<p>Using <code>nasType</code>, <code>node-stage-secret-name</code>, and  <code>node-stage-secret-namespace</code>, you can specify an SMB volume and provide the required Active Directory credentials.</p>
+</div>
+<details open>
+<summary class="title">Example 1: Basic configuration on default namespace</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: anf-sc-smb
+provisioner: csi.trident.netapp.io
+parameters:
+  backendType: "azure-netapp-files"
+  trident.netapp.io/nasType: "smb"
+  csi.storage.k8s.io/node-stage-secret-name: "smbcreds"
+  csi.storage.k8s.io/node-stage-secret-namespace: "default"</pre>
+</div>
+</div>
+</div>
+</details>
+<details open>
+<summary class="title">Example 2: Using different secrets per namespace</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: anf-sc-smb
+provisioner: csi.trident.netapp.io
+parameters:
+  backendType: "azure-netapp-files"
+  trident.netapp.io/nasType: "smb"
+  csi.storage.k8s.io/node-stage-secret-name: "smbcreds"
+  csi.storage.k8s.io/node-stage-secret-namespace: ${pvc.namespace}</pre>
+</div>
+</div>
+</div>
+</details>
+<details open>
+<summary class="title">Example 3: Using different secrets per volume</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: anf-sc-smb
+provisioner: csi.trident.netapp.io
+parameters:
+  backendType: "azure-netapp-files"
+  trident.netapp.io/nasType: "smb"
+  csi.storage.k8s.io/node-stage-secret-name: ${pvc.name}
+  csi.storage.k8s.io/node-stage-secret-namespace: ${pvc.namespace}</pre>
+</div>
+</div>
+</div>
+</details>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<code>nasType: "smb"</code> filters for pools which support SMB volumes. <code>nasType: "nfs"`</code> or <code>nasType: "null"</code> filters for NFS pools.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="create-the-backend">Create the backend</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After you create the backend configuration file, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>tridentctl create backend -f &lt;backend-file&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the backend creation fails, something is wrong with the backend configuration. You can view the logs to determine the cause by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>tridentctl logs</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After you identify and correct the problem with the configuration file, you can run the create command again.</p>
+</div>
 </div>
 </div>
 
