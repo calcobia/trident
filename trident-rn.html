@@ -743,6 +743,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -1297,6 +1299,13 @@
         Import volumes
       </a></li></ul></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Share NFS volumes across namespaces"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/volume-share.html">
+        Share NFS volumes across namespaces
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Monitor Astra Trident"
       data-li-level="2#" 
       class=" "
@@ -1566,7 +1575,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-28 15:42:07 +0000">10/28/2022</time>
+    <time datetime="2022-10-31 23:15:44 +0000">10/31/2022</time>
     
   
 
@@ -1670,13 +1679,13 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 <div class="ulist">
 <ul>
 <li>
-<p>Added support for Kubernetes 1.25.</p>
+<p>Added support for Kubernetes 1.25. You must upgrade Astra Trident to 22.10 prior to upgrading to Kubernetes 1.25.</p>
 </li>
 <li>
 <p>Added a separate ServiceAccount, ClusterRole, and ClusterRoleBinding for the Trident Deployment and DaemonSet to allow future permissions enhancements.</p>
 </li>
 <li>
-<p>Added support for <a href="../trident-use/volume-share.html">cross-namespace volume sharing</a>.</p>
+<p>Added support for <a href="https://docs.netapp.com/us-en/trident/trident-use/volume-share.html">cross-namespace volume sharing</a>.</p>
 </li>
 </ul>
 </div>
@@ -1688,13 +1697,13 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 <p>Added new operator yaml (<code>bundle_post_1_25.yaml</code>) without a <code>PodSecurityPolicy</code> to support Kubernetes 1.25.</p>
 </li>
 <li>
-<p>Added <a href="../trident-reco/security-reco.html#use-linux-unified-key-setup-luks">support for LUKS-encrypted volumes</a> for <code>ontap-san</code> and <code>ontap-san-economy</code> storage drivers.</p>
+<p>Added <a href="https://docs.netapp.com/us-en/trident/trident-reco/security-reco.html#enable-per-volume-host-side-encryption-using-linux-unified-key-setup-luks">support for LUKS-encrypted volumes</a> for <code>ontap-san</code> and <code>ontap-san-economy</code> storage drivers.</p>
 </li>
 <li>
 <p>Added support for Windows Server 2019 nodes.</p>
 </li>
 <li>
-<p>Added <a href="../trident-use/anf.html">support for SMB volumes on Windows nodes</a> through the <code>azure-netapp-files</code> storage driver.</p>
+<p>Added <a href="https://docs.netapp.com/us-en/trident/trident-use/anf.html">support for SMB volumes on Windows nodes</a> through the <code>azure-netapp-files</code> storage driver.</p>
 </li>
 </ul>
 </div>
