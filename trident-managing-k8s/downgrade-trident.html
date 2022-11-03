@@ -1520,7 +1520,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1575,24 +1575,24 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
-    <img  class="avatar avatar-small"
-          alt="netapp-mwallis"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/53353653?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
     <img  class="avatar avatar-small"
           alt="juliantap"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
+    <img  class="avatar avatar-small"
+          alt="netapp-mwallis"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53353653?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1603,9 +1603,14 @@
 
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph lead">
 <p>Learn about the steps involved in downgrading to an earlier version of Astra Trident.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="when-to-downgrade">When to downgrade</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>You might consider downgrading for various reasons, such as the following:</p>
 </div>
@@ -1622,13 +1627,11 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="when-to-downgrade">When to downgrade</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>You should consider a downgrade when moving to a Astra Trident release that uses CRDs. Because Astra Trident now uses CRDs for maintaining state, all storage entities created (backends, storage classes, PV, and volume snapshots) have associated CRD objects instead of data written into the <code>trident</code> PV (used by the earlier installed version of Astra Trident). Newly created PVs, backends, and storage classes are all maintained as CRD objects. If you need to downgrade, this should only be attempted for a version of Astra Trident that runs using CRDs (19.07 and later). This is to ensure that all the operations performed on the current Astra Trident release are visible after the downgrade occurs.</p>
+<p>You should consider a downgrade when moving to a Astra Trident release that uses CRDs. Because Astra Trident uses CRDs for maintaining state, all storage entities created (backends, storage classes, PV, and volume snapshots) have associated CRD objects instead of data written into the <code>trident</code> PV (used by the earlier installed version of Astra Trident). Newly created PVs, backends, and storage classes are all maintained as CRD objects.</p>
+</div>
+<div class="paragraph">
+<p>Only attempt downgrade for a version of Astra Trident that runs using CRDs (19.07 and later). This ensures operations performed on the current Astra Trident release are visible after the downgrade occurs.</p>
 </div>
 </div>
 </div>

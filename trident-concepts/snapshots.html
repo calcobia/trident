@@ -1520,7 +1520,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1575,7 +1575,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-27 22:15:28 +0000">04/27/2022</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
@@ -1601,9 +1601,16 @@
 
 </p>
 
-<div class="paragraph">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
 <p>Learn more about how Astra Trident handles the creation of volume snapshots for its drivers.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="learn-about-volume-snapshot-creation">Learn about volume snapshot creation</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -1625,6 +1632,8 @@
 </div>
 <div class="paragraph">
 <p>With Astra Trident, you can use VolumeSnapshots to create new PVs from them. Creating PVs from these snapshots is performed by using the FlexClone technology for supported ONTAP and CVS backends. When creating a PV from a snapshot, the backing volume is a FlexClone of the snapshot’s parent volume. The <code>solidfire-san</code> driver uses Element software volume clones to create PVs from snapshots. Here it creates a clone from the Element snapshot.</p>
+</div>
+</div>
 </div>
 
     </article>

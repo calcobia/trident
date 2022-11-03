@@ -1520,7 +1520,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1575,7 +1575,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-01 00:35:01 +0000">02/01/2022</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
@@ -1604,22 +1604,29 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>While <a href="tridentctl.html" target="_blank" rel="noopener">tridentctl commands and options</a> is the easiest way to interact with Astra Trident&#8217;s REST API, you can use the REST endpoint directly if you prefer.</p>
-</div>
-<div class="paragraph">
-<p>This is useful for advanced installations that use Astra Trident as a standalone binary in non-Kubernetes deployments.</p>
-</div>
-<div class="paragraph">
-<p>For better security, Astra Trident&#8217;s <code>REST API</code> is restricted to localhost by default when running inside a pod. To change this behavior, you need to set Astra Trident&#8217;s <code>-address</code> argument in its pod configuration.</p>
-</div>
-<div class="paragraph">
-<p>The API works as follows:</p>
+<p>While <a href="tridentctl.html">tridentctl commands and options</a> are the easiest way to interact with the Astra Trident REST API, you can use the REST endpoint directly if you prefer.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="get"><code>GET</code></h2>
+<h2 id="when-to-use-the-rest-api">When to use the REST API</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>REST API is useful for advanced installations that use Astra Trident as a standalone binary in non-Kubernetes deployments.</p>
+</div>
+<div class="paragraph">
+<p>For better security, the Astra Trident <code>REST API</code> is restricted to localhost by default when running inside a pod. To change this behavior, you need to set Astra Trident&#8217;s <code>-address</code> argument in its pod configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using-rest-api">Using REST API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The API works as follows:</p>
+</div>
+<div class="sect2">
+<h3 id="get"><code>GET</code></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1631,10 +1638,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="post"><code>POST</code></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="post"><code>POST</code></h3>
 <div class="paragraph">
 <p><code>POST &lt;trident-address&gt;/trident/v1/&lt;object-type&gt;</code>: Creates an object of the specified type.</p>
 </div>
@@ -1649,10 +1654,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="delete"><code>DELETE</code></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="delete"><code>DELETE</code></h3>
 <div class="paragraph">
 <p><code>DELETE &lt;trident-address&gt;/trident/v1/&lt;object-type&gt;/&lt;object-name&gt;</code>: Deletes the named resource.</p>
 </div>
@@ -1670,6 +1673,7 @@ Volumes associated with backends or storage classes will continue to exist; thes
 </div>
 <div class="paragraph">
 <p>For examples of how these APIs are called, pass the debug (<code>-d</code>) flag. For more information, see <a href="tridentctl.html"><code>tridentctl</code> commands and options</a>.</p>
+</div>
 </div>
 </div>
 </div>

@@ -1520,7 +1520,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1575,7 +1575,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-19 19:53:07 +0000">08/19/2022</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
@@ -1593,26 +1593,29 @@
 
 </p>
 
-<div class="paragraph">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
 <p>You have to install and configure the necessary protocol prerequisites on your host before you can deploy Astra Trident.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="verify-the-requirements">Verify the requirements</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Verify that your deployment meets all of the <a href="../trident-get-started/requirements.html" target="_blank" rel="noopener">requirements</a>.</p>
+<p>Verify that your deployment meets all of the <a href="../trident-get-started/requirements.html">requirements</a>.</p>
 </li>
 <li>
 <p>Verify that you have a supported version of Docker installed. If your Docker version is out of date, <a href="https://docs.docker.com/engine/install/" target="_blank" rel="noopener">install or update it</a>.</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>docker --version</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Verify that the protocol prerequisites are installed and configured on your host:</p>
 </li>
@@ -1747,6 +1750,8 @@ sudo service multipath-tools start</code></p>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 
     </article>
     <!-- Page Container -->

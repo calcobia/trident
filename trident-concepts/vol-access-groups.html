@@ -1520,7 +1520,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1575,17 +1575,27 @@
 <p class="page-details">
   
     
-    <time datetime="2021-09-16 20:35:15 +0000">09/16/2021</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
-<div class="paragraph">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
 <p>Learn more about how Astra Trident uses <a href="https://docs.netapp.com/us-en/element-software/concepts/concept_solidfire_concepts_volume_access_groups.html" target="_blank" rel="noopener">volume access groups</a>.</p>
 </div>
 <div class="admonitionblock note">
@@ -1600,6 +1610,11 @@ Ignore this section if you are using CHAP, which is recommended to simplify mana
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="learn-about-volume-access-groups">Learn about volume access groups</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Astra Trident can use volume access groups to control access to the volumes that it provisions. If CHAP is disabled, it expects to find an access group called <code>trident</code> unless you specify one or more access group IDs in the configuration.</p>
 </div>
@@ -1611,6 +1626,8 @@ Ignore this section if you are using CHAP, which is recommended to simplify mana
 </div>
 <div class="paragraph">
 <p>If you’re modifying the configuration from one that is using the default <code>trident</code> access group to one that uses others as well, include the ID for the <code>trident</code> access group in the list.</p>
+</div>
+</div>
 </div>
 
     </article>

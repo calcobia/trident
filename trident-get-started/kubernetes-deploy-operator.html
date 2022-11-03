@@ -1518,7 +1518,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1573,7 +1573,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-28 15:42:07 +0000">10/28/2022</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
@@ -1609,30 +1609,8 @@
 
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>You can deploy Astra Trident using the Trident operator. You can deploy the Trident operator in one of two ways:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Using the Trident <a href="https://artifacthub.io/packages/helm/netapp-trident/trident-operator" target="_blank" rel="noopener">Helm Chart</a>: The Helm Chart deploys the Trident operator and installs Trident in one step.</p>
-</li>
-<li>
-<p>Manually: Trident provides a <a href="https://github.com/NetApp/trident/blob/master/deploy/bundle.yaml" target="_blank" rel="noopener">bundle.yaml</a> file that can be used to install the operator and create associated objects.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/tip.svg" alt="Tip">
-</td>
-<td class="content">
-If you have not already familiarized yourself with the <a href="../trident-concepts/intro.html" target="_blank" rel="noopener">basic concepts</a>, now is a great time to do that.
-</td>
-</tr>
-</table>
+<div class="paragraph lead">
+<p>You can deploy Astra Trident using the Trident operator.</p>
 </div>
 </div>
 </div>
@@ -1667,8 +1645,42 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="trident-operator-deployment-options">Trident operator deployment options</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<div class="title">What you&#8217;ll need</div>
+<p>You can deploy the Trident operator in one of two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using the Trident <a href="https://artifacthub.io/packages/helm/netapp-trident/trident-operator" target="_blank" rel="noopener">Helm Chart</a>: The Helm Chart deploys the Trident operator and installs Trident in one step.</p>
+</li>
+<li>
+<p>Manually: Trident provides a <a href="https://github.com/NetApp/trident/blob/master/deploy/bundle.yaml" target="_blank" rel="noopener">bundle.yaml</a> file that can be used to install the operator and create associated objects.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/tip.svg" alt="Tip">
+</td>
+<td class="content">
+If you have not already familiarized yourself with the <a href="../trident-concepts/intro.html" target="_blank" rel="noopener">basic concepts</a>, now is a great time to do that.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="verify-prerequisites">Verify prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>To deploy Astra Trident, the following prerequisites should be met:</p>
 </div>
 <div class="ulist">
@@ -1785,7 +1797,7 @@ If you already created a namespace for Trident, the <code>--create-namespace</co
 </div>
 </div>
 <div class="sect1">
-<h2 id="deploy-the-trident-operator-manually">Deploy the Trident operator manually</h2>
+<h2 id="deploy-the-trident-operator-manually-and-install-trident">Deploy the Trident operator manually and install Trident</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Perform the steps listed to manually deploy the Trident operator.</p>

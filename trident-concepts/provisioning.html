@@ -1520,7 +1520,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1575,24 +1575,46 @@
 <p class="page-details">
   
     
-    <time datetime="2021-09-20 02:57:37 +0000">09/20/2021</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
-<div class="paragraph">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
 <p>Provisioning in Astra Trident has two primary phases. The first phase associates a storage class with the set of suitable backend storage pools and occurs as a necessary preparation before provisioning. The second phase includes the volume creation itself and requires choosing a storage pool from those associated with the pending volume’s storage class.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="storage-class-association">Storage class association</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Associating backend storage pools with a storage class relies on both the storage class&#8217;s requested attributes and its <code>storagePools</code>, <code>additionalStoragePools</code>, and <code>excludeStoragePools</code> lists. When you create a storage class, Trident compares the attributes and pools offered by each of its backends to those requested by the storage class. If a storage pool&#8217;s attributes and name match all of the requested attributes and pool names, Astra Trident adds that storage pool to the set of suitable storage pools for that storage class. In addition, Astra Trident adds all storage pools listed in the <code>additionalStoragePools</code> list to that set, even if their attributes do not fulfill all or any of the storage class&#8217;s requested attributes. You should use the <code>excludeStoragePools</code> list to override and remove storage pools from use for a storage class. Astra Trident performs a similar process every time you add a new backend, checking whether its storage pools satisfy those of the existing storage classes and removing any that have been marked as excluded.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="volume-creation">Volume creation</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Astra Trident then uses the associations between storage classes and storage pools to determine where to provision volumes. When you create a volume, Astra Trident first gets the set of storage pools for that volume&#8217;s storage class, and, if you specify a protocol for the volume, Astra Trident removes those storage pools that cannot provide the requested protocol (for example, a NetApp HCI/SolidFire backend cannot provide a file-based volume while an ONTAP NAS backend cannot provide a block-based volume). Astra Trident randomizes the order of this resulting set, to facilitate an even distribution of volumes, and then iterates through it, attempting to provision the volume on each storage pool in turn. If it succeeds on one, it returns successfully, logging any failures encountered in the process. Astra Trident returns a failure <strong>only if</strong> it fails to provision on <strong>all</strong> the storage pools available for the requested storage class and protocol.</p>
+</div>
+</div>
 </div>
 
     </article>

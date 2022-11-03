@@ -9,14 +9,14 @@
   <meta property="og:title" content="Customize <code>tridentctl</code> deployment" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy-tridentctl.html" />
-	<meta property="og:description" content="Trident’s installer enables you to customize attributes." />
+	<meta property="og:description" content="You can use the Astra Trident installer to customize deployment." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/trident/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Trident’s installer enables you to customize attributes.">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can use the Astra Trident installer to customize deployment.">
   <meta name="keywords" content=" deploy, astra trident, methods, operator, tridentctl, helm, attributes, customize, tridentorchestrator"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
@@ -1520,7 +1520,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1575,7 +1575,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-07-18 17:02:30 +0000">07/18/2022</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
@@ -1593,8 +1593,18 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>You can use the Astra Trident installer to customize deployment.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="learn-about-the-installer">Learn about the installer</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Trident installer enables you to customize attributes. For example, if you have copied the Trident image to a private repository, you can specify the image name by using <code>--trident-image</code>. If you have copied the Trident image as well as the needed CSI sidecar images to a private repository, it might be preferable to specify the location of that repository by using the <code>--image-registry</code> switch, which takes the form <code>&lt;registry FQDN&gt;[:port]</code>.</p>
+<p>The Astra Trident installer enables you to customize attributes. For example, if you have copied the Trident image to a private repository, you can specify the image name by using <code>--trident-image</code>. If you have copied the Trident image as well as the needed CSI sidecar images to a private repository, it might be preferable to specify the location of that repository by using the <code>--image-registry</code> switch, which takes the form <code>&lt;registry FQDN&gt;[:port]</code>.</p>
 </div>
 <div class="paragraph">
 <p>If you are using a distribution of Kubernetes, where <code>kubelet</code> keeps its data on a path other than the usual <code>/var/lib/kubelet</code>, you can specify the alternate path by using <code>--kubelet-dir</code>.</p>
@@ -1639,6 +1649,8 @@
 <div class="listingblock">
 <div class="content">
 <pre>./tridentctl install -n trident --use-custom-yaml</pre>
+</div>
+</div>
 </div>
 </div>
 

@@ -1518,7 +1518,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1573,7 +1573,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-04 20:28:30 +0000">08/04/2022</time>
+    <time datetime="2022-11-03 21:36:39 +0000">11/03/2022</time>
     
   
 
@@ -1622,7 +1622,7 @@ sidebar:
     - title: Earlier versions
       url: /earlier-versions.html
     - title: Legal notices
-      url: /legal.html
+      url: /legal-notices.html
 
 homepage:
   tiles:

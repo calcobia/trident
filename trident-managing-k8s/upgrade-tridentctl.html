@@ -1520,7 +1520,7 @@
       data-pdf-filename="Legal notices"
       data-li-level="1#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/legal.html">
+    ><a class="na-navbar-padding" href="/us-en/trident/legal-notices.html">
         Legal notices
       </a></li></ul>
 </div>
@@ -1575,11 +1575,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-27 22:04:12 +0000">09/27/2022</time>
+    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/juliantap">
+    <img  class="avatar avatar-small"
+          alt="juliantap"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/83591660?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
     <img  class="avatar avatar-small"
           alt="netapp-mwallis"
@@ -1595,11 +1603,15 @@
 
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph lead">
 <p>You can easily upgrade an existing Astra Trident installation by using <code>tridentctl</code>.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="considerations-before-upgrading">Considerations before upgrading</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<div class="title">Considerations</div>
 <p>When upgrading to the latest release of Astra Trident, consider the following:</p>
 </div>
 <div class="ulist">
@@ -1608,25 +1620,12 @@
 <p>Starting with Trident 20.01, only the beta release of <a href="https://kubernetes.io/docs/concepts/storage/volume-snapshots/" target="_blank" rel="noopener">volume snapshots</a> is supported. Kubernetes administrators should take care to safely back up or convert the alpha snapshot objects to beta to retain the legacy alpha snapshots.</p>
 </li>
 <li>
-<p>The beta release of volume snapshots introduces a modified set of CRDs and a snapshot controller, both of which should be set up before installing Astra Trident.</p>
+<p>The beta release of volume snapshots introduces a modified set of CRDs and a snapshot controller, both of which should be set up before installing Astra Trident. <a href="https://netapp.io/2020/01/30/alpha-to-beta-snapshots/" target="_blank" rel="noopener">This blog</a> discusses the steps involved in migrating alpha volume snapshots to the beta format.</p>
+</li>
+<li>
+<p>Uninstalling and reinstalling Astra Trident acts as an upgrade. When you uninstall Trident, the Persistent Volume Claim (PVC) and Persistent Volume (PV) used by the Astra Trident deployment are not deleted. PVs that have already been provisioned will remain available while Astra Trident is offline, and Astra Trident will provision volumes for any PVCs that are created in the interim once it is back online.</p>
 </li>
 </ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-<a href="https://netapp.io/2020/01/30/alpha-to-beta-snapshots/" target="_blank" rel="noopener">This blog</a> discusses the steps involved in migrating alpha volume snapshots to the beta format.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<div class="title">About this task</div>
-<p>Uninstalling and reinstalling Astra Trident acts as an upgrade. When you uninstall Trident, the Persistent Volume Claim (PVC) and Persistent Volume (PV) used by the Astra Trident deployment are not deleted. PVs that have already been provisioned will remain available while Astra Trident is offline, and Astra Trident will provision volumes for any PVCs that are created in the interim once it is back online.</p>
 </div>
 <div class="admonitionblock important">
 <table>
