@@ -1573,7 +1573,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2022-11-07 20:15:53 +0000">11/07/2022</time>
     
   
 
@@ -1591,14 +1591,6 @@
           alt="netapp-mwallis"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/53353653?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/balaramesh">
-    <img  class="avatar avatar-small"
-          alt="balaramesh"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/25675836?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1686,7 +1678,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 <div class="ulist">
 <ul>
 <li>
-<p>You have full privileges to a supported Kubernetes cluster running Kubernetes 1.19 - 1.24.</p>
+<p>You have full privileges to a supported Kubernetes cluster running a supported version of Kubernetes. Review the <a href="requirements.html">requirements</a>.</p>
 </li>
 <li>
 <p>You have access to a supported NetApp storage system.</p>
@@ -1726,7 +1718,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 <div class="ulist">
 <ul>
 <li>
-<p>Kubernetes 1.19 - 1.24</p>
+<p>A <a href="requirements.html">supported Kubernetes version</a></p>
 </li>
 <li>
 <p>Helm version 3</p>
@@ -1749,7 +1741,7 @@ If you have not already familiarized yourself with the <a href="../trident-conce
 See the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre>helm install &lt;release-name&gt; netapp-trident/trident-operator --version 22.4.0 --create-namespace &lt;trident-namespace&gt;</pre>
+<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 22.10.0 --create-namespace --namespace &lt;trident-namespace&gt;</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1785,7 +1777,7 @@ If you already created a namespace for Trident, the <code>--create-namespace</co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 22.7.0 --set tridentDebug=true</pre>
+<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 22.10.0 --create-namespace --namespace --set tridentDebug=true</pre>
 </div>
 </div>
 <div class="paragraph">

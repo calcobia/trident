@@ -85,7 +85,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/csi-topology.html</loc>
       
-      <lastmod>2022-09-27T22:04:12+00:00</lastmod>
+      <lastmod>2022-11-04T19:30:30+00:00</lastmod>
       
     </url>
   
@@ -204,7 +204,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html</loc>
       
-      <lastmod>2022-11-03T21:27:23+00:00</lastmod>
+      <lastmod>2022-11-07T20:15:53+00:00</lastmod>
       
     </url>
   
@@ -260,7 +260,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-reference/objects.html</loc>
       
-      <lastmod>2022-11-03T21:27:23+00:00</lastmod>
+      <lastmod>2022-11-04T19:30:30+00:00</lastmod>
       
     </url>
   
@@ -365,7 +365,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident//search.html</loc>
       
-      <lastmod>2022-11-07T16:51:52+00:00</lastmod>
+      <lastmod>2022-11-07T20:43:25+00:00</lastmod>
       
     </url>
   
@@ -442,7 +442,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html</loc>
       
-      <lastmod>2022-11-03T21:27:23+00:00</lastmod>
+      <lastmod>2022-11-04T19:22:29+00:00</lastmod>
       
     </url>
   
