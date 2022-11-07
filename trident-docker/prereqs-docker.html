@@ -1575,7 +1575,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2022-11-07 15:56:58 +0000">11/07/2022</time>
     
   
 
@@ -1667,35 +1667,45 @@
 </div>
 </li>
 <li>
-<p>Start the multipathing daemon:</p>
+<p>Check that iscsi-initiator-utils version is 6.2.0.874-2.el7 or later:</p>
 <div class="paragraph">
-<p><code>sudo mpathconf --enable --with_multipathd y</code></p>
+<p><code>rpm -q iscsi-initiator-utils</code></p>
 </div>
 </li>
 <li>
-<p>Ensure that <code>iscsid</code> and <code>multipathd</code> are enabled and running:</p>
+<p>Set scanning to manual:</p>
 <div class="paragraph">
-<p><code>sudo systemctl enable iscsid multipathd</code><br>
-<code>sudo systemctl start iscsid multipathd</code></p>
+<p><code>sudo sed -i 's/^\(node.session.scan\).*/\1 = manual/' /etc/iscsi/iscsid.conf</code></p>
 </div>
 </li>
 <li>
-<p>Discover the iSCSI targets:</p>
+<p>Enable multipathing:</p>
 <div class="paragraph">
-<p><code>sudo iscsiadm -m discoverydb -t st -p &lt;DATA_LIF_IP&gt; --discover</code></p>
+<p><code>sudo mpathconf --enable --with_multipathd y --find_multipaths n</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Ensure <code>etc/multipath.conf</code> contains <code>find_multipaths no</code> under <code>defaults</code>.
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
-<p>Log in to the discovered iSCSI targets:</p>
+<p>Ensure that <code>iscsid</code> and <code>multipathd</code> are running:</p>
 <div class="paragraph">
-<p><code>sudo iscsiadm -m node -p &lt;DATA_LIF_IP&gt; --login</code></p>
+<p><code>sudo systemctl enable --now iscsid multipathd</code></p>
 </div>
 </li>
 <li>
 <p>Enable and start <code>iscsi</code>:</p>
 <div class="paragraph">
-<p><code>sudo systemctl enable iscsi</code><br>
-<code>sudo systemctl start iscsi</code></p>
+<p><code>sudo systemctl enable --now iscsi</code></p>
 </div>
 </li>
 </ol>
@@ -1715,34 +1725,48 @@
 </div>
 </li>
 <li>
+<p>Check that open-iscsi version is 2.0.874-5ubuntu2.10 or later (for bionic) or 2.0.874-7.1ubuntu6.1 or later (for focal):</p>
+<div class="paragraph">
+<p><code>dpkg -l open-iscsi</code></p>
+</div>
+</li>
+<li>
+<p>Set scanning to manual:</p>
+<div class="paragraph">
+<p><code>sudo sed -i 's/^\(node.session.scan\).*/\1 = manual/' /etc/iscsi/iscsid.conf</code></p>
+</div>
+</li>
+<li>
 <p>Enable multipathing:</p>
 <div class="paragraph">
 <p><code>sudo tee /etc/multipath.conf &lt;&#8592;'EOF'<br>
 defaults {<br>
     user_friendly_names yes<br>
-    find_multipaths yes<br>
+    find_multipaths no<br>
 }<br>
 EOF<br>
+sudo systemctl enable --now multipath-tools.service<br>
 sudo service multipath-tools restart</code></p>
 </div>
-</li>
-<li>
-<p>Ensure that <code>iscsid</code> and <code>multipathd</code> are running:</p>
-<div class="paragraph">
-<p><code>sudo service open-iscsi start<br>
-sudo service multipath-tools start</code></p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Ensure <code>etc/multipath.conf</code> contains <code>find_multipaths no</code> under <code>defaults</code>.
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
-<p>Discover the iSCSI targets:</p>
+<p>Ensure that <code>open-iscsi</code> and <code>multipath-tools</code> are enabled and running:</p>
 <div class="paragraph">
-<p><code>sudo iscsiadm -m discoverydb -t st -p &lt;DATA_LIF_IP&gt; --discover</code></p>
-</div>
-</li>
-<li>
-<p>Log in to the discovered iSCSI targets:</p>
-<div class="paragraph">
-<p><code>sudo iscsiadm -m node -p &lt;DATA_LIF_IP&gt; --login</code></p>
+<p><code>sudo systemctl status multipath-tools</code><br>
+<code>sudo systemctl enable --now open-iscsi.service</code><br>
+<code>sudo systemctl status open-iscsi</code></p>
 </div>
 </li>
 </ol>
