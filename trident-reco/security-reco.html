@@ -1575,7 +1575,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2022-11-09 17:03:25 +0000">11/09/2022</time>
     
   
 
@@ -1761,14 +1761,14 @@ The volumes that are created by CSI Trident are not associated with any Volume A
         "labels":{"luks": "true"},
         "zone":"us_east_1a",
         "defaults": {
-            "luksEncryption": true
+            "luksEncryption": "true"
         }
     },
     {
         "labels":{"luks": "false"},
         "zone":"us_east_1a",
         "defaults": {
-            "luksEncryption": false
+            "luksEncryption": "false"
         }
     },
 ]</pre>
@@ -1786,8 +1786,8 @@ metadata:
 provisioner: netapp.io/trident
 parameters:
   selector: "luks=true"
-  csi.storage.k8s.io/node-stage-secret-name: luks-\${pvc.name}
-  csi.storage.k8s.io/node-stage-secret-namespace: \${pvc.namespace}</pre>
+  csi.storage.k8s.io/node-stage-secret-name: luks-${pvc.name}
+  csi.storage.k8s.io/node-stage-secret-namespace: ${pvc.namespace}</pre>
 </div>
 </div>
 </li>
