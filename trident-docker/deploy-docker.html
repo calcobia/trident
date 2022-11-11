@@ -25,28 +25,8 @@
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
-  <!-- Controls AsciiDoctor Admonition Blocks -->
-  <link rel="stylesheet" type="text/css" href="/us-en/trident/css/font-awesome.min.css">
-
-  <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/us-en/trident/css/boxshadowproperties.css">
-
-  <!-- NetApp CSS controls the technical content -->
-  <link rel="stylesheet" type="text/css" href="/us-en/trident/css/netapp.css">
-
-  <!-- WWW CSS Content -->
-  <link rel="stylesheet" type="text/css" href="/us-en/trident/css/www-luci-dotcom.min.css">
-  <link rel="stylesheet" type="text/css" href="/us-en/trident/css/www-netapp-dotcom.css">
-  <link rel="stylesheet" href="/us-en/trident/css/www-netapp-library-critical.min.css" media="all" >
-  <link rel="stylesheet" href="/us-en/trident/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="/us-en/trident/css/www-netapp-library-global-header-footer.min.css">
-
-  <!-- NetApp IE Customizations -->
-  <link rel="stylesheet" href='/us-en/trident/css/na-utility.css' type='text/css'>
-  <link rel="stylesheet" href='/us-en/trident/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/trident/css/clouddocs.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/trident/css/custom-dropdown.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/trident/css/na-pagenav.css' type='text/css'>
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/us-en/trident/css/netappdocs.css">
 
   
   <link rel="stylesheet" href="/us-en/trident/css/landing-page.css" type="text/css">
@@ -98,11 +78,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/trident/js/na-search.js'></script><script src='/us-en/trident/js/na-pagenav.js'></script><link rel='stylesheet' href='/us-en/trident/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/trident/css/prism-netapp.css' type='text/css'>
-
-
-  <script src='/us-en/trident/js/na-utility.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/trident/js/na-search.js'></script><script src='/us-en/trident/js/na-pagenav.js'></script><script src='/us-en/trident/js/na-utility.js'></script>
   <script src='/us-en/trident/js/clouddocs.js'></script>
   <script src='/us-en/trident/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -1575,7 +1551,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2022-11-10 15:24:42 +0000">11/10/2022</time>
     
   
 
@@ -1603,7 +1579,7 @@
 </div>
 <div class="paragraph">
 <div class="title">What you&#8217;ll need</div>
-<p>See the <a href="prereqs-docker.html" target="_blank" rel="noopener">prerequisites for deployment</a>. After you ensure the prerequisites are met, you are ready to deploy Astra Trident.</p>
+<p>See the <a href="prereqs-docker.html">prerequisites for deployment</a>. After you ensure the prerequisites are met, you are ready to deploy Astra Trident.</p>
 </div>
 </div>
 </div>
@@ -1706,10 +1682,10 @@ EOF</pre>
 </div>
 </li>
 <li>
-<p>Start Astra Trident using the managed plugin system.</p>
+<p>Start Astra Trident using the managed plugin system. Replace <code>&lt;version&gt;</code> with the plugin version (xxx.xx.x) you are using.</p>
 <div class="listingblock">
 <div class="content">
-<pre>docker plugin install --grant-all-permissions --alias netapp netapp/trident-plugin:21.07 config=myConfigFile.json</pre>
+<pre>docker plugin install --grant-all-permissions --alias netapp netapp/trident-plugin:&lt;version&gt; config=myConfigFile.json</pre>
 </div>
 </div>
 </li>
