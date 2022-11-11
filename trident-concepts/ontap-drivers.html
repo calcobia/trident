@@ -1551,7 +1551,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2022-11-10 14:47:55 +0000">11/10/2022</time>
     
   
 
@@ -1591,7 +1591,7 @@
 <tr>
 <th class="tableblock halign-left valign-top">Driver</th>
 <th class="tableblock halign-left valign-top">Protocol</th>
-<th class="tableblock halign-left valign-top">VolumeMode</th>
+<th class="tableblock halign-left valign-top">volumeMode</th>
 <th class="tableblock halign-left valign-top">Access modes supported</th>
 <th class="tableblock halign-left valign-top">File systems supported</th>
 </tr>
@@ -1606,7 +1606,7 @@
 <p>Filesystem</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>RWO,RWX,ROX</p>
+<p>RWO,ROX,RWX</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>"", nfs</p>
@@ -1621,7 +1621,7 @@
 <p>Filesystem</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>RWO,RWX,ROX</p>
+<p>RWO,ROX,RWX</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>"", nfs</p>
@@ -1636,7 +1636,7 @@
 <p>Filesystem</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>RWO,RWX,ROX</p>
+<p>RWO,ROX,RWX</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>"", nfs</p>
@@ -1654,7 +1654,7 @@
 <p>RWO,ROX,RWX</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No Filesystem. Raw block device</p>
+<p>No filesystem; raw block device</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1667,6 +1667,9 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>RWO,ROX</p>
+</div>
+<div class="paragraph">
+<p>RWX is not available in Filesystem volume mode.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>xfs</code>, <code>ext3</code>, <code>ext4</code></p>
@@ -1684,7 +1687,7 @@
 <p>RWO,ROX,RWX</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>No Filesystem. Raw block device</p>
+<p>No filesystem; raw block device</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1697,6 +1700,9 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>RWO,ROX</p>
+</div>
+<div class="paragraph">
+<p>RWX is not available in Filesystem volume mode.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><code>xfs</code>, <code>ext3</code>, <code>ext4</code></p>
@@ -1711,7 +1717,7 @@
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-ONTAP backends can be authenticated by using login credentials for a security role (username/password) or using the private key and the certificate that is installed on the ONTAP cluster. You can update existing backends to move from one authentication mode to the other with <code>tridentctl update backend</code>.
+ONTAP backends can be authenticated using login credentials for a security role (username/password) or using the private key and the certificate that is installed on the ONTAP cluster. You can update existing backends to move from one authentication mode to the other with <code>tridentctl update backend</code>.
 </td>
 </tr>
 </table>
