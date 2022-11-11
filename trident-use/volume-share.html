@@ -9,15 +9,15 @@
   <meta property="og:title" content="Share an NFS volume across namespaces" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-use/volume-share.html" />
-	<meta property="og:description" content="" />
+	<meta property="og:description" content="Using Astra Trident, you can create a volume in a primary namespace and share it in one or more secondary namespaces." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/trident/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
-  <meta name="keywords" content=" volref, volume reference, share, pvc, pv, nfs, namespace"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Using Astra Trident, you can create a volume in a primary namespace and share it in one or more secondary namespaces.">
+  <meta name="keywords" content=" volref, volume reference, share, pvc, pv, nfs, namespace, cvna, cross-namespace, sharing"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -1551,7 +1551,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-19 15:50:04 +0000">10/19/2022</time>
+    <time datetime="2022-11-10 15:12:50 +0000">11/10/2022</time>
     
   
 
@@ -1570,6 +1570,14 @@
 </p>
 
 <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Using Astra Trident, you can create a volume in a primary namespace and share it in one or more secondary namespaces.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="features">Features</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Astra TridentVolumeReference CR allows you to securely share ReadWriteMany (RWX) NFS volumes across one or more Kubernetes namespaces. This Kubernetes-native solution has the following benefits:</p>
@@ -1788,6 +1796,24 @@ The size of the destination PVC must be less than or equal than the source PVC.
 </li>
 <li>
 <p>Snapshots, clones, and mirroring are not possible on subordinate volumes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="for-more-information">For more information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To learn more about cross-namespace volume access:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Visit <a href="https://cloud.netapp.com/blog/astra-blg-sharing-volumes-between-namespaces-say-hello-to-cross-namespace-volume-access" target="_blank" rel="noopener">Sharing volumes between namespaces: Say hello to cross-namespace volume access</a>.</p>
+</li>
+<li>
+<p>Watch the demo on <a href="http://netapp.tv/cloud/details/29594?playlist_id=81&amp;mcid=63262890210074608700682715883688763007" target="_blank" rel="noopener">NetAppTV</a>.</p>
 </li>
 </ul>
 </div>
