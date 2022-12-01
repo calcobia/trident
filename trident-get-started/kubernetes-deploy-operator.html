@@ -1553,7 +1553,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-07 20:15:53 +0000">11/07/2022</time>
+    <time datetime="2022-11-30 22:14:32 +0000">11/30/2022</time>
     
   
 
@@ -1631,7 +1631,17 @@
 <p>Using the Trident <a href="https://artifacthub.io/packages/helm/netapp-trident/trident-operator" target="_blank" rel="noopener">Helm Chart</a>: The Helm Chart deploys the Trident operator and installs Trident in one step.</p>
 </li>
 <li>
-<p>Manually: Trident provides a <a href="https://github.com/NetApp/trident/blob/master/deploy/bundle.yaml" target="_blank" rel="noopener">bundle.yaml</a> file that can be used to install the operator and create associated objects.</p>
+<p>Manually: Trident provides a file that can be used to install the operator and create associated objects.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For clusters running Kubernetes 1.24 or lower, use <a href="https://github.com/NetApp/trident/tree/stable/v22.10/deploy/bundle_pre_1_25.yaml" target="_blank" rel="noopener">bundle_pre_1_25.yaml</a>.</p>
+</li>
+<li>
+<p>For clusters running Kubernetes 1.25 or higher, use <a href="https://github.com/NetApp/trident/tree/stable/v22.10/deploy/bundle_post_1_25.yaml" target="_blank" rel="noopener">bundle_post_1_25.yaml</a>.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>

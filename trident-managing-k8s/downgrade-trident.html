@@ -1555,7 +1555,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2022-11-30 22:14:32 +0000">11/30/2022</time>
     
   
 
@@ -1651,10 +1651,10 @@
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p><a href="uninstall-trident.html" target="_blank" rel="noopener">Uninstall Astra Trident</a>. <strong>Do not wipeout the CRDs unless you want to completely remove an existing installation.</strong></p>
+<p><a href="uninstall-trident.html" target="_blank" rel="noopener">Uninstall Astra Trident</a>. <strong>Do not delete the CRDs unless you want to completely remove an existing installation.</strong></p>
 </li>
 <li>
-<p>Delete the cluster-scoped operator. To do this, you will need the manifest used to deploy the operator. You can obtain it from the <a href="https://github.com/NetApp/trident/blob/stable/v21.07/deploy/bundle.yaml" target="_blank" rel="noopener">Trident GitHub repo</a>. Make sure you switch to the required branch.</p>
+<p>The Trident operator can be deleted by using the operator manifest associated with your version of Trident. For example, <code>https://github.com/NetApp/trident/tree/stable/<em>vXX.XX</em>/deploy/<em>bundle.yaml</em></code> where <code><em>vXX.XX</em></code> is the version number (for example <code>v22.10</code>) and <code><em>bundle.yaml</em></code> is the bundle YAML file name.</p>
 </li>
 <li>
 <p>Continue downgrading by installing the desired version of Astra Trident. Follow the documentation for the desired release.</p>
@@ -1687,7 +1687,7 @@ tridentorchestrator.trident.netapp.io "trident" deleted</pre>
 </div>
 </li>
 <li>
-<p>Delete the cluster-scoped operator. To do this, you will need the manifest used to deploy the operator. You can obtain it here from the <a href="https://github.com/NetApp/trident/blob/stable/v21.07/deploy/bundle.yaml" target="_blank" rel="noopener">Trident GitHub repo</a>. Make sure you switch to the required branch.</p>
+<p>The Trident operator can be deleted by using the operator manifest associated with your version of Trident. For example, <code>https://github.com/NetApp/trident/tree/stable/<em>vXX.XX</em>/deploy/<em>bundle.yaml</em></code> where <code><em>vXX.XX</em></code> is the version number (for example <code>v22.10</code>) and <code><em>bundle.yaml</em></code> is the bundle YAML file name.</p>
 </li>
 <li>
 <p>Delete the <code>tridentorchestrator</code> CRD.</p>
