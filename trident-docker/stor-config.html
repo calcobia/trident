@@ -1555,7 +1555,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2022-12-02 17:21:56 +0000">12/02/2022</time>
     
   
 
@@ -2209,30 +2209,6 @@ The <code>ontap-nas-economy</code> driver is not currently supported in Docker S
 <div class="sectionbody">
 <div class="paragraph">
 <p>Astra Trident supports volumes with the default CVS service type on <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-types" target="_blank" rel="noopener">GCP</a>. Astra Trident does not support CVS volumes less than 100 GiB regardless of the minimum allowed by the CVS service type. Therefore, Trident automatically creates a 100 GiB volume if the requested volume is smaller than the minimum size.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>NetApp recommends customers consume sub-1TiB volumes for non-production workloads.</p>
-</li>
-<li>
-<p>When deploying backends using the default CVS service type <code>storageClass=software</code>, sign up for access to the sub-1TiB volumes feature on GCP for the relevant Project Number and Project ID. This is necessary for Trident to provision sub-1TiB volumes. If not, volume creation <strong>will fail</strong> for PVCs less than 600 GiB.</p>
-</li>
-<li>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc7_euiPtlV8bhsKWvwBl3gm9KUL4kOhD7lnbHC3LlQ7m02Dw/viewform">Sign up for access to sub-1TiB volumes.</a></p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>In addition to the global configuration values, when using CVS on GCP, these options are available.</p>
