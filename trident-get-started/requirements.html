@@ -1555,7 +1555,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-01 19:22:05 +0000">12/01/2022</time>
+    <time datetime="2022-12-16 16:31:16 +0000">12/16/2022</time>
     
   
 
@@ -1811,10 +1811,7 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <h2 id="tested-host-operating-systems">Tested host operating systems</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>By default, Astra Trident runs in a container and will, therefore, run on any Linux worker. However, those workers need to be able to mount the volumes that Astra Trident provides using the standard NFS client or iSCSI initiator, depending on the backends you are using.</p>
-</div>
-<div class="paragraph">
-<p>Though Astra Trident does not officially "support" specific operating systems, the following Linux distributions are known to work:</p>
+<p>Though Astra Trident does not officially "support" specific operating systems, the following are known to work:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1827,7 +1824,13 @@ Astra Trident and the versions of Kubernetes it supports.</p>
 <li>
 <p>Ubuntu 18.04 or later (latest 22.04)</p>
 </li>
+<li>
+<p>Windows Server 2019</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
+<p>By default, Astra Trident runs in a container and will, therefore, run on any Linux worker. However, those workers need to be able to mount the volumes that Astra Trident provides using the standard NFS client or iSCSI initiator, depending on the backends you are using.</p>
 </div>
 <div class="paragraph">
 <p>The <code>tridentctl</code> utility also runs on any of these distributions of Linux.</p>
