@@ -1555,7 +1555,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2023-01-03 18:07:04 +0000">01/03/2023</time>
     
   
 
@@ -2117,7 +2117,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 <p>When using Astra Trident over IPv6, you should specify <code>managementLIF</code> and <code>dataLIF</code> in the backend definition within square brackets. For example, <code>[fd20:8b1e:b258:2000:f816:3eff:feec:0]</code>.</p>
 </li>
 <li>
-<p>If using the <code>solidfire-san</code> driver with OpenShift 4.5, ensure that the underlying worker nodes use MD5 as the CHAP authentication algorithm.</p>
+<p>If using the <code>solidfire-san</code> driver with OpenShift 4.5, ensure that the underlying worker nodes use MD5 as the CHAP authentication algorithm. Secure FIPS-compliant CHAP algorithms SHA1, SHA-256, and SHA3-256 are available with Element 12.7.</p>
 </li>
 </ul>
 </div>
