@@ -1555,7 +1555,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2023-01-03 16:15:03 +0000">01/03/2023</time>
     
   
 
@@ -1611,7 +1611,7 @@ It is also advisable to not edit/modify attributes for an existing virtual pool 
 <p>Most aspects are specified in backend-specific terms. Crucially, the aspect values are not exposed outside the backend&#8217;s driver and are not available for matching in <code>StorageClasses</code>. Instead, the administrator defines one or more labels for each virtual pool. Each label is a key:value pair, and labels might be common across unique backends. Like aspects, labels can be specified per-pool or global to the backend. Unlike aspects, which have predefined names and values, the administrator has full discretion to define label keys and values as needed.</p>
 </div>
 <div class="paragraph">
-<p>A <code>StorageClass</code> identifies which virtual pool to use by referencing the labels within a selector parameter. Virtual pool selectors support six operators:</p>
+<p>A <code>StorageClass</code> identifies which virtual pool to use by referencing the labels within a selector parameter. Virtual pool selectors support the following operators:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1623,31 +1623,39 @@ It is also advisable to not edit/modify attributes for an existing virtual pool 
 <tr>
 <th class="tableblock halign-left valign-top">Operator</th>
 <th class="tableblock halign-left valign-top">Example</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">A pool&#8217;s label value must:</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>=</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">performance=premium</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A pool&#8217;s label value must match</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Match</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>!=</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">performance!=extreme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A pool&#8217;s label value must not match</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not match</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>in</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">location in (east, west)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A pool&#8217;s label value must be in the set<br>
-of values</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Be in the set of values</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>notin</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">performance notin (silver, bronze)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A pool&#8217;s label value must<br>
-not b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not be in the set of values</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;key&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">protection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exist with any value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>!&lt;key&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!protection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not exist</p></td>
 </tr>
 </tbody>
 </table>
