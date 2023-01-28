@@ -1553,7 +1553,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-16 18:40:03 +0000">09/16/2022</time>
+    <time datetime="2023-01-27 22:10:03 +0000">01/27/2023</time>
     
   
 
@@ -1579,12 +1579,24 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="ontap-nas-prep.html" target="_blank" rel="noopener">Preparation</a></p>
+<p><a href="ontap-nas-prep.html">Preparation</a></p>
 </li>
 <li>
-<p><a href="ontap-nas-examples.html" target="_blank" rel="noopener">Configuration and examples</a></p>
+<p><a href="ontap-nas-examples.html">Configuration and examples</a></p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/warning.svg" alt="Warning">
+</td>
+<td class="content">
+Customers must use the <code>ontap-nas</code> driver for production workloads that require data protection, disaster recovery, and mobility. Astra Control provides seamless protection, disaster recovery, and mobility for volumes created with the <code>ontap-nas</code> driver. The <code>ontap-nas-economy</code> driver should be used only in  limited use cases where anticipated volume usage is expected to be much higher than what ONTAP supports, with no anticipated data protection, disaster recovery, or mobility (moving volumes between Kubernetes clusters) requirements.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
