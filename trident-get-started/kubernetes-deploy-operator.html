@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Deploy with Trident operator</title>
+  <title>Manually deploy the Trident operator (Standard mode)</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Deploy with Trident operator" />
+  <meta property="og:title" content="Manually deploy the Trident operator (Standard mode)" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html" />
-	<meta property="og:description" content="You can deploy Astra Trident with the Trident operator. You can deploy the Trident operator either manually or using Helm." />
+	<meta property="og:description" content="You can manually deploy the Trident operator to install Astra Trident. This process applies to installations where the container images required by Astra Tri..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/trident/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can deploy Astra Trident with the Trident operator. You can deploy the Trident operator either manually or using Helm.">
-  <meta name="keywords" content=" deploy, astra trident, methods, operator, tridentctl, helm"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can manually deploy the Trident operator to install Astra Trident. This process applies to installations where the container images required by Astra Tri...">
+  <meta name="keywords" content=" deploy, astra trident, methods, operator, tridentctl, registry, registries"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -161,9 +161,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.10">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 23.01">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.10</span>
+    <span translate="no" class="notranslate">Astra Trident 23.01</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -171,6 +171,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 23.01</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2210/trident-get-started/kubernetes-deploy-operator.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
       </a>
                      
@@ -196,16 +203,9 @@
       </a>
                      
     </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2110/trident-get-started/kubernetes-deploy-operator.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
     
   </ul>
-</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Deploy with Trident operator](https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-get-started/kubernetes-deploy-operator.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Manually deploy the Trident operator (Standard mode)](https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-get-started/kubernetes-deploy-operator.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -395,7 +395,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_10_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -457,6 +457,22 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Install_Astra_Trident.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Install Astra Trident
+          </a>
+          
+
 
 
     
@@ -467,13 +483,23 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Deploy_with_Trident_operator.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Install_using_Trident_operator.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Deploy with Trident operator
+            Install using Trident operator
           </a>
           
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
 
 
         </li>
@@ -492,13 +518,22 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Deploy_with_tridentctl.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Install_using_tridentctl.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Deploy with tridentctl
+            Install using tridentctl
           </a>
           
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
         </li>
@@ -534,9 +569,32 @@
           </a>
           
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Upgrade_Astra_Trident.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Upgrade Astra Trident
+          </a>
+          
 
 
 
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -593,13 +651,15 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_an_ANF_backend.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Azure_NetApp_Files.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure an ANF backend
+            Azure NetApp Files
           </a>
           
+
+
 
 
 
@@ -624,11 +684,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_a_backend_with_ONTAP_SAN_drivers.pdf" 
+              href="/us-en/trident/pdfs/sidebar/ONTAP_SAN_drivers.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure a backend with ONTAP SAN drivers
+            ONTAP SAN drivers
           </a>
           
 
@@ -651,11 +711,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_a_backend_with_ONTAP_NAS_drivers.pdf" 
+              href="/us-en/trident/pdfs/sidebar/ONTAP_NAS_drivers.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure a backend with ONTAP NAS drivers
+            ONTAP NAS drivers
           </a>
           
 
@@ -669,6 +729,33 @@
   
 
 
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Amazon_FSx_for_NetApp_ONTAP.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Amazon FSx for NetApp ONTAP
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
         </li>
@@ -823,6 +910,31 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Security.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Security
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
 
         </li>
       </ul>
@@ -963,11 +1075,11 @@
         Volume snapshots
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Virtual storage pools"
+      data-pdf-filename="Virtual pools"
       data-li-level="2#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/virtual-storage-pool.html">
-        Virtual storage pools
+        Virtual pools
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Volume access groups"
@@ -1000,44 +1112,88 @@
         Requirements
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Deployment overview"
-      data-li-level="2#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy.html">
-        Deployment overview
-      </a></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Deploy with Trident operator"
-      data-li-level="2" 
-      class="subfolders  active "
-    ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
-        <div class="na-navbar-padding"> Deploy with Trident operator</div>
-      </a>
-      <ul style="display: none;">
-        <li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Customize Trident operator deployment"
-      data-li-level="3#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy.html">
-        Customize Trident operator deployment
-      </a></li></ul></li><li 
-      data-pdf-exists="true" 
-      data-pdf-filename="Deploy with tridentctl"
+      data-pdf-filename="Install Astra Trident"
       data-li-level="2" 
       class="subfolders "
-    ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
-        <div class="na-navbar-padding"> Deploy with tridentctl</div>
+    ><a href="#">
+        <div class="na-navbar-padding"> Install Astra Trident</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Customize tridentctl deployment"
+      data-pdf-filename="Installation overview"
       data-li-level="3#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy-tridentctl.html">
-        Customize tridentctl deployment
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy.html">
+        Installation overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install using Trident operator"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Install using Trident operator</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manually deploy the Trident operator (Standard)"
+      data-li-level="4#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
+        Manually deploy the Trident operator (Standard)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manually deploy the Trident operator (Offline)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-operator-mirror.html">
+        Manually deploy the Trident operator (Offline)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Trident Helm Chart (Standard)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-helm.html">
+        Use Trident Helm Chart (Standard)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Trident Helm Chart (Offline)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-helm-mirror.html">
+        Use Trident Helm Chart (Offline)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Customize Trident operator installation"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy.html">
+        Customize Trident operator installation
       </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install using tridentctl"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Install using tridentctl</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install using tridentctl"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
+        Install using tridentctl
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Customize tridentctl installation"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy-tridentctl.html">
+        Customize tridentctl installation
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="What's next?"
       data-li-level="2#" 
@@ -1056,25 +1212,34 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade Astra Trident"
-      data-li-level="2#" 
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Upgrade Astra Trident</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade overview"
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-trident.html">
-        Upgrade Astra Trident
+        Upgrade overview
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade with the operator"
-      data-li-level="2#" 
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-operator.html">
         Upgrade with the operator
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade with tridentctl"
-      data-li-level="2#" 
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-tridentctl.html">
         Upgrade with tridentctl
-      </a></li><li 
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Uninstall Astra Trident"
       data-li-level="2#" 
@@ -1115,95 +1280,125 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure an ANF backend"
+      data-pdf-filename="Azure NetApp Files"
       data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/trident/trident-use/anf.html">
-        <div class="na-navbar-padding"> Configure an ANF backend</div>
+    ><a href="#">
+        <div class="na-navbar-padding"> Azure NetApp Files</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure an ANF backend"
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
+        Overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-prep.html">
-        Prepare to configure an ANF backend
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ANF configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
-        ANF configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a CVS for GCP backend"
+      data-pdf-filename="Cloud Volumes Service for Google Cloud"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/gcp.html">
-        Configure a CVS for GCP backend
+        Cloud Volumes Service for Google Cloud
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a NetApp HCI or SolidFire backend"
+      data-pdf-filename="NetApp HCI or SolidFire"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/element.html">
-        Configure a NetApp HCI or SolidFire backend
+        NetApp HCI or SolidFire
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backend with ONTAP SAN drivers"
+      data-pdf-filename="ONTAP SAN drivers"
       data-li-level="3" 
       class="subfolders "
     ><a href="/us-en/trident/trident-use/ontap-san.html">
-        <div class="na-navbar-padding"> Configure a backend with ONTAP SAN drivers</div>
+        <div class="na-navbar-padding"> ONTAP SAN drivers</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure backend with ONTAP SAN drivers"
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
-        Prepare to configure backend with ONTAP SAN drivers
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ONTAP SAN configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
-        ONTAP SAN configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backend with ONTAP NAS drivers"
+      data-pdf-filename="ONTAP NAS drivers"
       data-li-level="3" 
       class="subfolders "
     ><a href="/us-en/trident/trident-use/ontap-nas.html">
-        <div class="na-navbar-padding"> Configure a backend with ONTAP NAS drivers</div>
+        <div class="na-navbar-padding"> ONTAP NAS drivers</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure backend with ONTAP NAS drivers"
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
-        Prepare to configure backend with ONTAP NAS drivers
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ONTAP NAS configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
-        ONTAP NAS configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
-      data-li-level="3#" 
+      data-pdf-filename="Amazon FSx for NetApp ONTAP"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Amazon FSx for NetApp ONTAP</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx.html">
-        Use Astra Trident with Amazon FSx for NetApp ONTAP
-      </a></li></ul></li><li 
+        Overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integrate Amazon FSx for ONTAP"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx-prep.html">
+        Integrate Amazon FSx for ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx-examples.html">
+        Configuration options and examples
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create backends with kubectl"
       data-li-level="2#" 
@@ -1424,11 +1619,27 @@
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Security"
-      data-li-level="2#" 
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Security</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security recommendations"
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/security-reco.html">
-        Security
-      </a></li></ul></li><li 
+        Security recommendations
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Linux Unified Key Setup (LUKS)"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/security-luks.html">
+        Linux Unified Key Setup (LUKS)
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Reference"
       data-li-level="1" 
@@ -1546,14 +1757,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Deploy with Trident operator</h1>
+  <h1 class="n-doc__component-detail-heading">Manually deploy the Trident operator (Standard mode)</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-11-30 22:14:32 +0000">11/30/2022</time>
+    <time datetime="2023-01-30 18:59:50 +0000">01/30/2023</time>
     
   
 
@@ -1582,212 +1793,45 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>You can deploy Astra Trident using the Trident operator.</p>
+<p>You can manually deploy the Trident operator to install Astra Trident. This process applies to installations where the container images required by Astra Trident are not stored in a private registry. If you do have a private image registry, use the <a href="kubernetes-deploy-operator-mirror.html">process for offline deployment</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="critical-information-about-astra-trident-22-10">Critical information about Astra Trident 22.10</h2>
+<h2 id="critical-information-about-astra-trident-23-01">Critical information about Astra Trident 23.01</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>You must read the following critical information before upgrading to Astra Trident 22.10.</strong></p>
+<p><strong>You must read the following critical information about Astra Trident.</strong></p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/warning.svg" alt="Warning">
-</td>
-<td class="content">
-<div class="title"><strong>Critical information about Astra Trident 22.10</strong></div>
+<details open>
+<summary class="title"><strong>Critical information about Astra Trident</strong></summary>
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Kubernetes 1.25 is now supported in Trident. You must upgrade to Astra Trident 22.10 prior to upgrading to Kubernetes 1.25.</p>
+<p>Kubernetes 1.26 is now supported in Trident. Upgrade Trident prior to upgrading Kubernetes.</p>
 </li>
 <li>
-<p>Astra Trident now strictly enforces the use of multipathing configuration in SAN environments, with a recommended value of <code>find_multipaths: no</code> in multipath.conf file.</p>
+<p>Astra Trident strictly enforces the use of multipathing configuration in SAN environments, with a recommended value of <code>find_multipaths: no</code> in multipath.conf file.</p>
 <div class="paragraph">
 <p>Use of non-multipathing configuration or use of <code>find_multipaths: yes</code> or <code>find_multipaths: smart</code> value in multipath.conf file will result in mount failures. Trident has recommended the use of <code>find_multipaths: no</code> since the 21.07 release.</p>
 </div>
 </li>
 </ul>
 </div>
-</td>
-</tr>
-</table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="trident-operator-deployment-options">Trident operator deployment options</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can deploy the Trident operator in one of two ways:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Using the Trident <a href="https://artifacthub.io/packages/helm/netapp-trident/trident-operator" target="_blank" rel="noopener">Helm Chart</a>: The Helm Chart deploys the Trident operator and installs Trident in one step.</p>
-</li>
-<li>
-<p>Manually: Trident provides a file that can be used to install the operator and create associated objects.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For clusters running Kubernetes 1.24 or lower, use <a href="https://github.com/NetApp/trident/tree/stable/v22.10/deploy/bundle_pre_1_25.yaml" target="_blank" rel="noopener">bundle_pre_1_25.yaml</a>.</p>
-</li>
-<li>
-<p>For clusters running Kubernetes 1.25 or higher, use <a href="https://github.com/NetApp/trident/tree/stable/v22.10/deploy/bundle_post_1_25.yaml" target="_blank" rel="noopener">bundle_post_1_25.yaml</a>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/tip.svg" alt="Tip">
-</td>
-<td class="content">
-If you have not already familiarized yourself with the <a href="../trident-concepts/intro.html" target="_blank" rel="noopener">basic concepts</a>, now is a great time to do that.
-</td>
-</tr>
-</table>
-</div>
+</details>
 </div>
 </div>
 <div class="sect1">
-<h2 id="verify-prerequisites">Verify prerequisites</h2>
+<h2 id="manually-deploy-the-trident-operator-and-install-trident">Manually deploy the Trident operator and install Trident</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To deploy Astra Trident, the following prerequisites should be met:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You have full privileges to a supported Kubernetes cluster running a supported version of Kubernetes. Review the <a href="requirements.html">requirements</a>.</p>
-</li>
-<li>
-<p>You have access to a supported NetApp storage system.</p>
-</li>
-<li>
-<p>You have the capability to mount volumes from all of the Kubernetes worker nodes.</p>
-</li>
-<li>
-<p>You have a Linux host with <code>kubectl</code> (or <code>oc</code>, if you are using OpenShift) installed and configured to manage the Kubernetes cluster that you want to use.</p>
-</li>
-<li>
-<p>You have set the <code>KUBECONFIG</code> environment variable to point to your Kubernetes cluster configuration.</p>
-</li>
-<li>
-<p>You have enabled the <a href="requirements.html" target="_blank" rel="noopener">feature gates required by Astra Trident</a>.</p>
-</li>
-<li>
-<p>If you are using Kubernetes with Docker Enterprise, <a href="https://docs.docker.com/ee/ucp/user-access/cli/" target="_blank" rel="noopener">follow their steps to enable CLI access</a>.</p>
-</li>
-</ul>
+<p>Review <a href="../trident-get-started/kubernetes-deploy.html">the installation overview</a> to ensure you&#8217;ve met installation prerequisites and selected the correct installation option for your environment.</p>
 </div>
 <div class="paragraph">
-<p>Got all that? Great! Let&#8217;s get started.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="deploy-the-trident-operator-and-install-astra-trident-using-helm">Deploy the Trident operator and install Astra Trident using Helm</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Perform the steps listed to deploy the Trident operator by using Helm.</p>
-</div>
-<div class="paragraph">
-<div class="title">What you&#8217;ll need</div>
-<p>In addition to the prerequisites listed above, to deploy Trident operator by using Helm, you need the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A <a href="requirements.html">supported Kubernetes version</a></p>
-</li>
-<li>
-<p>Helm version 3</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Steps</div>
-<ol class="arabic">
-<li>
-<p>Add Trident&#8217;s Helm repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre>helm repo add netapp-trident https://netapp.github.io/trident-helm-chart</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Use the <code>helm install</code> command and specify a name for your deployment.<br>
-See the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 22.10.0 --create-namespace --namespace &lt;trident-namespace&gt;</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-If you already created a namespace for Trident, the <code>--create-namespace</code> parameter will not create an additional namespace.
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>There are two ways to pass configuration data during the install:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>--values</code> (or <code>-f</code>): Specify a YAML file with overrides. This can be specified multiple times and the rightmost file will take precedence.</p>
-</li>
-<li>
-<p><code>--set</code>: Specify overrides on the command line.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For example, to change the default value of <code>debug</code>, run the following <code>--set</code> command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 22.10.0 --create-namespace --namespace --set tridentDebug=true</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>values.yaml</code> file, which is part of the Helm chart provides the list of keys and their default values.</p>
-</div>
-<div class="paragraph">
-<p><code>helm list</code> shows you details about the installation, such as name, namespace, chart, status, app version, revision number, and so on.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="deploy-the-trident-operator-manually-and-install-trident">Deploy the Trident operator manually and install Trident</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Perform the steps listed to manually deploy the Trident operator.</p>
-</div>
-<div class="sect2">
-<h3 id="step-1-qualify-your-kubernetes-cluster">Step 1: Qualify your Kubernetes cluster</h3>
-<div class="paragraph">
-<p>The first thing you need to do is log in to the Linux host and verify that it is managing a <em>working</em>, <a href="requirements.html" target="_blank" rel="noopener">supported Kubernetes cluster</a> that you have the necessary privileges to.</p>
+<div class="title">Before you begin</div>
+<p>Before you begin installation, log in to the Linux host and verify it is managing a working, <a href="requirements.html" target="_blank" rel="noopener">supported Kubernetes cluster</a> and that you have the necessary privileges.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1801,34 +1845,92 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>To verify your Kubernetes version, run the following command:</p>
-</div>
+<details open>
+<summary class="title">Details</summary>
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Verify your Kubernetes version:</p>
 <div class="listingblock">
 <div class="content">
 <pre>kubectl version</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>To see if you have Kubernetes cluster administrator privileges, run the following command:</p>
-</div>
+</li>
+<li>
+<p>Verify cluster administrator privileges:</p>
 <div class="listingblock">
 <div class="content">
 <pre>kubectl auth can-i '*' '*' --all-namespaces</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>To verify if you can launch a pod that uses an image from Docker Hub and reach your storage system over the pod network, run the following command:</p>
-</div>
+</li>
+<li>
+<p>Verify you can launch a pod that uses an image from Docker Hub and reach your storage system over the pod network:</p>
 <div class="listingblock">
 <div class="content">
 <pre>kubectl run -i --tty ping --image=busybox --restart=Never --rm -- \
   ping &lt;management IP&gt;</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
+</div>
+</details>
+<div class="sect2">
+<h3 id="step-1-download-the-trident-installer-package">Step 1: Download the Trident installer package</h3>
+<div class="paragraph">
+<p>The Astra Trident installer package contains everything you need to deploy the Trident operator and install Astra Trident. Download and extract the latest version of the Trident installer from <a href="https://github.com/NetApp/trident/releases/latest" target="_blank" rel="noopener">the <em>Assets</em> section on GitHub</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>wget https://github.com/NetApp/trident/releases/download/v23.01.0/trident-installer-23.01.0.tar.gz
+tar -xf trident-installer-23.01.0.tar.gz
+cd trident-installer</pre>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="step-2-download-and-set-up-the-operator">Step 2: Download and set up the operator</h3>
+<h3 id="step-2-create-the-tridentorchestrator-crd">Step 2: Create the <code>TridentOrchestrator</code> CRD</h3>
+<div class="paragraph">
+<p>Create the <code>TridentOrchestrator</code> Custom Resource Definition (CRD). You will create a <code>TridentOrchestrator</code> Custom Resources later. Use the appropriate CRD YAML version in <code>deploy/crds</code> to create the <code>TridentOrchestrator</code> CRD.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_&lt;version&gt;.yaml</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="step-3-deploy-the-trident-operator">Step 3: Deploy the Trident operator</h3>
+<div class="paragraph">
+<p>The Astra Trident installer provides a bundle file that can be used to install the operator and create associated objects. The bundle file is an easy way to deploy the operator and install Astra Trident using a default configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For clusters running Kubernetes 1.24 or lower, use <code>bundle_pre_1_25.yaml</code>.</p>
+</li>
+<li>
+<p>For clusters running Kubernetes 1.25 or higher, use <code>bundle_post_1_25.yaml</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Trident installer deploys the operator in the <code>trident</code> namespace. If the <code>trident</code> namespace does not exist, use <code>kubectl apply -f deploy/namespace.yaml</code> to create it.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Create the resources and deploy the operator:</p>
+<div class="listingblock">
+<div class="content">
+<pre>kubectl create -f deploy/&lt;bundle&gt;.yaml</pre>
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1836,82 +1938,21 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Beginning with 21.01, the Trident operator is cluster scoped. Using the Trident operator to install Trident requires creating the <code>TridentOrchestrator</code> Custom Resource Definition (CRD) and defining other resources. You should perform these steps to set up the operator before you can install Astra Trident.
+<div class="paragraph">
+<p>To deploy the operator in a namespace other than the <code>trident</code> namespace, update <code>serviceaccount.yaml</code>, <code>clusterrolebinding.yaml</code> and <code>operator.yaml</code> and generate your bundle file using the <code>kustomization.yaml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>kubectl kustomize deploy/ &gt; deploy/&lt;bundle&gt;.yaml</pre>
+</div>
+</div>
 </td>
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Download and extract the latest version of the Trident installer bundle from <a href="https://github.com/NetApp/trident/releases/latest" target="_blank" rel="noopener">the <em>Assets</em> section on GitHub</a>.</p>
-<div class="listingblock">
-<div class="content">
-<pre>wget https://github.com/NetApp/trident/releases/download/v22.10.0/trident-installer-22.10.0.tar.gz
-tar -xf trident-installer-22.10.0.tar.gz
-cd trident-installer</pre>
-</div>
-</div>
 </li>
 <li>
-<p>Use the appropriate CRD manifest to create the <code>TridentOrchestrator</code> CRD. You then create a <code>TridentOrchestrator</code> Custom Resource later on to instantiate an installation by the operator.</p>
-<div class="paragraph">
-<p>Run the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_post1.16.yaml</pre>
-</div>
-</div>
-</li>
-<li>
-<p>After the <code>TridentOrchestrator</code> CRD is created, create the following resources required for the operator deployment:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>A ServiceAccount for the operator</p>
-</li>
-<li>
-<p>A ClusterRole and ClusterRoleBinding to the ServiceAccount</p>
-</li>
-<li>
-<p>A dedicated PodSecurityPolicy</p>
-</li>
-<li>
-<p>The operator itself</p>
-<div class="paragraph">
-<p>The Trident installer contains manifests for defining these resources. By default, the operator is deployed in the <code>trident</code> namespace. If the <code>trident</code> namespace does not exist, use the following manifest to create one.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>kubectl apply -f deploy/namespace.yaml</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>To deploy the operator in a namespace other than the default <code>trident</code> namespace, you should update the <code>serviceaccount.yaml</code>, <code>clusterrolebinding.yaml</code> and <code>operator.yaml</code> manifests and generate your <code>bundle.yaml</code>.</p>
-<div class="paragraph">
-<p>Run the following command to update the YAML manifests and generate your <code>bundle.yaml</code> using the <code>kustomization.yaml</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>kubectl kustomize deploy/ &gt; deploy/bundle.yaml</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Run the following command to create the resources and deploy the operator:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>kubectl create -f deploy/bundle.yaml</pre>
-</div>
-</div>
-</li>
-<li>
-<p>To verify the status of the operator after you have deployed, do the following:</p>
+<p>Verify the operator was deployed.</p>
 <div class="listingblock">
 <div class="content">
 <pre>kubectl get deployment -n &lt;operator-namespace&gt;
@@ -1920,19 +1961,8 @@ NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 trident-operator   1/1     1            1           3m</pre>
 </div>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>kubectl get pods -n &lt;operator-namespace&gt;
-
-NAME                              READY   STATUS             RESTARTS   AGE
-trident-operator-54cb664d-lnjxh   1/1     Running            0          3m</pre>
-</div>
-</div>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>The operator deployment successfully creates a pod running on one of the worker nodes in your cluster.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1948,9 +1978,9 @@ There should only be <strong>one instance</strong> of the operator in a Kubernet
 </div>
 </div>
 <div class="sect2">
-<h3 id="step-3-create-tridentorchestrator-and-install-trident">Step 3: Create <code>TridentOrchestrator</code> and install Trident</h3>
+<h3 id="step-4-create-the-tridentorchestrator-and-install-trident">Step 4: Create the <code>TridentOrchestrator</code> and install Trident</h3>
 <div class="paragraph">
-<p>You are now ready to install Astra Trident using the operator! This will require creating <code>TridentOrchestrator</code>. The Trident installer comes with example definitions for creating <code>TridentOrchestrator</code>. This kicks off an installation in the <code>trident</code> namespace.</p>
+<p>You can now create the <code>TridentOrchestrator</code> and install Astra Trident. Optionally, you can <a href="kubernetes-customize-deploy.html">customize your Trident installation</a> using the attributes in the <code>TridentOrchestrator</code> spec.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1958,6 +1988,7 @@ There should only be <strong>one instance</strong> of the operator in a Kubernet
 tridentorchestrator.trident.netapp.io/trident created
 
 kubectl describe torc trident
+
 Name:        trident
 Namespace:
 Labels:      &lt;none&gt;
@@ -1972,7 +2003,7 @@ Status:
   Current Installation Params:
     IPv6:                      false
     Autosupport Hostname:
-    Autosupport Image:         netapp/trident-autosupport:22.10
+    Autosupport Image:         netapp/trident-autosupport:23.01
     Autosupport Proxy:
     Autosupport Serial Number:
     Debug:                     true
@@ -1982,21 +2013,29 @@ Status:
     Kubelet Dir:          /var/lib/kubelet
     Log Format:           text
     Silence Autosupport:  false
-    Trident Image:        netapp/trident:21.04.0
+    Trident Image:        netapp/trident:23.01.0
   Message:                  Trident installed  Namespace:                trident
   Status:                   Installed
-  Version:                  v21.04.0
+  Version:                  v23.01.0
 Events:
     Type Reason Age From Message ---- ------ ---- ---- -------Normal
     Installing 74s trident-operator.netapp.io Installing Trident Normal
     Installed 67s trident-operator.netapp.io Trident installed</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The Trident operator enables you to customize the manner in which Astra Trident is installed by using the attributes in the <code>TridentOrchestrator</code> spec. See <a href="kubernetes-customize-deploy.html" target="_blank" rel="noopener">Customize your Trident deployment</a>.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="verify-the-installation">Verify the installation</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The Status of <code>TridentOrchestrator</code> indicates if the installation was successful and displays the version of Trident installed.</p>
+<p>There are several ways to verify your installation.</p>
+</div>
+<div class="sect2">
+<h3 id="using-tridentorchestrator-status">Using <code>TridentOrchestrator</code> status</h3>
+<div class="paragraph">
+<p>The status of <code>TridentOrchestrator</code> indicates if the installation was successful and displays the version of Trident installed. During the installation, the status of <code>TridentOrchestrator</code> changes from <code>Installing</code> to <code>Installed</code>. If you observe the <code>Failed</code> status and the operator is unable to recover by itself, <a href="../troubleshooting.html">check the logs</a>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2043,26 +2082,29 @@ exists.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>During the installation, the status of <code>TridentOrchestrator</code> changes from <code>Installing</code> to <code>Installed</code>. If you observe the <code>Failed</code> status and the operator is unable to recover by itself, you should  check the logs of the operator. See the <a href="../troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> section.</p>
 </div>
+<div class="sect2">
+<h3 id="using-pod-creation-status">Using pod creation status</h3>
 <div class="paragraph">
-<p>You can confirm if the Astra Trident installation completed by taking a look at the pods that have been created:</p>
+<p>You can confirm if the Astra Trident installation completed by reviewing the status of the created pods:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>kubectl get pod -n trident
+<pre>kubectl get pods -n trident
 
-NAME                                READY   STATUS    RESTARTS   AGE
-trident-csi-7d466bf5c7-v4cpw        5/5     Running   0           1m
-trident-csi-mr6zc                   2/2     Running   0           1m
-trident-csi-xrp7w                   2/2     Running   0           1m
-trident-csi-zh2jt                   2/2     Running   0           1m
-trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</pre>
+NAME                                       READY   STATUS    RESTARTS   AGE
+trident-controller-7d466bf5c7-v4cpw        6/6     Running   0           1m
+trident-node-linux-mr6zc                   2/2     Running   0           1m
+trident-node-linux-xrp7w                   2/2     Running   0           1m
+trident-node-linux-zh2jt                   2/2     Running   0           1m
+trident-operator-766f7b8658-ldzsv          1/1     Running   0           3m</pre>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="using-tridentctl">Using <code>tridentctl</code></h3>
 <div class="paragraph">
-<p>You can also use <code>tridentctl</code> to check the version of Astra Trident installed.</p>
+<p>You can use <code>tridentctl</code> to check the version of Astra Trident installed.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2071,25 +2113,18 @@ trident-operator-766f7b8658-ldzsv   1/1     Running   0           3m</pre>
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
-| 21.04.0        | 21.04.0        |
+| 23.01.0        | 23.01.0        |
 +----------------+----------------+</pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="whats-next">What&#8217;s next</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Now you can go ahead and create a backend. See <a href="kubernetes-postdeployment.html" target="_blank" rel="noopener">post-deployment tasks</a>.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/tip.svg" alt="Tip">
-</td>
-<td class="content">
-For troubleshooting issues during deployment, see the <a href="../troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> section.
-</td>
-</tr>
-</table>
-</div>
+<p>Now you can <a href="kubernetes-postdeployment.html">create create a backend and storage class, provision a volume, and mount the volume in a pod</a>.</p>
 </div>
 </div>
 </div>

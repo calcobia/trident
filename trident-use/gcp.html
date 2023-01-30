@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Configure a CVS for GCP backend</title>
+  <title>Configure a Cloud Volumes Service for Google Cloud backend</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Configure a CVS for GCP backend" />
+  <meta property="og:title" content="Configure a Cloud Volumes Service for Google Cloud backend" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-use/gcp.html" />
 	<meta property="og:description" content="Learn how to configure Cloud Volumes Service for Google Cloud as the backend for your Astra Trident installation using the sample configurations provided." />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Learn how to configure Cloud Volumes Service for Google Cloud as the backend for your Astra Trident installation using the sample configurations provided.">
-  <meta name="keywords" content=" trident backend, cloud volumes service for google cloud platform, Google Cloud Platform"><!-- Icons -->
+  <meta name="keywords" content=" trident backend, cloud volumes service for google cloud platform, google cloud platform, gcp, storage pool labels, storage pool, cvs, cvs-performance, service type, service level, cloud volumes service, cloud volumes"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -161,9 +161,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.10">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 23.01">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.10</span>
+    <span translate="no" class="notranslate">Astra Trident 23.01</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -171,6 +171,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-use/gcp.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 23.01</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2210/trident-use/gcp.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
       </a>
                      
@@ -196,16 +203,9 @@
       </a>
                      
     </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2110/trident-use/gcp.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
-      </a>
-                     
-    </li>
     
   </ul>
-</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Configure a CVS for GCP backend](https://docs.netapp.com/us-en/trident/trident-use/gcp.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-use/gcp.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Configure a Cloud Volumes Service for Google Cloud backend](https://docs.netapp.com/us-en/trident/trident-use/gcp.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-use/gcp.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -395,7 +395,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_10_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -457,6 +457,22 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Install_Astra_Trident.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Install Astra Trident
+          </a>
+          
+
 
 
     
@@ -467,13 +483,21 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Deploy_with_Trident_operator.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Install_using_Trident_operator.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Deploy with Trident operator
+            Install using Trident operator
           </a>
           
+
+
+
+
+
+
+
+
 
 
         </li>
@@ -492,13 +516,22 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Deploy_with_tridentctl.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Install_using_tridentctl.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Deploy with tridentctl
+            Install using tridentctl
           </a>
           
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
         </li>
@@ -534,9 +567,32 @@
           </a>
           
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Upgrade_Astra_Trident.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Upgrade Astra Trident
+          </a>
+          
 
 
 
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -593,13 +649,15 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_an_ANF_backend.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Azure_NetApp_Files.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure an ANF backend
+            Azure NetApp Files
           </a>
           
+
+
 
 
 
@@ -626,11 +684,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_a_backend_with_ONTAP_SAN_drivers.pdf" 
+              href="/us-en/trident/pdfs/sidebar/ONTAP_SAN_drivers.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure a backend with ONTAP SAN drivers
+            ONTAP SAN drivers
           </a>
           
 
@@ -653,11 +711,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_a_backend_with_ONTAP_NAS_drivers.pdf" 
+              href="/us-en/trident/pdfs/sidebar/ONTAP_NAS_drivers.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure a backend with ONTAP NAS drivers
+            ONTAP NAS drivers
           </a>
           
 
@@ -671,6 +729,33 @@
   
 
 
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Amazon_FSx_for_NetApp_ONTAP.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Amazon FSx for NetApp ONTAP
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
         </li>
@@ -825,6 +910,31 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Security.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Security
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
 
         </li>
       </ul>
@@ -965,11 +1075,11 @@
         Volume snapshots
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Virtual storage pools"
+      data-pdf-filename="Virtual pools"
       data-li-level="2#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/virtual-storage-pool.html">
-        Virtual storage pools
+        Virtual pools
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Volume access groups"
@@ -1002,44 +1112,88 @@
         Requirements
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Deployment overview"
-      data-li-level="2#" 
+      data-pdf-filename="Install Astra Trident"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Install Astra Trident</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installation overview"
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy.html">
-        Deployment overview
+        Installation overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Deploy with Trident operator"
-      data-li-level="2" 
+      data-pdf-filename="Install using Trident operator"
+      data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
-        <div class="na-navbar-padding"> Deploy with Trident operator</div>
+    ><a href="#">
+        <div class="na-navbar-padding"> Install using Trident operator</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Customize Trident operator deployment"
-      data-li-level="3#" 
+      data-pdf-filename="Manually deploy the Trident operator (Standard)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
+        Manually deploy the Trident operator (Standard)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manually deploy the Trident operator (Offline)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-operator-mirror.html">
+        Manually deploy the Trident operator (Offline)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Trident Helm Chart (Standard)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-helm.html">
+        Use Trident Helm Chart (Standard)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Trident Helm Chart (Offline)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-helm-mirror.html">
+        Use Trident Helm Chart (Offline)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Customize Trident operator installation"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy.html">
-        Customize Trident operator deployment
+        Customize Trident operator installation
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Deploy with tridentctl"
-      data-li-level="2" 
+      data-pdf-filename="Install using tridentctl"
+      data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
-        <div class="na-navbar-padding"> Deploy with tridentctl</div>
+    ><a href="#">
+        <div class="na-navbar-padding"> Install using tridentctl</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Customize tridentctl deployment"
-      data-li-level="3#" 
+      data-pdf-filename="Install using tridentctl"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
+        Install using tridentctl
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Customize tridentctl installation"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy-tridentctl.html">
-        Customize tridentctl deployment
-      </a></li></ul></li><li 
+        Customize tridentctl installation
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="What's next?"
       data-li-level="2#" 
@@ -1058,25 +1212,34 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade Astra Trident"
-      data-li-level="2#" 
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Upgrade Astra Trident</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade overview"
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-trident.html">
-        Upgrade Astra Trident
+        Upgrade overview
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade with the operator"
-      data-li-level="2#" 
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-operator.html">
         Upgrade with the operator
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade with tridentctl"
-      data-li-level="2#" 
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-tridentctl.html">
         Upgrade with tridentctl
-      </a></li><li 
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Uninstall Astra Trident"
       data-li-level="2#" 
@@ -1117,95 +1280,125 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure an ANF backend"
+      data-pdf-filename="Azure NetApp Files"
       data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/trident/trident-use/anf.html">
-        <div class="na-navbar-padding"> Configure an ANF backend</div>
+    ><a href="#">
+        <div class="na-navbar-padding"> Azure NetApp Files</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure an ANF backend"
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
+        Overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-prep.html">
-        Prepare to configure an ANF backend
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ANF configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
-        ANF configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a CVS for GCP backend"
+      data-pdf-filename="Cloud Volumes Service for Google Cloud"
       data-li-level="3#" 
       class="  active "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/gcp.html">
-        Configure a CVS for GCP backend
+        Cloud Volumes Service for Google Cloud
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a NetApp HCI or SolidFire backend"
+      data-pdf-filename="NetApp HCI or SolidFire"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/element.html">
-        Configure a NetApp HCI or SolidFire backend
+        NetApp HCI or SolidFire
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backend with ONTAP SAN drivers"
+      data-pdf-filename="ONTAP SAN drivers"
       data-li-level="3" 
       class="subfolders "
     ><a href="/us-en/trident/trident-use/ontap-san.html">
-        <div class="na-navbar-padding"> Configure a backend with ONTAP SAN drivers</div>
+        <div class="na-navbar-padding"> ONTAP SAN drivers</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure backend with ONTAP SAN drivers"
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
-        Prepare to configure backend with ONTAP SAN drivers
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ONTAP SAN configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
-        ONTAP SAN configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backend with ONTAP NAS drivers"
+      data-pdf-filename="ONTAP NAS drivers"
       data-li-level="3" 
       class="subfolders "
     ><a href="/us-en/trident/trident-use/ontap-nas.html">
-        <div class="na-navbar-padding"> Configure a backend with ONTAP NAS drivers</div>
+        <div class="na-navbar-padding"> ONTAP NAS drivers</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure backend with ONTAP NAS drivers"
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
-        Prepare to configure backend with ONTAP NAS drivers
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ONTAP NAS configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
-        ONTAP NAS configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
-      data-li-level="3#" 
+      data-pdf-filename="Amazon FSx for NetApp ONTAP"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Amazon FSx for NetApp ONTAP</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx.html">
-        Use Astra Trident with Amazon FSx for NetApp ONTAP
-      </a></li></ul></li><li 
+        Overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integrate Amazon FSx for ONTAP"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx-prep.html">
+        Integrate Amazon FSx for ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx-examples.html">
+        Configuration options and examples
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create backends with kubectl"
       data-li-level="2#" 
@@ -1426,11 +1619,27 @@
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Security"
-      data-li-level="2#" 
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Security</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security recommendations"
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/security-reco.html">
-        Security
-      </a></li></ul></li><li 
+        Security recommendations
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Linux Unified Key Setup (LUKS)"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/security-luks.html">
+        Linux Unified Key Setup (LUKS)
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Reference"
       data-li-level="1" 
@@ -1548,14 +1757,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Configure a CVS for GCP backend</h1>
+  <h1 class="n-doc__component-detail-heading">Configure a Cloud Volumes Service for Google Cloud backend</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-12-02 17:21:56 +0000">12/02/2022</time>
+    <time datetime="2023-01-25 17:09:52 +0000">01/25/2023</time>
     
   
 
@@ -1576,15 +1785,48 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Learn how to configure NetApp Cloud Volumes Service (CVS) for Google Cloud Platform (GCP) as the backend for your Astra Trident installation using the sample configurations provided.</p>
+<p>Learn how to configure NetApp Cloud Volumes Service for Google Cloud as the backend for your Astra Trident installation using the sample configurations provided.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="learn-about-astra-trident-support-for-cvs-for-gcp">Learn about Astra Trident support for CVS for GCP</h2>
+<h2 id="learn-about-astra-trident-support-for-cloud-volumes-service-for-google-cloud">Learn about Astra Trident support for Cloud Volumes Service for Google Cloud</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Astra Trident supports volumes with the default CVS service type on <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-types" target="_blank" rel="noopener">GCP</a>. Astra Trident does not support CVS volumes less than 100 GiB regardless of the minimum allowed by the CVS service type. Therefore, Trident automatically creates a 100 GiB volume if the requested volume is smaller than the minimum size.</p>
+<p>Astra Trident can create Cloud Volumes Service volumes in one of two <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-types" target="_blank" rel="noopener">service types</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>CVS-Performance</strong>: The default Astra Trident service type. This performance-optimized service type is best suited for production workloads that value performance. The CVS-Performance service type is a hardware option supporting volumes with a minimum 100 GiB size. You can choose one of <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-levels#service_levels_for_the_cvs-performance_service_type" target="_blank" rel="noopener">three  service levels</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>standard</code></p>
+</li>
+<li>
+<p><code>premium</code></p>
+</li>
+<li>
+<p><code>extreme</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>CVS</strong>: The CVS service type provides high zonal availability with limited to moderate performance levels. The CVS service type is a software option that uses storage pools to support volumes as small as 1 GiB. The storage pool can contain up to 50 volumes where all volumes share the capacity and performance of the pool. You can choose one of <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-levels#service_levels_for_the_cvs_service_type" target="_blank" rel="noopener">two service levels</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>standardsw</code></p>
+</li>
+<li>
+<p><code>zoneredundantstandardsw</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <div class="title">What you&#8217;ll need</div>
@@ -1593,7 +1835,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>A Google Cloud account configured with NetApp CVS</p>
+<p>A Google Cloud account configured with NetApp Cloud Volumes Service</p>
 </li>
 <li>
 <p>Project number of your Google Cloud account</p>
@@ -1602,7 +1844,7 @@
 <p>Google Cloud service account with the <code>netappcloudvolumes.admin</code> role</p>
 </li>
 <li>
-<p>API key file for your CVS service account</p>
+<p>API key file for your Cloud Volumes Service account</p>
 </li>
 </ul>
 </div>
@@ -1612,7 +1854,7 @@
 <h2 id="backend-configuration-options">Backend configuration options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See the following table for the backend configuration options:</p>
+<p>Each backend provisions volumes in a single Google Cloud region. To create volumes in other regions, you can define additional backends.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1645,27 +1887,47 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>storageClass</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type of storage. Choose from <code>hardware</code> (performance optimized) or <code>software</code> (CVS service type)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional parameter used to specify the CVS service type.<br>
+<br>
+Use <code>software</code> to select the CVS service type. Otherwise, Astra Trident assumes CVS-Performance service type (<code>hardware</code>).</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>storagePools</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CVS service type only. Optional parameter used to specify storage pools for volume creation.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>projectNumber</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud account project number. The value is found on the Google Cloud portal&#8217;s Home page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud account project number. The value is found on the Google Cloud portal home page.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hostProjectNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Required if using a shared VPC network. In this scenario, <code>projectNumber</code> is the service project, and <code>hostProjectNumber</code> is the host project.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>apiRegion</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CVS account region. It is the region where the backend will provision the volumes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Google Cloud region where Astra Trident creates Cloud Volumes Service volumes. When creating cross-region Kubernetes clusters, volumes created in an <code>apiRegion</code> can be used in workloads scheduled on nodes across multiple Google Cloud regions.<br>
+<br>
+Cross-region traffic incurs an additional cost.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>apiKey</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API key for the Google Cloud service account with the <code>netappcloudvolumes.admin</code> role. It includes the JSON-formatted contents of a Google Cloud service account&#8217;s private key file (copied verbatim into the backend configuration file).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API key for the Google Cloud service account with the <code>netappcloudvolumes.admin</code> role.<br>
+<br>
+It includes the JSON-formatted contents of a Google Cloud service account&#8217;s private key file (copied verbatim into the backend configuration file).</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>proxyURL</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Proxy URL if proxy server required to connect to CVS Account. The proxy server can either be an HTTP proxy or an HTTPS proxy. For an HTTPS proxy, certificate validation is skipped to allow the usage of self-signed certificates in the proxy server. Proxy servers with authentication enabled are not supported.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proxy URL if proxy server required to connect to CVS account. The proxy server can either be an HTTP proxy or an HTTPS proxy.<br>
+<br>
+For an HTTPS proxy, certificate validation is skipped to allow the usage of self-signed certificates in the proxy server.<br>
+<br>
+Proxy servers with authentication enabled are not supported.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -1675,78 +1937,52 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>limitVolumeSize</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fail provisioning if the requested volume size is above this value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fail provisioning if the requested volume size is above this value.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">"" (not enforced by default)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>serviceLevel</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The CVS service level for new volumes. The values are "standard", "premium", and "extreme".</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"standard"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CVS-Performance or CVS service level for new volumes.<br>
+<br>
+CVS-Performance values are <code>standard</code>, <code>premium</code>, or <code>extreme</code>.<br>
+<br>
+CVS values are <code>standardsw</code> or <code>zoneredundantstandardsw</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CVS-Performance default is "standard".<br>
+<br>
+CVS default is "standardsw".</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>network</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GCP network used for CVS volumes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud network used for Cloud Volumes Service volumes.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">“default”</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>debugTraceFlags</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug flags to use when troubleshooting. Example, <code>\{"api":false, "method":true}</code>. Do not use this unless you are troubleshooting and require a detailed log dump.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug flags to use when troubleshooting. Example, <code>\{"api":false, "method":true}</code>.<br>
+<br>
+Do not use this unless you are troubleshooting and require a detailed log dump.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>allowedTopologies</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To enable cross-region access, your StorageClass definition for <code>allowedTopologies</code> must include all regions.<br>
+<br>
+For example:<br>
+<code>- key: topology.kubernetes.io/region<br>
+  values:<br>
+  - us-east1<br>
+  - europe-west1</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="volume-provisioning-options">Volume provisioning options</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>If using a shared VPC network, both <code>projectNumber</code> and <code>hostProjectNumber</code> must be specified. In that case, <code>projectNumber</code> is the service project, and <code>hostProjectNumber</code> is the host project.</p>
-</div>
-<div class="paragraph">
-<p>The <code>apiRegion</code> represents the GCP region where Astra Trident creates CVS volumes. When creating cross-region Kubernetes clusters, CVS volumes created in an <code>apiRegion</code> can be used in workloads scheduled on nodes across multiple GCP regions. Be aware that cross-region traffic incurs an additional cost.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>To enable cross-region access, your StorageClass definition for <code>allowedTopologies</code> must include all regions. For example:</p>
-<div class="listingblock">
-<div class="content">
-<pre>- key: topology.kubernetes.io/region
-  values:
-  - us-east1
-  - europe-west1</pre>
-</div>
-</div>
-</li>
-<li>
-<p><code>storageClass</code> is an optional parameter that you can use to select the desired <a href="https://cloud.google.com/solutions/partners/netapp-cloud-volumes/service-types?hl=en_US" target="_blank" rel="noopener">CVS service type</a>. You can choose from the base CVS service type (<code>storageClass=software</code>) or the CVS-Performance service type (<code>storageClass=hardware</code>), which Trident uses by default. Make sure you specify an <code>apiRegion</code> that provides the respective CVS <code>storageClass</code> in your backend definition.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/caution.svg" alt="Caution">
-</td>
-<td class="content">
-Astra Trident&#8217;s integration with the base CVS service type on Google Cloud is a <strong>beta feature</strong>, not meant for production workloads. Trident is <strong>fully supported</strong> with the CVS-Performance service type and uses it by default.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Each backend provisions volumes in a single Google Cloud region. To create volumes in other regions, you can define additional backends.</p>
-</div>
-<div class="paragraph">
-<p>You can control how each volume is provisioned by default by specifying the following options in a special section of the configuration file. See the configuration examples below.</p>
+<p>You can control default volume provisioning in the <code>defaults</code> section of the configuration file.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1764,7 +2000,7 @@ Astra Trident&#8217;s integration with the base CVS service type on Google Cloud
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>exportRule</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The export rule(s) for new volumes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The export rules for new volumes. Must be a comma-separated list of any combination of IPv4 addresses or IPv4 subnets in CIDR notation.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">"0.0.0.0/0"</p></td>
 </tr>
 <tr>
@@ -1779,33 +2015,30 @@ Astra Trident&#8217;s integration with the base CVS service type on Google Cloud
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The size of new volumes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"100Gi"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The size of new volumes.<br>
+<br>
+CVS-Performance minimum is 100 GiB.<br>
+<br>
+CVS minimum is 1 GiB.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CVS-Performance service type defaults to "100GiB".<br>
+<br>
+CVS service type does not set a default but requires a 1 GiB minimum.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>The <code>exportRule</code> value must be a comma-separated list of any combination of IPv4 addresses or IPv4 subnets in CIDR notation.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-For all the volumes created on a CVS Google Cloud backend, Trident copies all the labels present on a storage pool to the storage volume at the time it is provisioned. Storage administrators can define labels per storage pool and group all the volumes created in a storage pool. This provides a convenient way of differentiating volumes based on a set of customizable labels that are provided in the backend configuration.
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="example-1-minimal-configuration">Example 1: Minimal configuration</h2>
+<h2 id="cvs-performance-service-type-examples">CVS-Performance service type examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is the absolute minimum backend configuration.</p>
+<p>The following examples provide sample configurations for the CVS-Performance service type.</p>
+</div>
+<details>
+<summary class="title">Example 1: Minimal configuration</summary>
+<div class="content">
+<div class="paragraph">
+<p>This is the minimum backend configuration using default CVS-Performance service type with the default "standard" service level.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1830,43 +2063,12 @@ For all the volumes created on a CVS Google Cloud backend, Trident copies all th
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="example-2-base-cvs-service-type-configuration">Example 2: Base CVS service type configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This example shows a backend definition that uses the base CVS service type, which is meant for general-purpose workloads and provides light/moderate performance, coupled with high zonal availability.</p>
-</div>
-<div class="listingblock">
+</details>
+<details>
+<summary class="title">Example 2: Service level configuration</summary>
 <div class="content">
-<pre>{
-    "version": 1,
-    "storageDriverName": "gcp-cvs",
-    "projectNumber": "012345678901",
-    "storageClass": "software",
-    "apiRegion": "us-east4",
-    "apiKey": {
-        "type": "service_account",
-        "project_id": "my-gcp-project",
-        "private_key_id": "1234567890123456789012345678901234567890",
-        "private_key": "-----BEGIN PRIVATE KEY-----\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nXsYg6gyxy4zq7OlwWgLwGa==\n-----END PRIVATE KEY-----\n",
-        "client_email": "cloudvolumes-admin-sa@my-gcp-project.iam.gserviceaccount.com",
-        "client_id": "123456789012345678901",
-        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-        "token_uri": "https://oauth2.googleapis.com/token",
-        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloudvolumes-admin-sa%40my-gcp-project.iam.gserviceaccount.com"
-    }
-}</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="example-3-single-service-level-configuration">Example 3: Single service level configuration</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>This example shows a backend file that applies the same aspects to all Astra Trident-created storage in the Google Cloud us-west2 region. This example also shows the usage of <code>proxyURL</code> in the backend configuration file.</p>
+<p>This sample illustrates backend configuration options, including service level, and volume defaults.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1901,15 +2103,15 @@ For all the volumes created on a CVS Google Cloud backend, Trident copies all th
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="example-4-virtual-storage-pool-configuration">Example 4: Virtual storage pool configuration</h2>
-<div class="sectionbody">
+</details>
+<details>
+<summary class="title">Example 3: Virtual pool configuration</summary>
+<div class="content">
 <div class="paragraph">
-<p>This example shows the backend definition file configured with virtual storage pools along with <code>StorageClasses</code> that refer back to them.</p>
+<p>This sample uses <code>storage</code> to configure virtual pools and the <code>StorageClasses</code> that refer back to them. Refer to <a href="#storage-class-definitions">Storage class definitions</a> to see how the storage classes were defined.</p>
 </div>
 <div class="paragraph">
-<p>In the sample backend definition file shown below, specific defaults are set for all storage pools, which set the <code>snapshotReserve</code> at 5% and the <code>exportRule</code> to 0.0.0.0/0. The virtual storage pools are defined in the <code>storage</code> section. In this example, each individual storage pool sets its own <code>serviceLevel</code>, and some pools overwrite the default values.</p>
+<p>Here, specific defaults are set for all virtual pools, which set the <code>snapshotReserve</code> at 5% and the <code>exportRule</code> to 0.0.0.0/0. The virtual pools are defined in the <code>storage</code> section. Each individual virtual pool defines its own <code>serviceLevel</code>, and some pools overwrite the default values. Virtual pool labels were used to differentiate the pools based on <code>performance</code> and <code>protection</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1992,12 +2194,16 @@ For all the volumes created on a CVS Google Cloud backend, Trident copies all th
 }</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The following StorageClass definitions refer to the storage pools above. By using the <code>parameters.selector</code> field, you can specify for each StorageClass the virtual pool that is used to host a volume. The volume will have the aspects defined in the chosen pool.</p>
 </div>
+</details>
+<div class="sect2">
+<h3 id="storage-class-definitions">Storage class definitions</h3>
 <div class="paragraph">
-<p>The first StorageClass (<code>cvs-extreme-extra-protection</code>) maps to the first virtual storage pool. This is the only pool offering extreme performance with a snapshot reserve of 10%. The last StorageClass (<code>cvs-extra-protection</code>) calls out any storage pool which provides a snapshot reserve of 10%. Astra Trident decides which virtual storage pool is selected and ensures that the snapshot reserve requirement is met.</p>
+<p>The following StorageClass definitions apply to the virtual pool configuration example. Using <code>parameters.selector</code>, you can specify for each StorageClass the virtual pool used to host a volume. The volume will have the aspects defined in the chosen pool.</p>
 </div>
+<details>
+<summary class="title">Storage class example</summary>
+<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre>apiVersion: storage.k8s.io/v1
@@ -2055,6 +2261,95 @@ parameters:
 allowVolumeExpansion: true</pre>
 </div>
 </div>
+</div>
+</details>
+<div class="ulist">
+<ul>
+<li>
+<p>The first StorageClass (<code>cvs-extreme-extra-protection</code>) maps to the first virtual pool. This is the only pool offering extreme performance with a snapshot reserve of 10%.</p>
+</li>
+<li>
+<p>The last StorageClass (<code>cvs-extra-protection</code>) calls out any storage pool which provides a snapshot reserve of 10%. Astra Trident decides which virtual pool is selected and ensures that the snapshot reserve requirement is met.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cvs-service-type-examples">CVS service type examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following examples provide sample configurations for the CVS service type.</p>
+</div>
+<details>
+<summary class="title">Example 1: Minimum configuration</summary>
+<div class="content">
+<div class="paragraph">
+<p>This is the minimum backend configuration using <code>storageClass</code> to specify the CVS service type and default <code>standardsw</code> service level.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "version": 1,
+    "storageDriverName": "gcp-cvs",
+    "projectNumber": "012345678901",
+    "storageClass": "software",
+    "apiRegion": "us-east4",
+    "apiKey": {
+        "type": "service_account",
+        "project_id": "my-gcp-project",
+        "private_key_id": "1234567890123456789012345678901234567890",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nznHczZsrrtHisIsAbOguSaPIKeyAZNchRAGzlzZE4jK3bl/qp8B4Kws8zX5ojY9m\nXsYg6gyxy4zq7OlwWgLwGa==\n-----END PRIVATE KEY-----\n",
+        "client_email": "cloudvolumes-admin-sa@my-gcp-project.iam.gserviceaccount.com",
+        "client_id": "123456789012345678901",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloudvolumes-admin-sa%40my-gcp-project.iam.gserviceaccount.com"
+    }
+“serviceLevel”: “standardsw”
+}</pre>
+</div>
+</div>
+</div>
+</details>
+<details>
+<summary class="title">Example 2: Storage pool configuration</summary>
+<div class="content">
+<div class="paragraph">
+<p>This sample backend configuration uses <code>storagePools</code> to configure a storage pool.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "version": 1,
+  "storageDriverName": "gcp-cvs",
+  "backendName": "gcp-std-so-with-pool",
+  "projectNumber": "531265380079",
+  "apiRegion": "europe-west1",
+  "apiKey": {
+    "type": "service_account",
+    "project_id": "cloud-native-data",
+    "private_key_id": "eeba413dcf54992cbbb265a369b7de6baebe88f8",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDaT+Oui9FBAw19\nL1AGEkrYU5xd9K5NlO5jMkIFND5wCD+Nv+jd1GvtFRLaLK5RvXyF5wzvztmODNS+\nqtScpQ+5cFpQkuGtv9U9+N6qtuVYYO3b504Kp5CtqVPJCgMJaK2j8pZTIqUiMum/\n5/Y9oTbZrjAHSMgJm2nHzFq2X0rqVMaHghI6ATm4DOuWx8XGWKTGIPlc0qPqJlqS\nLLaWOH4VIZQZCAyW5IUp9CAmwqHgdG0uhFNfCgMmED6PBUvVLsLvcq86X+QSWR9k\nETqElj/sGCenPF7ti1DhGBFafd9hPnxg9PZY29ArEZwY9G/ZjZQX7WPgs0VvxiNR\nDxZRC3GXAgMBAAECggEACn5c59bG/qnVEVI1CwMAalM5M2z09JFhlLlljKwntNPj\nVilw2eTW2+UE7HbJru/S7KQgA5Dnn9kvCraEahPRuddUMrD0vG4kTl/IODV6uFuk\nY0sZfbqd4jMUQ21smvGsqFzwloYWS5qzO1W83ivXH/HW/iqkmY2eW+EPRS/hwSSu\nSscR+SojI7PB0BWSJhlV4yqYf3vcD/D95el2CVHfRCkL85DKumeZ+yHEnpiXGZAE\nt8xSs4a5OOPm6NHhevCw2a/UQ95/foXNUR450HtbjieJo5o+FF6EYZQGfU2ZHZO8\n37FBKuaJkdGW5xqaI9TL7aqkGkFMF4F2qvOZM+vy8QKBgQD4oVuOkJDlhkTHP86W\nesFlw1kpWyJR9ZA7LI0g/rVpslnX+XdDq0WQf4umdLNau5hYEH9LU6ZSGs1Xk3/B\nNHwR6OXFuqEKNiu83d0zSlHhTy7PZpOZdj5a/vVvQfPDMz7OvsqLRd7YCAbdzuQ0\n+Ahq0Ztwvg0HQ64hdW0ukpYRRwKBgQDgyHj98oqswoYuIa+pP1yS0pPwLmjwKyNm\n/HayzCp+Qjiyy7Tzg8AUqlH1Ou83XbV428jvg7kDhO7PCCKFq+mMmfqHmTpb0Maq\nKpKnZg4ipsqP1yHNNEoRmcailXbwIhCLewMqMrggUiLOmCw4PscL5nK+4GKu2XE1\njLqjWAZFMQKBgFHkQ9XXRAJ1kR3XpGHoGN890pZOkCVSrqju6aUef/5KYlFCt8ew\nF/+aIxM2iQSvmWQYOvVCnhuY/F2GFaQ7d0om3decuwI0CX/xy7PjHMkLXa2uaZs4\nWR17sLduj62RqXRLX0c0QkwBiNFyHbRcpdkZJQujbYMhBa+7j7SxT4BtAoGAWMWT\nUucocRXZm/pdvz9wteNH3YDWnJLMxm1KC06qMXbBoYrliY4sm3ywJWMC+iCd/H8A\nGecxd/xVu5mA2L2N3KMq18Zhz8Th0G5DwKyDRJgOQ0Q46yuNXOoYEjlo4Wjyk8Me\n+tlQ8iK98E0UmZnhTgfSpSNElbz2AqnzQ3MN9uECgYAqdvdVPnKGfvdtZ2DjyMoJ\nE89UIC41WjjJGmHsd8W65+3X0RwMzKMT6aZc5tK9J5dHvmWIETnbM+lTImdBBFga\nNWOC6f3r2xbGXHhaWSl+nobpTuvlo56ZRJVvVk7lFMsiddzMuHH8pxfgNJemwA4P\nThDHCejv035NNV6KyoO0tA==\n-----END PRIVATE KEY-----",
+    "client_email": "cloudvolumes-admin-sa@cloud-native-data.iam.gserviceaccount.com",
+    "client_id": "107071413297115343396",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloudvolumes-admin-sa%40cloud-native-data.iam.gserviceaccount.com"
+  },
+  "storageClass": "software",
+  "zone": "europe-west1-b",
+  "network": "default",
+  "storagePools": ["1bc7f380-3314-6005-45e9-c7dc8c2d7509"],
+  "serviceLevel": "Standardsw"
+}</pre>
+</div>
+</div>
+</div>
+</details>
 </div>
 </div>
 <div class="sect1">

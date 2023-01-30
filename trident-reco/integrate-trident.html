@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="A Kubernetes cluster typically consists of two types of nodes, each responsible for different aspects of functionality.">
-  <meta name="keywords" content=" kubernetes, clusters, nodes, components, master, compute, fsx, flexgroup, flexvolume, solidfire, hci, virtual storage pool, cvs, gcp, volumes"><!-- Icons -->
+  <meta name="keywords" content=" kubernetes, clusters, nodes, components, master, compute, fsx, flexgroup, flexvolume, solidfire, hci, virtual pool, cvs, gcp, volumes"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -161,9 +161,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Astra Trident 22.10">
+  <div class="custom-dropdown-select unselected" title="Astra Trident 23.01">
     <label>Version</label>
-    <span translate="no" class="notranslate">Astra Trident 22.10</span>
+    <span translate="no" class="notranslate">Astra Trident 23.01</span>
     <img src="/us-en/trident/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/trident/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -171,6 +171,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/trident/trident-reco/integrate-trident.html" target="_self">
+        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 23.01</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/trident-2210/trident-reco/integrate-trident.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
       </a>
                      
@@ -193,13 +200,6 @@
       
       <a href="https://docs.netapp.com/us-en/trident-2201/trident-reco/integrate-trident.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.01</span></span>
-      </a>
-                     
-    </li>
-    <li>
-      
-      <a href="https://docs.netapp.com/us-en/trident-2110/trident-reco/integrate-trident.html" target="_self">
-        <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 21.10</span></span>
       </a>
                      
     </li>
@@ -395,7 +395,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_22_10_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -457,6 +457,22 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Install_Astra_Trident.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Install Astra Trident
+          </a>
+          
+
 
 
     
@@ -467,13 +483,21 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Deploy_with_Trident_operator.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Install_using_Trident_operator.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Deploy with Trident operator
+            Install using Trident operator
           </a>
           
+
+
+
+
+
+
+
+
 
 
         </li>
@@ -492,13 +516,22 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Deploy_with_tridentctl.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Install_using_tridentctl.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Deploy with tridentctl
+            Install using tridentctl
           </a>
           
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
         </li>
@@ -534,9 +567,32 @@
           </a>
           
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Upgrade_Astra_Trident.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Upgrade Astra Trident
+          </a>
+          
 
 
 
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
 
@@ -593,13 +649,15 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_an_ANF_backend.pdf" 
+              href="/us-en/trident/pdfs/sidebar/Azure_NetApp_Files.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure an ANF backend
+            Azure NetApp Files
           </a>
           
+
+
 
 
 
@@ -624,11 +682,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_a_backend_with_ONTAP_SAN_drivers.pdf" 
+              href="/us-en/trident/pdfs/sidebar/ONTAP_SAN_drivers.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure a backend with ONTAP SAN drivers
+            ONTAP SAN drivers
           </a>
           
 
@@ -651,11 +709,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/trident/pdfs/sidebar/Configure_a_backend_with_ONTAP_NAS_drivers.pdf" 
+              href="/us-en/trident/pdfs/sidebar/ONTAP_NAS_drivers.pdf" 
             
           >
             <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
-            Configure a backend with ONTAP NAS drivers
+            ONTAP NAS drivers
           </a>
           
 
@@ -669,6 +727,33 @@
   
 
 
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Amazon_FSx_for_NetApp_ONTAP.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Amazon FSx for NetApp ONTAP
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
 
 
         </li>
@@ -825,6 +910,31 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/us-en/trident/pdfs/sidebar/Security.pdf" 
+            
+          >
+            <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>
+            Security
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
 
         </li>
       </ul>
@@ -965,11 +1075,11 @@
         Volume snapshots
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Virtual storage pools"
+      data-pdf-filename="Virtual pools"
       data-li-level="2#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-concepts/virtual-storage-pool.html">
-        Virtual storage pools
+        Virtual pools
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Volume access groups"
@@ -1002,44 +1112,88 @@
         Requirements
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Deployment overview"
-      data-li-level="2#" 
+      data-pdf-filename="Install Astra Trident"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Install Astra Trident</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installation overview"
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy.html">
-        Deployment overview
+        Installation overview
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Deploy with Trident operator"
-      data-li-level="2" 
+      data-pdf-filename="Install using Trident operator"
+      data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
-        <div class="na-navbar-padding"> Deploy with Trident operator</div>
+    ><a href="#">
+        <div class="na-navbar-padding"> Install using Trident operator</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Customize Trident operator deployment"
-      data-li-level="3#" 
+      data-pdf-filename="Manually deploy the Trident operator (Standard)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-operator.html">
+        Manually deploy the Trident operator (Standard)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manually deploy the Trident operator (Offline)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-operator-mirror.html">
+        Manually deploy the Trident operator (Offline)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Trident Helm Chart (Standard)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-helm.html">
+        Use Trident Helm Chart (Standard)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Trident Helm Chart (Offline)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-helm-mirror.html">
+        Use Trident Helm Chart (Offline)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Customize Trident operator installation"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy.html">
-        Customize Trident operator deployment
+        Customize Trident operator installation
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Deploy with tridentctl"
-      data-li-level="2" 
+      data-pdf-filename="Install using tridentctl"
+      data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
-        <div class="na-navbar-padding"> Deploy with tridentctl</div>
+    ><a href="#">
+        <div class="na-navbar-padding"> Install using tridentctl</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Customize tridentctl deployment"
-      data-li-level="3#" 
+      data-pdf-filename="Install using tridentctl"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html">
+        Install using tridentctl
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Customize tridentctl installation"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy-tridentctl.html">
-        Customize tridentctl deployment
-      </a></li></ul></li><li 
+        Customize tridentctl installation
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="What's next?"
       data-li-level="2#" 
@@ -1058,25 +1212,34 @@
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade Astra Trident"
-      data-li-level="2#" 
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Upgrade Astra Trident</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade overview"
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-trident.html">
-        Upgrade Astra Trident
+        Upgrade overview
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade with the operator"
-      data-li-level="2#" 
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-operator.html">
         Upgrade with the operator
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade with tridentctl"
-      data-li-level="2#" 
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-managing-k8s/upgrade-tridentctl.html">
         Upgrade with tridentctl
-      </a></li><li 
+      </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Uninstall Astra Trident"
       data-li-level="2#" 
@@ -1117,95 +1280,125 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure an ANF backend"
+      data-pdf-filename="Azure NetApp Files"
       data-li-level="3" 
       class="subfolders "
-    ><a href="/us-en/trident/trident-use/anf.html">
-        <div class="na-navbar-padding"> Configure an ANF backend</div>
+    ><a href="#">
+        <div class="na-navbar-padding"> Azure NetApp Files</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure an ANF backend"
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf.html">
+        Overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-prep.html">
-        Prepare to configure an ANF backend
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ANF configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/anf-examples.html">
-        ANF configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a CVS for GCP backend"
+      data-pdf-filename="Cloud Volumes Service for Google Cloud"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/gcp.html">
-        Configure a CVS for GCP backend
+        Cloud Volumes Service for Google Cloud
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a NetApp HCI or SolidFire backend"
+      data-pdf-filename="NetApp HCI or SolidFire"
       data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/element.html">
-        Configure a NetApp HCI or SolidFire backend
+        NetApp HCI or SolidFire
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backend with ONTAP SAN drivers"
+      data-pdf-filename="ONTAP SAN drivers"
       data-li-level="3" 
       class="subfolders "
     ><a href="/us-en/trident/trident-use/ontap-san.html">
-        <div class="na-navbar-padding"> Configure a backend with ONTAP SAN drivers</div>
+        <div class="na-navbar-padding"> ONTAP SAN drivers</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure backend with ONTAP SAN drivers"
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-prep.html">
-        Prepare to configure backend with ONTAP SAN drivers
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ONTAP SAN configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-san-examples.html">
-        ONTAP SAN configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Configure a backend with ONTAP NAS drivers"
+      data-pdf-filename="ONTAP NAS drivers"
       data-li-level="3" 
       class="subfolders "
     ><a href="/us-en/trident/trident-use/ontap-nas.html">
-        <div class="na-navbar-padding"> Configure a backend with ONTAP NAS drivers</div>
+        <div class="na-navbar-padding"> ONTAP NAS drivers</div>
       </a>
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
-      data-pdf-filename="Prepare to configure backend with ONTAP NAS drivers"
+      data-pdf-filename="Prepare to configure"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-prep.html">
-        Prepare to configure backend with ONTAP NAS drivers
+        Prepare to configure
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="ONTAP NAS configuration options and examples"
+      data-pdf-filename="Configuration options and examples"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/ontap-nas-examples.html">
-        ONTAP NAS configuration options and examples
+        Configuration options and examples
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Use Astra Trident with Amazon FSx for NetApp ONTAP"
-      data-li-level="3#" 
+      data-pdf-filename="Amazon FSx for NetApp ONTAP"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Amazon FSx for NetApp ONTAP</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx.html">
-        Use Astra Trident with Amazon FSx for NetApp ONTAP
-      </a></li></ul></li><li 
+        Overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integrate Amazon FSx for ONTAP"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx-prep.html">
+        Integrate Amazon FSx for ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuration options and examples"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-use/trident-fsx-examples.html">
+        Configuration options and examples
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Create backends with kubectl"
       data-li-level="2#" 
@@ -1426,11 +1619,27 @@
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Security"
-      data-li-level="2#" 
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Security</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security recommendations"
+      data-li-level="3#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/security-reco.html">
-        Security
-      </a></li></ul></li><li 
+        Security recommendations
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Linux Unified Key Setup (LUKS)"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/trident/trident-reco/security-luks.html">
+        Linux Unified Key Setup (LUKS)
+      </a></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Reference"
       data-li-level="1" 
@@ -1555,7 +1764,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-05 20:38:21 +0000">12/05/2022</time>
+    <time datetime="2023-01-25 17:09:52 +0000">01/25/2023</time>
     
   
 
@@ -1584,7 +1793,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>To integrate Astra Trident, the following design and architectural elements require integration: driver selection and deployment, storage class design, virtual storage pool design, Persistent Volume Claim (PVC) impacts on storage provisioning, volume operations, and OpenShift services deployment using Astra Trident.</p>
+<p>To integrate Astra Trident, the following design and architectural elements require integration: driver selection and deployment, storage class design, virtual pool design, Persistent Volume Claim (PVC) impacts on storage provisioning, volume operations, and OpenShift services deployment using Astra Trident.</p>
 </div>
 </div>
 </div>
@@ -1868,22 +2077,28 @@ Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-volumes-service-with-gcp-backend-drivers">Cloud Volumes Service with GCP backend drivers</h3>
+<h3 id="cloud-volumes-service-on-google-cloud-backend-driver">Cloud Volumes Service on Google Cloud backend driver</h3>
 <div class="paragraph">
-<p>Astra Trident uses the <code>gcp-cvs</code> driver to link with the Cloud Volumes Service on the GCP backend. To configure the GCP backend on Trident, you are required specify <code>projectNumber</code>, <code>apiRegion</code>, and <code>apiKey</code> in the backend file. The project number may be found in the GCP web portal, while the API key must be taken from the service account private key file that you created while setting up API access for Cloud Volumes on GCP. Astra Trident can create CVS volumes in one of two <a href="https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-types" target="_blank" rel="noopener">service types</a>:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>CVS</strong>: The base CVS service type, which provides high zonal availability with limited/moderate performance levels.</p>
-</li>
-<li>
-<p><strong>CVS-Performance</strong>: Performance-optimized service type best suited for production workloads that value performance. Choose from three unique service levels [<code>standard</code>, <code>premium</code>, and <code>extreme</code>].</p>
-</li>
-</ol>
+<p>Astra Trident uses the <code>gcp-cvs</code> driver to link with the Cloud Volumes Service on Google Cloud.</p>
 </div>
 <div class="paragraph">
-<p>The minimum CVS and CVS-Performance volume size is 100 GiB.</p>
+<p>The <code>gcp-cvs</code> driver uses virtual pools to abstract the backend and allow Astra Trident to determine volume placement. The administrator defines the virtual pools in the <code>backend.json</code> files. Storage classes use selectors to identify virtual pools by label.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If virtual pools are defined in the backend, Astra Trident will try to create a volume in the Google Cloud storage pools to which those virtual pools are limited.</p>
+</li>
+<li>
+<p>If virtual pools are not defined in the backend, Astra Trident will select a Google Cloud storage pool from the available storage pools in the region.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To configure the Google Cloud backend on Astra Trident, you must specify <code>projectNumber</code>, <code>apiRegion</code>, and <code>apiKey</code> in the backend file. You can find the project number in the Google Cloud console. The API key is taken from the service account private key file you created when setting up API access for Cloud Volumes Service on Google Cloud.</p>
+</div>
+<div class="paragraph">
+<p>For details on Cloud Volumes Service on Google Cloud service types and service levels, see <a href="../trident-use/gcp.html">Learn about Astra Trident support for CVS for GCP</a>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1897,7 +2112,7 @@ Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">CVS for GCP Driver</th>
+<th class="tableblock halign-left valign-top">Cloud Volumes Service for Google Cloud driver</th>
 <th class="tableblock halign-left valign-top">Snapshots</th>
 <th class="tableblock halign-left valign-top">Clones</th>
 <th class="tableblock halign-left valign-top">Multi-attach</th>
@@ -1914,16 +2129,31 @@ Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Available on CVS-Performance service type only.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="verseblock">
-<pre class="content">Footnote:<br>
-Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>: Not managed by Astra Trident</pre>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+<div class="ulist">
+<div class="title">Replication notes</div>
+<ul>
+<li>
+<p>Replication is not managed by Astra Trident.</p>
+</li>
+<li>
+<p>The clone will be created in the same storage pool as the source volume.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>The <code>gcp-cvs</code> driver uses virtual storage pools. Virtual storage pools abstract the backend, letting Astra Trident decide volume placement. The administrator defines the virtual storage pools in the backend.json file(s). Storage classes identify the virtual storage pools with the use of labels.</p>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1959,21 +2189,21 @@ Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>
 </div>
 </div>
 <div class="sect2">
-<h3 id="virtual-storage-pools">Virtual Storage Pools</h3>
+<h3 id="virtual-pools">Virtual pools</h3>
 <div class="paragraph">
-<p>Virtual Storage Pools are available for all Astra Trident backends. You can define Virtual Storage Pools for any backend, using any driver that Astra Trident provides.</p>
+<p>Virtual pools are available for all Astra Trident backends. You can define virtual pools for any backend, using any driver that Astra Trident provides.</p>
 </div>
 <div class="paragraph">
-<p>Virtual Storage Pools allow an administrator to create a level of abstraction over backends which can be referenced through Storage Classes, for greater flexibility and efficient placement of volumes on backends. Different backends can be defined with the same class of service. Moreover, multiple Storage Pools can be created on the same backend but with different characteristics. When a Storage Class is configured with a selector with the specific labels, Astra Trident chooses a backend which matches all the selector labels to place the volume. If the Storage Class selector labels matches multiple Storage Pools, Astra Trident will choose one of them to provision the volume from.</p>
+<p>Virtual pools allow an administrator to create a level of abstraction over backends which can be referenced through Storage Classes, for greater flexibility and efficient placement of volumes on backends. Different backends can be defined with the same class of service. Moreover, multiple storage pools can be created on the same backend but with different characteristics. When a Storage Class is configured with a selector with the specific labels, Astra Trident chooses a backend which matches all the selector labels to place the volume. If the Storage Class selector labels matches multiple storage pools, Astra Trident will choose one of them to provision the volume from.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="virtual-storage-pool-design">Virtual Storage Pool design</h2>
+<h2 id="virtual-pool-design">Virtual pool design</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>While creating a backend, you can generally specify a set of parameters. It was impossible for the administrator to create another backend with the same storage credentials and with a different set of parameters. With the introduction of Virtual Storage Pools, this issue has been alleviated. Virtual Storage Pools is a level abstraction introduced between the backend and the Kubernetes Storage Class so that the administrator can define parameters along with labels which can be referenced through Kubernetes Storage Classes as a selector, in a backend-agnostic way. Virtual Storage Pools can be defined for all supported NetApp backends with Astra Trident. That list includes SolidFire/NetApp HCI, ONTAP, Cloud Volumes Service on GCP, as well as Azure NetApp Files.</p>
+<p>While creating a backend, you can generally specify a set of parameters. It was impossible for the administrator to create another backend with the same storage credentials and with a different set of parameters. With the introduction of virtual pools, this issue has been alleviated. Virtual pools is a level abstraction introduced between the backend and the Kubernetes Storage Class so that the administrator can define parameters along with labels which can be referenced through Kubernetes Storage Classes as a selector, in a backend-agnostic way. Virtual pools can be defined for all supported NetApp backends with Astra Trident. That list includes SolidFire/NetApp HCI, ONTAP, Cloud Volumes Service on GCP, as well as Azure NetApp Files.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1982,7 +2212,7 @@ Yes<sup class="footnoteref red" title="Unresolved footnote reference.">[1]</sup>
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-When defining Virtual Storage Pools, it is recommended to not attempt to rearrange the order of existing virtual pools in a backend definition. It is also advisable to not edit/modify attributes for an existing virtual pool and define a new virtual pool instead.
+When defining virtual pools, it is recommended to not attempt to rearrange the order of existing virtual pools in a backend definition. It is also advisable to not edit/modify attributes for an existing virtual pool and define a new virtual pool instead.
 </td>
 </tr>
 </table>
@@ -1990,19 +2220,19 @@ When defining Virtual Storage Pools, it is recommended to not attempt to rearran
 <div class="sect2">
 <h3 id="emulating-different-service-levelsqos">Emulating different service levels/QoS</h3>
 <div class="paragraph">
-<p>It is possible to design Virtual Storage Pools for emulating service classes. Using the virtual pool implementation for Cloud Volume Service for Azure NetApp Files, let us examine how we can setup up different service classes. Configure the ANF backend with multiple labels, representing different performance levels. Set <code>servicelevel</code> aspect to the appropriate performance level and add other required aspects under each labels. Now create different Kubernetes Storage Classes that would map to different virtual Storage Pools. Using the <code>parameters.selector</code> field, each StorageClass calls out which virtual pool(s) may be used to host a volume.</p>
+<p>It is possible to design virtual pools for emulating service classes. Using the virtual pool implementation for Cloud Volume Service for Azure NetApp Files, let us examine how we can setup up different service classes. Configure the ANF backend with multiple labels, representing different performance levels. Set <code>servicelevel</code> aspect to the appropriate performance level and add other required aspects under each labels. Now create different Kubernetes Storage Classes that would map to different virtual pools. Using the <code>parameters.selector</code> field, each StorageClass calls out which virtual pools may be used to host a volume.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="assigning-specific-set-of-aspects">Assigning specific set of aspects</h3>
 <div class="paragraph">
-<p>Multiple Virtual Storage pools with a specific set of aspects can be designed from a single storage backend. For doing so, configure the backend with multiple labels and set the required aspects under each label. Now create different Kubernetes Storage Classes using the <code>parameters.selector</code> field that would map to different Virtual Storage Pools. The volumes that get provisioned on the backend will have the aspects defined in the chosen Virtual Storage Pool.</p>
+<p>Multiple virtual pools with a specific set of aspects can be designed from a single storage backend. For doing so, configure the backend with multiple labels and set the required aspects under each label. Now create different Kubernetes Storage Classes using the <code>parameters.selector</code> field that would map to different virtual pools. The volumes that get provisioned on the backend will have the aspects defined in the chosen virtual pool.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="pvc-characteristics-which-affect-storage-provisioning">PVC characteristics which affect storage provisioning</h3>
 <div class="paragraph">
-<p>Some parameters beyond the requested storage class may affect Astra Trident’s provisioning decision process when creating a PVC.</p>
+<p>Some parameters beyond the requested storage class may affect the Astra Trident provisioning decision process when creating a PVC.</p>
 </div>
 </div>
 <div class="sect2">
