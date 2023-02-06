@@ -240,15 +240,12 @@
           <li class="n-top-hat__list-item">
             <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
           </li>
-          <li class="n-top-hat__list-item">
-            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
-          </li>
         </ul>
       </div>
       <div class="n-top-hat__utils">
         <ul class="n-top-hat__list">
           <li class="n-top-hat__list-item">
-            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
           </li>
         </ul>
       </div>
@@ -332,47 +329,20 @@
         </li><li>
           <a href="https://docs.netapp.com/ja-jp/trident/trident-use/ontap-nas-examples.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
+          <a href="https://docs.netapp.com/ko-kr/trident/trident-use/ontap-nas-examples.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
           <a href="https://docs.netapp.com/zh-cn/trident/trident-use/ontap-nas-examples.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
           <a href="https://docs.netapp.com/zh-tw/trident/trident-use/ontap-nas-examples.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/trident/trident-use/ontap-nas-examples.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/de-de/trident/trident-use/ontap-nas-examples.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
           <a href="https://docs.netapp.com/fr-fr/trident/trident-use/ontap-nas-examples.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
-        </li><li>
-          <a href="https://docs.netapp.com/de-de/trident/trident-use/ontap-nas-examples.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
   </div>
-  <script>
-    $(function(){
-        var currentLocalization = $('html').attr('lang');
-
-        var localizationsDictionary = {
-            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
-            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
-            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
-            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
-            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
-            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
-            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
-            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
-            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
-            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
-            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
-            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
-            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
-            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
-            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
-        };
-
-        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
-            $('.n-property-bar__property-link').attr('href', '/');
-        }
-    });
-  </script>
   <!-- End property bar -->
 </header>
 
@@ -1764,7 +1734,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-30 17:36:48 +0000">01/30/2023</time>
+    <time datetime="2023-02-06 18:54:26 +0000">02/06/2023</time>
     
   
 
@@ -1913,46 +1883,46 @@ Using the <code>autoExportPolicy</code> and <code>autoExportCIDRs</code> options
 <td class="tableblock halign-left valign-top"><p class="tableblock">“”  (not enforced by default)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“” (not enforced by default)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>limitVolumeSize</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fail provisioning if requested volume size is above this value.<br>
 <br>
 Also restricts the maximum size of the volumes it manages for qtrees and LUNs, and the <code>qtreesPerFlexvol</code> option allows customizing the maximum number of qtrees per FlexVol.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“”  (not enforced by default)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“”  (not enforced by default)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>lunsPerFlexvol</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maximum LUNs per Flexvol, must be in range [50, 200]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“100”</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“100”</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>debugTraceFlags</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Debug flags to use when troubleshooting. Example, {“api”:false, “method”:true}<br>
 <br>
 Do not use <code>debugTraceFlags</code> unless you are troubleshooting and require a detailed log dump.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>nfsMountOptions</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of NFS mount options.<br>
 <br>
 The mount options for Kubernetes-persistent volumes are normally specified in storage classes, but if no mount options are specified in a storage class, Astra Trident will fall back to using the mount options specified in the storage backend&#8217;s configuration file.<br>
 <br>
 If no mount options are specified in the storage class or the configuration file, Astra Trident will not set any mount options on an associated persistent volume.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“”</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“”</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>qtreesPerFlexvol</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maximum Qtrees per FlexVol, must be in range [50, 300]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“200”</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“200”</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>useREST</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Boolean parameter to use ONTAP REST APIs. <strong>Tech preview</strong><br>
 <br>
 <code>useREST</code> is provided as a <strong>tech preview</strong> that is recommended for test environments and not for production workloads. When set to <code>true</code>, Astra Trident will use ONTAP REST APIs to communicate with the backend. This feature requires ONTAP 9.11.1 and later. In addition, the ONTAP login role used must have access to the <code>ontap</code> application. This is satisfied by the pre-defined <code>vsadmin</code> and <code>cluster-admin</code> roles.<br>
 <br>
 <code>useREST</code> is not supported with MetroCluster.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 </tr>
 </tbody>
 </table>
@@ -2041,16 +2011,6 @@ For more information, refer to: <a href="../trident-reco/security-reco.html">How
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>snapshotDir</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Controls visibility of the <code>.snapshot</code> directory</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">“false”</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>snapshotDir</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Controls visibility of the <code>.snapshot</code> directory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“false”</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exportPolicy</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Export policy to use</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“default”</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>exportPolicy</code></p></td>
@@ -2623,7 +2583,7 @@ parameters:
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2023 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
               <a href="https://www.netapp.com/company/legal/terms-of-use/">Terms of Use</a>
