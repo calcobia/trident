@@ -1734,7 +1734,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-30 19:42:16 +0000">01/30/2023</time>
+    <time datetime="2023-02-13 21:51:09 +0000">02/13/2023</time>
     
   
 
@@ -2357,6 +2357,9 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>When upgrading a Kubernetes cluster from 1.24 to 1.25 or later that has Astra Trident installed, you must update values.yaml to set <code>excludePodSecurityPolicy</code> to <code>true</code> or add <code>--set excludePodSecurityPolicy=true</code> to the <code>helm upgrade</code> command before you can upgrade the cluster.</p>
+</li>
 <li>
 <p>Astra Trident now enforces a blank <code>fsType</code> (<code>fsType=""</code>) for volumes that do not have the <code>fsType</code> specified in their StorageClass. When working with Kubernetes 1.17 or later, Trident supports providing a blank <code>fsType</code> for NFS volumes. For iSCSI volumes, you are required to set the <code>fsType</code> on your StorageClass when enforcing an <code>fsGroup</code> using a Security Context.</p>
 </li>
