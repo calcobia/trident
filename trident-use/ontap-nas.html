@@ -1732,7 +1732,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-27 22:10:03 +0000">01/27/2023</time>
+    <time datetime="2023-02-10 16:00:24 +0000">02/10/2023</time>
     
   
 
@@ -1772,7 +1772,25 @@
 <img src="/us-en/trident/images/warning.svg" alt="Warning">
 </td>
 <td class="content">
-Customers must use the <code>ontap-nas</code> driver for production workloads that require data protection, disaster recovery, and mobility. Astra Control provides seamless protection, disaster recovery, and mobility for volumes created with the <code>ontap-nas</code> driver. The <code>ontap-nas-economy</code> driver should be used only in  limited use cases where anticipated volume usage is expected to be much higher than what ONTAP supports, with no anticipated data protection, disaster recovery, or mobility (moving volumes between Kubernetes clusters) requirements.
+<div class="paragraph">
+<p>Astra Control provides seamless protection, disaster recovery, and mobility (moving volumes between Kubernetes clusters) for volumes created with the <code>ontap-nas</code>, <code>ontap-nas-flexgroup</code>, and <code>ontap-san</code> drivers. See <a href="https://docs.netapp.com/us-en/astra-control-center/use/replicate_snapmirror.html#replication-prerequisites" target="_blank" rel="noopener">Astra Control replication prerequisites</a> for details.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You must use <code>ontap-nas</code> for production workloads that require data protection, disaster recovery, and mobility.</p>
+</li>
+<li>
+<p>Use <code>ontap-san-economy</code> when anticipated volume usage is expected to be much higher than what ONTAP supports.</p>
+</li>
+<li>
+<p>Use <code>ontap-nas-economy</code> only where anticipated volume usage is expected to be much higher than what ONTAP supports, and the <code>ontap-san-economy</code> driver cannot be used.</p>
+</li>
+<li>
+<p>Do not use use <code>ontap-nas-economy</code> if you anticipate the need for data protection, disaster recovery, or mobility.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>

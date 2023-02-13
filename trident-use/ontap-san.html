@@ -1732,7 +1732,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-16 18:40:03 +0000">09/16/2022</time>
+    <time datetime="2023-02-10 16:00:24 +0000">02/10/2023</time>
     
   
 
@@ -1764,6 +1764,36 @@
 <p><a href="ontap-san-examples.html" target="_blank" rel="noopener">Configuration and examples</a></p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/warning.svg" alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Astra Control provides seamless protection, disaster recovery, and mobility (moving volumes between Kubernetes clusters) for volumes created with the <code>ontap-nas</code>, <code>ontap-nas-flexgroup</code>, and <code>ontap-san</code> drivers. See <a href="https://docs.netapp.com/us-en/astra-control-center/use/replicate_snapmirror.html#replication-prerequisites" target="_blank" rel="noopener">Astra Control replication prerequisites</a> for details.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You must use <code>ontap-nas</code> for production workloads that require data protection, disaster recovery, and mobility.</p>
+</li>
+<li>
+<p>Use <code>ontap-san-economy</code> when anticipated volume usage is expected to be much higher than what ONTAP supports.</p>
+</li>
+<li>
+<p>Use <code>ontap-nas-economy</code> only where anticipated volume usage is expected to be much higher than what ONTAP supports, and the <code>ontap-san-economy</code> driver cannot be used.</p>
+</li>
+<li>
+<p>Do not use use <code>ontap-nas-economy</code> if you anticipate the need for data protection, disaster recovery, or mobility.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
