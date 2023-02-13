@@ -1734,7 +1734,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-30 17:49:15 +0000">01/30/2023</time>
+    <time datetime="2023-02-13 18:59:55 +0000">02/13/2023</time>
     
   
 
@@ -1960,17 +1960,19 @@ Refer to <a href="https://docs.netapp.com/us-en/ontap/smb-config/create-share-ta
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name of the SMB share created using Shared Folder Microsoft Management Console. For example "smb-share".<br>
 <br>
 <strong>Required for SMB volumes.</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"smb-share"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>smb-share</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>nasType</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Must set to <code>smb</code>.</strong> If null, defaults to <code>nfs</code>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"smb"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>smb</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>securityStyle</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Security style for new volumes. <strong>Must be set to "ntfs" for SMB volumes.</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"ntfs"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security style for new volumes.<br>
+<br>
+<strong>Must be set to <code>ntfs</code> or <code>mixed</code> for SMB volumes.</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ntfs</code> or <code>mixed</code> for SMB volumes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>unixPermissions</code></p></td>
