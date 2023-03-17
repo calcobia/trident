@@ -9,14 +9,14 @@
   <meta property="og:title" content="Install using <code>tridentctl</code>" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-tridentctl.html" />
-	<meta property="og:description" content="You can deploy Astra Trident by using `tridentctl`." />
+	<meta property="og:description" content="You can install Astra Trident using `tridentctl`. This process applies to installations where the container images required by Astra Trident are stored eithe..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/trident/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can deploy Astra Trident by using `tridentctl`.">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can install Astra Trident using `tridentctl`. This process applies to installations where the container images required by Astra Trident are stored eithe...">
   <meta name="keywords" content=" deploy, astra trident, methods, tridentctl, windows"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
@@ -1742,7 +1742,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-30 18:59:50 +0000">01/30/2023</time>
+    <time datetime="2023-03-10 16:09:15 +0000">03/10/2023</time>
     
   
 
@@ -1771,7 +1771,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>You can install Astra Trident using <code>tridentctl</code>. This process applies to installations where Trident and CSI images are located in a <code>docker.io</code> and <code>registry.k8s.io</code> or a private, mirrored registry. To customize your <code>tridentctl</code> deployment, refer to  <a href="kubernetes-customize-deploy-tridentctl.html">Customize tridentctl deployment</a>.</p>
+<p>You can install Astra Trident using <code>tridentctl</code>. This process applies to installations where the container images required by Astra Trident are stored either in a private registry or not. To customize your <code>tridentctl</code> deployment, refer to  <a href="kubernetes-customize-deploy-tridentctl.html">Customize tridentctl deployment</a>.</p>
 </div>
 </div>
 </div>
@@ -1905,7 +1905,7 @@ To enable Astra Trident to run on Windows nodes, add the <code>--windows</code> 
 </div>
 </div>
 <div class="openblock">
-<div class="title">Trident and CSI images in one mirrored registry</div>
+<div class="title">Images in one registry</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -1915,7 +1915,7 @@ To enable Astra Trident to run on Windows nodes, add the <code>--windows</code> 
 </div>
 </div>
 <div class="openblock">
-<div class="title">Trident and CSI images in different mirrored registries</div>
+<div class="title">Images in different registries</div>
 <div class="content">
 <div class="paragraph">
 <p>You must append <code>sig-storage</code> to the <code>imageRegistry</code> to use different registry locations.</p>

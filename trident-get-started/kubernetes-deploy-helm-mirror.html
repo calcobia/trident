@@ -1742,7 +1742,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-01-30 18:59:50 +0000">01/30/2023</time>
+    <time datetime="2023-03-16 17:59:21 +0000">03/16/2023</time>
     
   
 
@@ -1818,11 +1818,11 @@
 </div>
 </li>
 <li>
-<p>Use <code>helm install</code> and specify a name for your deployment and image registry location or locations as in the following examples. In the examples, <code>23.01.0</code> is the version of Astra Trident you are installing.</p>
+<p>Use <code>helm install</code> and specify a name for your deployment and image registry location. Your <a href="../trident-get-started/requirements.html#container-images-and-corresponding-kubernetes-versions">Trident and CSI images</a> can be located in one registry or different registries, but all CSI images must be located in the same registry. In the examples, <code>23.01.0</code> is the version of Astra Trident you are installing.</p>
 <div class="exampleblock tabbed-block">
 <div class="content">
 <div class="openblock">
-<div class="title">Trident and CSI images in one registry</div>
+<div class="title">Images in one registry</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -1832,7 +1832,7 @@
 </div>
 </div>
 <div class="openblock">
-<div class="title">Trident and CSI images in different registries</div>
+<div class="title">Images in different registries</div>
 <div class="content">
 <div class="paragraph">
 <p>You must append <code>sig-storage</code> to the <code>imageRegistry</code> to use different registry locations.</p>
