@@ -373,7 +373,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_1_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1742,7 +1742,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-03-16 17:59:21 +0000">03/16/2023</time>
+    <time datetime="2023-03-23 15:08:28 +0000">03/23/2023</time>
     
   
 
@@ -1856,8 +1856,8 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wget https://github.com/NetApp/trident/releases/download/v23.01.0/trident-installer-23.01.0.tar.gz
-tar -xf trident-installer-23.01.0.tar.gz
+<pre>wget https://github.com/NetApp/trident/releases/download/v23.01.1/trident-installer-23.01.1.tar.gz
+tar -xf trident-installer-23.01.1.tar.gz
 cd trident-installer</pre>
 </div>
 </div>
@@ -1876,15 +1876,15 @@ cd trident-installer</pre>
 <div class="sect2">
 <h3 id="step-3-update-the-registry-location-in-the-operator">Step 3: Update the registry location in the operator</h3>
 <div class="paragraph">
-<p>In <code>/deploy/operator.yaml</code>, update <code>image: docker.io/netapp/trident-operator:23.01.0</code> to reflect the location of your image registry. Your <a href="../trident-get-started/requirements.html#container-images-and-corresponding-kubernetes-versions">Trident and CSI images</a> can be located in one registry or different registries, but all CSI images must be located in the same registry. For example:</p>
+<p>In <code>/deploy/operator.yaml</code>, update <code>image: docker.io/netapp/trident-operator:23.01.1</code> to reflect the location of your image registry. Your <a href="../trident-get-started/requirements.html#container-images-and-corresponding-kubernetes-versions">Trident and CSI images</a> can be located in one registry or different registries, but all CSI images must be located in the same registry. For example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>image: &lt;your-registry&gt;/trident-operator:23.01.0</code> if your images are all located in one registry.</p>
+<p><code>image: &lt;your-registry&gt;/trident-operator:23.01.1</code> if your images are all located in one registry.</p>
 </li>
 <li>
-<p><code>image: &lt;your-registry&gt;/netapp/trident-operator:23.01.0</code> if your Trident image is located in a different registry from your CSI images.</p>
+<p><code>image: &lt;your-registry&gt;/netapp/trident-operator:23.01.1</code> if your Trident image is located in a different registry from your CSI images.</p>
 </li>
 </ul>
 </div>
@@ -1971,7 +1971,7 @@ There should only be <strong>one instance</strong> of the operator in a Kubernet
 <div class="content">
 <pre>imageRegistry: "&lt;your-registry&gt;"
 autosupportImage: "&lt;your-registry&gt;/trident-autosupport:23.01"
-tridentImage: "&lt;your-registry&gt;/trident:23.01.0"</pre>
+tridentImage: "&lt;your-registry&gt;/trident:23.01.1"</pre>
 </div>
 </div>
 </div>
@@ -1986,7 +1986,7 @@ tridentImage: "&lt;your-registry&gt;/trident:23.01.0"</pre>
 <div class="content">
 <pre>imageRegistry: "&lt;your-registry&gt;/sig-storage"
 autosupportImage: "&lt;your-registry&gt;/netapp/trident-autosupport:23.01"
-tridentImage: "&lt;your-registry&gt;/netapp/trident:23.01.0"</pre>
+tridentImage: "&lt;your-registry&gt;/netapp/trident:23.01.1"</pre>
 </div>
 </div>
 </div>
@@ -2018,7 +2018,7 @@ Spec:
   Debug:              true
   Image Registry:     &lt;your-registry&gt;/sig-storage
   Namespace:          trident
-  Trident Image:      &lt;your-registry&gt;/netapp/trident:23.01.0
+  Trident Image:      &lt;your-registry&gt;/netapp/trident:23.01.1
 Status:
   Current Installation Params:
     IPv6:                       false
@@ -2035,11 +2035,11 @@ Status:
     Log Format:           text
     Probe Port:           17546
     Silence Autosupport:  false
-    Trident Image:        &lt;your-registry&gt;/netapp/trident:23.01.0
+    Trident Image:        &lt;your-registry&gt;/netapp/trident:23.01.1
   Message:                Trident installed
   Namespace:              trident
   Status:                 Installed
-  Version:                v23.01.0
+  Version:                v23.01.1
 Events:
     Type Reason Age From Message ---- ------ ---- ---- -------Normal
     Installing 74s trident-operator.netapp.io Installing Trident Normal
@@ -2136,7 +2136,7 @@ trident-operator-766f7b8658-ldzsv          1/1     Running   0           3m</pre
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
-| 23.01.0        | 23.01.0        |
+| 23.01.1        | 23.01.1      |
 +----------------+----------------+</pre>
 </div>
 </div>

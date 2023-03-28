@@ -373,7 +373,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_1_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1742,7 +1742,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-03-10 16:09:15 +0000">03/10/2023</time>
+    <time datetime="2023-03-23 15:08:28 +0000">03/23/2023</time>
     
   
 
@@ -1867,8 +1867,8 @@ With OpenShift, use <code>oc</code> instead of <code>kubectl</code> in all of th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wget https://github.com/NetApp/trident/releases/download/v23.01.0/trident-installer-23.01.0.tar.gz
-tar -xf trident-installer-23.01.0.tar.gz
+<pre>wget https://github.com/NetApp/trident/releases/download/v23.01.1/trident-installer-23.01.1.tar.gz
+tar -xf trident-installer-23.01.1.tar.gz
 cd trident-installer</pre>
 </div>
 </div>
@@ -1909,7 +1909,7 @@ To enable Astra Trident to run on Windows nodes, add the <code>--windows</code> 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>./tridentctl install -n trident --image-registry &lt;your-registry&gt; --autosupport-image &lt;your-registry&gt;/trident-autosupport:23.01 --trident-image &lt;your-registry&gt;/trident:23.01.0</pre>
+<pre>./tridentctl install -n trident --image-registry &lt;your-registry&gt; --autosupport-image &lt;your-registry&gt;/trident-autosupport:23.01 --trident-image &lt;your-registry&gt;/trident:23.01.1</pre>
 </div>
 </div>
 </div>
@@ -1922,7 +1922,7 @@ To enable Astra Trident to run on Windows nodes, add the <code>--windows</code> 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>./tridentctl install -n trident --image-registry &lt;your-registry&gt;/sig-storage --autosupport-image &lt;your-registry&gt;/netapp/trident-autosupport:23.01 --trident-image &lt;your-registry&gt;/netapp/trident:23.01.0</pre>
+<pre>./tridentctl install -n trident --image-registry &lt;your-registry&gt;/sig-storage --autosupport-image &lt;your-registry&gt;/netapp/trident-autosupport:23.01 --trident-image &lt;your-registry&gt;/netapp/trident:23.01.1</pre>
 </div>
 </div>
 </div>
@@ -1947,7 +1947,7 @@ INFO Created Trident daemonset.
 INFO Waiting for Trident pod to start.
 INFO Trident pod started.                          namespace=trident pod=trident-controller-679648bd45-cv2mx
 INFO Waiting for Trident REST interface.
-INFO Trident REST interface is up.                 version=23.01.0
+INFO Trident REST interface is up.                 version=23.01.1
 INFO Trident installation succeeded.
 ....</pre>
 </div>
@@ -1999,7 +1999,7 @@ If the installer does not complete successfully or <code>trident-controller-&lt;
 +----------------+----------------+
 | SERVER VERSION | CLIENT VERSION |
 +----------------+----------------+
-| 23.01.0        | 23.01.0        |
+| 23.01.1        | 23.01.1        |
 +----------------+----------------+</pre>
 </div>
 </div>

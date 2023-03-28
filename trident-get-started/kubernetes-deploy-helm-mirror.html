@@ -373,7 +373,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_1_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1742,7 +1742,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-03-16 17:59:21 +0000">03/16/2023</time>
+    <time datetime="2023-03-23 15:08:28 +0000">03/23/2023</time>
     
   
 
@@ -1818,7 +1818,7 @@
 </div>
 </li>
 <li>
-<p>Use <code>helm install</code> and specify a name for your deployment and image registry location. Your <a href="../trident-get-started/requirements.html#container-images-and-corresponding-kubernetes-versions">Trident and CSI images</a> can be located in one registry or different registries, but all CSI images must be located in the same registry. In the examples, <code>23.01.0</code> is the version of Astra Trident you are installing.</p>
+<p>Use <code>helm install</code> and specify a name for your deployment and image registry location. Your <a href="../trident-get-started/requirements.html#container-images-and-corresponding-kubernetes-versions">Trident and CSI images</a> can be located in one registry or different registries, but all CSI images must be located in the same registry. In the examples, <code>23.01.1</code> is the version of Astra Trident you are installing.</p>
 <div class="exampleblock tabbed-block">
 <div class="content">
 <div class="openblock">
@@ -1826,7 +1826,7 @@
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 23.01.0 --set imageRegistry=&lt;your-registry&gt; --create-namespace --namespace &lt;trident-namespace&gt;</pre>
+<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 23.01.1 --set imageRegistry=&lt;your-registry&gt; --create-namespace --namespace &lt;trident-namespace&gt;</pre>
 </div>
 </div>
 </div>
@@ -1839,7 +1839,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 23.01.0 --set imageRegistry=&lt;your-registry&gt;/sig-storage --set operatorImage=&lt;your-registry&gt;/netapp/trident-operator:23.01.0 --set tridentAutosupportImage=&lt;your-registry&gt;/netapp/trident-autosupport:23.01 --set tridentImage=&lt;your-registry&gt;/netapp/trident:23.01.0 --create-namespace --namespace &lt;trident-namespace&gt;</pre>
+<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 23.01.1 --set imageRegistry=&lt;your-registry&gt;/sig-storage --set operatorImage=&lt;your-registry&gt;/netapp/trident-operator:23.01.1 --set tridentAutosupportImage=&lt;your-registry&gt;/netapp/trident-autosupport:23.01 --set tridentImage=&lt;your-registry&gt;/netapp/trident:23.01.1 --create-namespace --namespace &lt;trident-namespace&gt;</pre>
 </div>
 </div>
 </div>
@@ -1899,11 +1899,11 @@ If you already created a namespace for Trident, the <code>--create-namespace</co
 </tbody>
 </table>
 <div class="paragraph">
-<p>For example, to change the default value of <code>debug</code>, run the following <code>--set</code> command where <code>23.01.0</code> is the version of Astra Trident you are installing:</p>
+<p>For example, to change the default value of <code>debug</code>, run the following <code>--set</code> command where <code>23.01.1</code> is the version of Astra Trident you are installing:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 23.01.0  --create-namespace --namespace --set tridentDebug=true</pre>
+<pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 23.01.1  --create-namespace --namespace --set tridentDebug=true</pre>
 </div>
 </div>
 <div class="admonitionblock note">

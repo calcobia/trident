@@ -373,7 +373,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_1_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1742,7 +1742,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-03 21:27:23 +0000">11/03/2022</time>
+    <time datetime="2023-03-23 15:47:24 +0000">03/23/2023</time>
     
   
 
@@ -1873,7 +1873,7 @@ For a comprehensive list of troubleshooting articles, see the <a href="https://k
 <p>Use the <code>uninstall parameter &lt;Uninstalling Trident&gt;</code> for cleaning up after a failed run. By default, the script does not remove the CRDs that have been created by Trident, making it safe to uninstall and install again even in a running deployment.</p>
 </li>
 <li>
-<p>If you are looking to downgrade to an earlier version of Trident, first run the <code>tridenctl uninstall</code> command to remove Trident. Download the desired <a href="https://github.com/NetApp/trident/releases">Trident version</a> and install using the <code>tridentctl install</code> command. Only consider a downgrade if there are no new PVs created and if no changes have been made to already existing PVs/backends/ storage classes. Since Trident now uses CRDs for maintaining state, all storage entities created (backends, storage classes, PVs and Volume Snapshots) have <code>associated CRD objects &lt;Kubernetes CustomResourceDefinition Objects&gt;</code> instead of data written into the PV that was used by the earlier installed version of Trident. <strong>Newly created PVs will not be usable when moving back to an earlier version.</strong> <strong>Changes made to objects, such as backends, PVs, storage classes, and volume snapshots (created/updated/deleted) will not be visible to Trident when downgraded</strong>. The PV that was used by the earlier version of Trident installed will still be visible to Trident. Going back to an earlier version will not disrupt access for PVs that were already created using the older release, unless they have been upgraded.</p>
+<p>If you are looking to downgrade to an earlier version of Trident, first run the <code>tridentctl uninstall</code> command to remove Trident. Download the desired <a href="https://github.com/NetApp/trident/releases">Trident version</a> and install using the <code>tridentctl install</code> command. Only consider a downgrade if there are no new PVs created and if no changes have been made to already existing PVs/backends/ storage classes. Since Trident now uses CRDs for maintaining state, all storage entities created (backends, storage classes, PVs and Volume Snapshots) have <code>associated CRD objects &lt;Kubernetes CustomResourceDefinition Objects&gt;</code> instead of data written into the PV that was used by the earlier installed version of Trident. <strong>Newly created PVs will not be usable when moving back to an earlier version.</strong> <strong>Changes made to objects, such as backends, PVs, storage classes, and volume snapshots (created/updated/deleted) will not be visible to Trident when downgraded</strong>. The PV that was used by the earlier version of Trident installed will still be visible to Trident. Going back to an earlier version will not disrupt access for PVs that were already created using the older release, unless they have been upgraded.</p>
 </li>
 <li>
 <p>To completely remove Trident, run the <code>tridentctl obliviate crd</code> command. This will remove all CRD objects and undefine the CRDs. Trident will no longer manage any PVs it had already provisioned.</p>

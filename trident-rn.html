@@ -373,7 +373,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_1_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1742,7 +1742,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-13 21:51:09 +0000">02/13/2023</time>
+    <time datetime="2023-03-23 15:08:28 +0000">03/23/2023</time>
     
   
 
@@ -1782,7 +1782,34 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 </div>
 </div>
 <div class="sect1">
-<h2 id="whats-new-in-23-01">What&#8217;s new in 23.01</h2>
+<h2 id="whats-new-in-23-01-1">What&#8217;s new in 23.01.1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fixes">Fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed Trident Operator to use IPv6 localhost for installation when specified in spec.</p>
+</li>
+<li>
+<p>Fixed Trident Operator cluster role permissions to be in sync with the bundle permissions <a href="https://github.com/NetApp/trident/issues/799" target="_blank" rel="noopener">Issue #799</a>.</p>
+</li>
+<li>
+<p>Added a fix to allow external processes to run to completion.</p>
+</li>
+<li>
+<p>Fixed issue with attaching raw block volume on multiple nodes in RWX mode.</p>
+</li>
+<li>
+<p>Fixed FlexGroup cloning support and volume import for SMB volumes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="changes-in-23-01">Changes in 23.01</h2>
 <div class="sectionbody">
 <div class="admonitionblock important">
 <table>
@@ -1791,13 +1818,13 @@ The <code>tridentctl</code> binary for Linux that is provided in the installer z
 <img src="/us-en/trident/images/important.svg" alt="Important">
 </td>
 <td class="content">
-Kubernetes 1.26 is now supported in Trident. Please upgrade Trident prior to upgrading Kubernetes.
+Kubernetes 1.26 is now supported in Trident. Please upgrade Astra Trident prior to upgrading Kubernetes.
 </td>
 </tr>
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes">Fixes</h3>
+<h3 id="fixes-2">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1902,7 +1929,7 @@ Kubernetes 1.26 is now supported in Trident. Please upgrade Trident prior to upg
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes-2">Fixes</h3>
+<h3 id="fixes-3">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1989,7 +2016,7 @@ Kubernetes 1.26 is now supported in Trident. Please upgrade Trident prior to upg
 <h2 id="changes-in-22-07">Changes in 22.07</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-3">Fixes</h3>
+<h3 id="fixes-4">Fixes</h3>
 <div class="paragraph">
 <p><strong>Kubernetes</strong></p>
 </div>
@@ -2090,7 +2117,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes-4">Fixes</h3>
+<h3 id="fixes-5">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2151,7 +2178,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 <h2 id="changes-in-22-01-1">Changes in 22.01.1</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-5">Fixes</h3>
+<h3 id="fixes-6">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2169,7 +2196,7 @@ If you are upgrading from any previous Trident release and use Azure NetApp File
 <h2 id="changes-in-22-01-0">Changes in 22.01.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-6">Fixes</h3>
+<h3 id="fixes-7">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2249,7 +2276,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 </table>
 </div>
 <div class="sect2">
-<h3 id="fixes-7">Fixes</h3>
+<h3 id="fixes-8">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2270,7 +2297,7 @@ The v21.10.0 release has an issue that can put the Trident controller into a Cra
 <h2 id="changes-in-21-10-0">Changes in 21.10.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="fixes-8">Fixes</h3>
+<h3 id="fixes-9">Fixes</h3>
 <div class="ulist">
 <ul>
 <li>

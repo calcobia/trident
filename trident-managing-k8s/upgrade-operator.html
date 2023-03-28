@@ -373,7 +373,7 @@
         
         
         
-        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_documentation.pdf" >
+        <a target="_blank" href="/us-en/trident/pdfs/fullsite-sidebar/Astra_Trident_23_01_1_documentation.pdf" >
           <img src="/us-en/trident/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -1742,7 +1742,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-13 21:51:09 +0000">02/13/2023</time>
+    <time datetime="2023-03-23 15:08:28 +0000">03/23/2023</time>
     
   
 
@@ -1853,7 +1853,7 @@
 <p>Install Astra Trident using the correct bundle YAML file for your environment and Astra Trident version. For example, if you are installing Astra Trident 23.01 for Kubernetes 1.26, run the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre>kubectl create -f 23.01.0/trident-installer/deploy/bundle_post_1_25.yaml -n trident</pre>
+<pre>kubectl create -f 23.01.1/trident-installer/deploy/bundle_post_1_25.yaml -n trident</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1869,10 +1869,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>For clusters running Kubernetes 1.24 or lower, use <a href="https://github.com/NetApp/trident/tree/stable/v22.10/deploy/bundle_pre_1_25.yaml" target="_blank" rel="noopener">bundle_pre_1_25.yaml</a>.</p>
+<p>For clusters running Kubernetes 1.24 or lower, use <a href="https://github.com/NetApp/trident/tree/stable/v23.01/deploy/bundle_pre_1_25.yaml" target="_blank" rel="noopener">bundle_pre_1_25.yaml</a>.</p>
 </li>
 <li>
-<p>For clusters running Kubernetes 1.25 or higher, use <a href="https://github.com/NetApp/trident/tree/stable/v22.10/deploy/bundle_post_1_25.yaml" target="_blank" rel="noopener">bundle_post_1_25.yaml</a>.</p>
+<p>For clusters running Kubernetes 1.25 or higher, use <a href="https://github.com/NetApp/trident/tree/stable/v23.01/deploy/bundle_post_1_25.yaml" target="_blank" rel="noopener">bundle_post_1_25.yaml</a>.</p>
 </li>
 </ul>
 </div>
@@ -1925,11 +1925,11 @@ If status shows <code>Updating</code>, ensure you resolve it before proceeding. 
 <p>Create the <code>TridentOrchestrator</code> CRD by using the manifest provided with the Trident installer.</p>
 <div class="listingblock">
 <div class="content">
-<pre># Download the release required [23.01.0]
-mkdir 23.01.0
-cd 23.01.0
-wget https://github.com/NetApp/trident/releases/download/v23.01.0/trident-installer-23.01.0.tar.gz
-tar -xf trident-installer-23.01.0.tar.gz
+<pre># Download the release required [23.01.1]
+mkdir 23.01.1
+cd 23.01.1
+wget https://github.com/NetApp/trident/releases/download/v23.01.1/trident-installer-23.01.1.tar.gz
+tar -xf trident-installer-23.01.1.tar.gz
 cd trident-installer
 kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_post1.16.yaml</pre>
 </div>
@@ -2005,7 +2005,7 @@ replicaset.apps/trident-csi-68d979fb85   1         1         1       105d</pre>
 <img src="/us-en/trident/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Installing the cluster-scoped operator initiates the migration of <code>TridentProvisioner</code> objects to <code>TridentOrchestrator</code> objects, deletes <code>TridentProvisioner</code> objects and the <code>tridentprovisioner</code> CRD, and upgrades Astra Trident to the version of the cluster-scoped operator being used. In the example that follows, Trident is upgraded to 23.01.0.
+Installing the cluster-scoped operator initiates the migration of <code>TridentProvisioner</code> objects to <code>TridentOrchestrator</code> objects, deletes <code>TridentProvisioner</code> objects and the <code>tridentprovisioner</code> CRD, and upgrades Astra Trident to the version of the cluster-scoped operator being used. In the example that follows, Trident is upgraded to 23.01.1.
 </td>
 </tr>
 </table>
@@ -2026,7 +2026,7 @@ Upgrading Astra Trident using the Trident operator results in the migration of <
 <div class="content">
 <pre>#Ensure you are in the correct directory
 pwd
-/root/23.01.0/trident-installer
+/root/23.01.1/trident-installer
 
 #Install the cluster-scoped operator in the **same namespace**
 kubectl create -f deploy/&lt;BUNDLE.YAML&gt;
@@ -2057,7 +2057,7 @@ kubectl describe torc trident | grep Message -A 3
 Message:                Trident installed
 Namespace:              trident
 Status:                 Installed
-Version:                v23.01.0</pre>
+Version:                v23.01.1</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -2102,10 +2102,10 @@ When upgrading a Kubernetes cluster from 1.24 to 1.25 or later that has Astra Tr
 <p>Download the latest Astra Trident release.</p>
 </li>
 <li>
-<p>Use the <code>helm upgrade</code> command where <code>trident-operator-23.01.0.tgz</code> reflects the version that you want to upgrade to.</p>
+<p>Use the <code>helm upgrade</code> command where <code>trident-operator-23.01.1.tgz</code> reflects the version that you want to upgrade to.</p>
 <div class="listingblock">
 <div class="content">
-<pre>helm upgrade &lt;name&gt; trident-operator-23.01.0.tgz</pre>
+<pre>helm upgrade &lt;name&gt; trident-operator-23.01.1.tgz</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -2123,7 +2123,7 @@ When upgrading a Kubernetes cluster from 1.24 to 1.25 or later that has Astra Tr
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>helm upgrade &lt;name&gt; trident-operator-23.01.0-custom.tgz --set tridentDebug=true</pre>
+<pre>helm upgrade &lt;name&gt; trident-operator-23.01.1-custom.tgz --set tridentDebug=true</pre>
 </div>
 </div>
 </td>
@@ -2155,11 +2155,11 @@ When upgrading a Kubernetes cluster from 1.24 to 1.25 or later that has Astra Tr
 <p>Download the latest Astra Trident release.</p>
 <div class="listingblock">
 <div class="content">
-<pre># Download the release required [23.01.0]
-mkdir 23.01.0
-cd 23.01.0
-wget https://github.com/NetApp/trident/releases/download/v22.01.0/trident-installer-23.01.0.tar.gz
-tar -xf trident-installer-23.01.0.tar.gz
+<pre># Download the release required [23.01.1]
+mkdir 23.01.1
+cd 23.01.1
+wget https://github.com/NetApp/trident/releases/download/v22.01.1/trident-installer-23.01.1.tar.gz
+tar -xf trident-installer-23.01.1.tar.gz
 cd trident-installer</pre>
 </div>
 </div>
@@ -2219,7 +2219,7 @@ kubectl describe torc trident | grep Message -A 3
 Message:                Trident installed
 Namespace:              trident
 Status:                 Installed
-Version:                v23.01.0</pre>
+Version:                v23.01.1</pre>
 </div>
 </div>
 </li>
