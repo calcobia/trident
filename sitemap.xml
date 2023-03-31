@@ -22,7 +22,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/anf-prep.html</loc>
       
-      <lastmod>2023-01-25T21:08:21+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
@@ -57,7 +57,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/backend_options.html</loc>
       
-      <lastmod>2023-01-24T16:44:31+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
@@ -85,14 +85,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/csi-topology.html</loc>
       
-      <lastmod>2022-11-04T19:30:30+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-docker/deploy-docker.html</loc>
       
-      <lastmod>2023-03-23T15:08:28+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
@@ -134,7 +134,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/gcp.html</loc>
       
-      <lastmod>2023-02-07T20:33:59+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
@@ -295,14 +295,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/ontap-nas-examples.html</loc>
       
-      <lastmod>2023-02-14T20:25:42+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/ontap-nas-prep.html</loc>
       
-      <lastmod>2023-01-19T16:57:56+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
@@ -316,14 +316,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/ontap-san-examples.html</loc>
       
-      <lastmod>2023-02-13T18:59:55+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/ontap-san-prep.html</loc>
       
-      <lastmod>2023-01-27T21:57:40+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
@@ -386,7 +386,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident//search.html</loc>
       
-      <lastmod>2023-03-30T15:31:37+00:00</lastmod>
+      <lastmod>2023-03-31T19:28:18+00:00</lastmod>
       
     </url>
   
@@ -414,7 +414,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-docker/stor-config.html</loc>
       
-      <lastmod>2023-02-13T18:59:55+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
@@ -442,7 +442,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/trident/trident-use/trident-fsx-prep.html</loc>
       
-      <lastmod>2023-02-13T18:59:55+00:00</lastmod>
+      <lastmod>2023-03-31T19:15:41+00:00</lastmod>
       
     </url>
   
