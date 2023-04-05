@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Customize Trident operator installation</title>
+  <title>Astra Trident architecture</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Customize Trident operator installation" />
+  <meta property="og:title" content="Astra Trident architecture" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy.html" />
-	<meta property="og:description" content="The Trident operator enables you to customize the manner in which Astra Trident is installed by using the attributes in the `TridentOrchestrator` spec." />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/trident/trident-concepts/architecture.html" />
+	<meta property="og:description" content="Learn how Astra Trident runs in a Kubernetes cluster." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/trident/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="The Trident operator enables you to customize the manner in which Astra Trident is installed by using the attributes in the `TridentOrchestrator` spec.">
-  <meta name="keywords" content=" deploy, trident, methods, operator, tridentctl, helm, attributes, customize, tridentorchestrator, smb, windows"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Learn how Astra Trident runs in a Kubernetes cluster.">
+  <meta name="keywords" content=" trident backend, AFF, FAS, ONTAP Select, Cloud, Amazon FSx for NetApp ONTAP, drivers, ONTAP drivers"><!-- Icons -->
   <link rel="icon" href="/us-en/trident/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -32,16 +32,16 @@
   <link rel="stylesheet" href="/us-en/trident/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/us-en/trident/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
-  <link rel="canonical" href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/trident/trident-get-started/kubernetes-customize-deploy.html" />
-  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/trident/trident-get-started/kubernetes-customize-deploy.html" />
+  <link rel="canonical" href="https://docs.netapp.com/us-en/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/trident/trident-concepts/architecture.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/trident/trident-concepts/architecture.html" />
   <link rel='stylesheet' href='/us-en/trident/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
@@ -186,42 +186,42 @@
 
   <ul class="custom-dropdown-menu"><li>
       
-      <a href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident/trident-concepts/architecture.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 23.01</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2210/trident-get-started/kubernetes-customize-deploy.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2210/trident-concepts/architecture.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.10</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2207/trident-get-started/kubernetes-customize-deploy.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2207/trident-concepts/architecture.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.07</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2204/trident-get-started/kubernetes-customize-deploy.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2204/trident-concepts/architecture.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.04</span></span>
       </a>
                      
     </li>
     <li>
       
-      <a href="https://docs.netapp.com/us-en/trident-2201/trident-get-started/kubernetes-customize-deploy.html" target="_self">
+      <a href="https://docs.netapp.com/us-en/trident-2201/trident-concepts/architecture.html" target="_self">
         <span translate="no" class="notranslate"><span>Astra Trident</span><span class="version"> 22.01</span></span>
       </a>
                      
     </li>
     
   </ul>
-</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Customize Trident operator installation](https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-get-started/kubernetes-customize-deploy.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/trident/issues/new?body=Page%3A%20[Astra Trident architecture](https://docs.netapp.com/us-en/trident/trident-concepts/architecture.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/trident/blob/main/trident-concepts/architecture.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/trident/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/trident/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -341,21 +341,21 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/trident/trident-concepts/architecture.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/trident/trident-concepts/architecture.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/trident/trident-concepts/architecture.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/trident/trident-concepts/architecture.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/trident/trident-concepts/architecture.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/de-de/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+          <a href="https://docs.netapp.com/de-de/trident/trident-concepts/architecture.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/es-es/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+          <a href="https://docs.netapp.com/es-es/trident/trident-concepts/architecture.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/fr-fr/trident/trident-get-started/kubernetes-customize-deploy.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+          <a href="https://docs.netapp.com/fr-fr/trident/trident-concepts/architecture.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -486,8 +486,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
         </li>
@@ -1155,7 +1153,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Customize Trident operator installation"
       data-li-level="4#" 
-      class="  active "
+      class=" "
     ><a class="na-navbar-padding" href="/us-en/trident/trident-get-started/kubernetes-customize-deploy.html">
         Customize Trident operator installation
       </a></li></ul></li><li 
@@ -1745,14 +1743,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Customize Trident operator installation</h1>
+  <h1 class="n-doc__component-detail-heading">Astra Trident architecture</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2023-03-31 16:44:10 +0000">03/31/2023</time>
+    <time datetime="2023-03-30 19:09:55 +0000">03/30/2023</time>
     
   
 
@@ -1765,284 +1763,13 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-mwallis">
-    <img  class="avatar avatar-small"
-          alt="netapp-mwallis"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/53353653?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
-<p>The Trident operator allows you to customize Astra Trident installation using the attributes in the <code>TridentOrchestrator</code> spec. If you want to customize the installation beyond what <code>TridentOrchestrator</code> arguments allow, consider using <code>tridentctl</code> to generate custom YAML manifests to modify as needed.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="understanding-controller-pods-and-node-pods">Understanding controller pods and node pods</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Astra Trident runs as a single controller pod, plus a node pod on each worker node in the cluster. The node pod must be running on any host where you want to potentially mount an Astra Trident volume.</p>
-</div>
-<div class="paragraph">
-<p>Kubernetes <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/" target="_blank" rel="noopener">node selectors</a> and <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/" target="_blank" rel="noopener">tolerations and taints</a> are used to constrain a pod to run on a specific or preferred node. Using the`ControllerPlugin` and <code>NodePlugin</code>, you can specify constraints and overrides.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The controller plugin handles volume provisioning and management, such as snapshots and resizing.</p>
-</li>
-<li>
-<p>The node plugin handles attaching the storage to the node.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="configuration-options">Configuration options</h2>
-<div class="sectionbody">
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/warning.svg" alt="Warning">
-</td>
-<td class="content">
-<code>spec.namespace</code> is specified in <code>TridentOrchestrator</code> to signify the namespace where Astra Trident is installed. This parameter <strong>cannot be updated after Astra Trident is installed</strong>. Attempting to do so causes the <code>TridentOrchestrator</code> status to change to <code>Failed</code>. Astra Trident is not intended to be migrated across namespaces.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>This table details <code>TridentOrchestrator</code> attributes.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>namespace</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Namespace to install Astra Trident in</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"default"</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>debug</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enable debugging for Astra Trident</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windows</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Setting to <code>true</code> enables installation on Windows worker nodes.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IPv6</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Install Astra Trident over IPv6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>k8sTimeout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timeout for Kubernetes operations</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">30sec</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>silenceAutosupport</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Don&#8217;t send autosupport bundles to NetApp<br>
-automatically</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableNodePrep</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Manage worker node dependencies automatically (<strong>BETA</strong>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>autosupportImage</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The container image for Autosupport Telemetry</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"netapp/trident-autosupport:23.01"</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>autosupportProxy</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The address/port of a proxy for sending Autosupport<br>
-Telemetry</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"http://proxy.example.com:8888"</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uninstall</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A flag used to uninstall Astra Trident</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>logFormat</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Astra Trident logging format to be used [text,json]</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"text"</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentImage</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Astra Trident image to install</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"netapp/trident:21.04"</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imageRegistry</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Path to internal registry, of the format<br>
-<code>&lt;registry FQDN&gt;[:port][/subpath]</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"k8s.gcr.io/sig-storage (k8s 1.19+)<br>
-or quay.io/k8scsi"</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>kubeletDir</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Path to the kubelet directory on the host</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">“/var/lib/kubelet”</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>wipeout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A list of resources to delete to perform a complete removal of<br>
-Astra Trident</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imagePullSecrets</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Secrets to pull images from an internal registry</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imagePullPolicy</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the image pull policy for the the Trident operator. Valid values are:<br>
-<br>
-<code>Always</code> to always pull the image.<br>
-<br>
-<code>IfNotPresent</code> to pull the image only if it does not already exist on the node.<br>
-<br>
-<code>Never</code> to never pull the image.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IfNotPresent</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>controllerPluginNodeSelector</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Additional node selectors for pods.	Follows same format as pod.spec.nodeSelector.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No default; optional</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>controllerPluginTolerations</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides Kubernetes tolerations for pods. Follows the same format as pod.spec.Tolerations.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No default; optional</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodePluginNodeSelector</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Additional node selectors for pods. Follows same format as pod.spec.nodeSelector.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No default; optional</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodePluginTolerations</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides Kubernetes tolerations for pods. Follows the same format as pod.spec.Tolerations.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No default; optional</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-For more information on formatting pod parameters, see <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/" target="_blank" rel="noopener">Assigning Pods to Nodes</a>.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="sample-configurations">Sample configurations</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can use the attributes mentioned above when defining <code>TridentOrchestrator</code> to customize your installation.</p>
-</div>
-<details open>
-<summary class="title">Example 1: Basic custom configuration</summary>
-<div class="content">
-<div class="paragraph">
-<p>This is an example for a basic custom configuration.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cat deploy/crds/tridentorchestrator_cr_imagepullsecrets.yaml
-apiVersion: trident.netapp.io/v1
-kind: TridentOrchestrator
-metadata:
-  name: trident
-spec:
-  debug: true
-  namespace: trident
-  imagePullSecrets:
-  - thisisasecret</pre>
-</div>
-</div>
-</div>
-</details>
-<details open>
-<summary class="title">Example 2: Deploy with node selectors</summary>
-<div class="content">
-<div class="paragraph">
-<p>This example illustrates how Trident can be deployed with node selectors:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>apiVersion: trident.netapp.io/v1
-kind: TridentOrchestrator
-metadata:
-  name: trident
-spec:
-  debug: true
-  namespace: trident
-  controllerPluginNodeSelector:
-    nodetype: master
-  nodePluginNodeSelector:
-    storage: netapp</pre>
-</div>
-</div>
-</div>
-</details>
-<details open>
-<summary class="title">Example 3: Deploy on Windows worker nodes</summary>
-<div class="content">
-<div class="paragraph">
-<p>This example illustrates deployment on a Windows worker node.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>cat deploy/crds/tridentorchestrator_cr.yaml
-apiVersion: trident.netapp.io/v1
-kind: TridentOrchestrator
-metadata:
-  name: trident
-spec:
-  debug: true
-  namespace: trident
-  windows: true</pre>
-</div>
-</div>
-</div>
-</details>
-</div>
+<p>Learn how Astra Trident runs in a Kubernetes cluster.</p>
 </div>
 
     </article>
