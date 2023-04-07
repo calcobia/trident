@@ -1752,7 +1752,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-03-31 19:15:41 +0000">03/31/2023</time>
+    <time datetime="2023-04-06 16:11:58 +0000">04/06/2023</time>
     
   
 
@@ -1772,32 +1772,37 @@
 
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph lead">
 <p>Before you can configure your Azure NetApp Files backend, you need to ensure the following requirements are met.</p>
 </div>
-<div class="paragraph">
-<p>If you are using Azure NetApp Files for the first time or in a new location, some initial configuration is required.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>To set up Azure NetApp files and create an NFS volume, refer to <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes" target="_blank" rel="noopener">Azure: Set up Azure NetApp Files and create an NFS volume</a>.</p>
-</li>
-<li>
-<p>To configure Azure NetApp Files and add an SMB volume, refer to: <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-volumes-smb" target="_blank" rel="noopener">Azure: Create an SMB volume for Azure NetApp Files</a>.</p>
-</li>
-</ul>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/trident/images/note.svg" alt="Note">
+</td>
+<td class="content">
+If you are using Azure NetApp Files for the first time or in a new location, some initial configuration is required to set up Azure NetApp files and create an NFS volume. Refer to <a href="https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-quickstart-set-up-account-create-volumes" target="_blank" rel="noopener">Azure: Set up Azure NetApp Files and create an NFS volume</a>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="requirements">Requirements</h2>
+<h2 id="prerequisites-for-nfs-and-smb-volumes">Prerequisites for NFS and SMB volumes</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To configure and use an <a href="https://azure.microsoft.com/en-us/services/netapp/" target="_blank" rel="noopener">Azure NetApp Files</a> backend, you need the following:</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>A capacity pool. Refer to <a href="https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool" target="_blank" rel="noopener">Microsoft: Create a capacity pool for Azure NetApp Files</a>.</p>
+</li>
+<li>
+<p>A subnet delegated to Azure NetApp Files. Refer to <a href="https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet" target="_blank" rel="noopener">Microsoft: Delegate a subnet to Azure NetApp Files</a>.</p>
+</li>
 <li>
 <p><code>subscriptionID</code> from an Azure subscription with Azure NetApp Files enabled.</p>
 </li>
@@ -1806,7 +1811,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>The Owner or Contributor role <a href="https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles" target="_blank" rel="noopener">predefined by Azure</a></p>
+<p>The Owner or Contributor role <a href="https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles" target="_blank" rel="noopener">predefined by Azure</a>.</p>
 </li>
 <li>
 <p>A <a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal">custom Contributor role</a> at the subscription level (<code>assignableScopes</code>) with the following permissions that are limited to only what Astra Trident requires. After creating the custom role, <a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal" target="_blank" rel="noopener">assign the role using the Azure portal</a>.</p>
@@ -1871,13 +1876,19 @@
 <div class="sect1">
 <h2 id="additional-requirements-for-smb-volumes">Additional requirements for SMB volumes</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>To create an SMB volume, you must have:</p>
+</div>
 <div class="ulist">
 <ul>
+<li>
+<p>Active Directory configured and connected to Azure NetApp Files. Refer to <a href="https://learn.microsoft.com/en-us/azure/azure-netapp-files/create-active-directory-connections" target="_blank" rel="noopener">Microsoft: Create and manage Active Directory connections for Azure NetApp Files</a>.</p>
+</li>
 <li>
 <p>A Kubernetes cluster with a Linux controller node and at least one Windows worker node running Windows Server 2019. Astra Trident supports SMB volumes mounted to pods running on Windows nodes only.</p>
 </li>
 <li>
-<p>At least one Astra Trident secret containing your Active Directory credentials so ANF can authenticate to Active Directory. To generate secret <code>smbcreds</code>:</p>
+<p>At least one Astra Trident secret containing your Active Directory credentials so Azure NetApp Files can authenticate to Active Directory. To generate secret <code>smbcreds</code>:</p>
 <div class="listingblock">
 <div class="content">
 <pre>kubectl create secret generic smbcreds --from-literal username=user --from-literal password='password'</pre>
