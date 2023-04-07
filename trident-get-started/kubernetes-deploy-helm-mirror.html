@@ -1752,7 +1752,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-03-23 15:08:28 +0000">03/23/2023</time>
+    <time datetime="2023-03-31 18:45:38 +0000">03/31/2023</time>
     
   
 
@@ -1916,17 +1916,223 @@ If you already created a namespace for Trident, the <code>--create-namespace</co
 <pre>helm install &lt;name&gt; netapp-trident/trident-operator --version 23.01.1  --create-namespace --namespace --set tridentDebug=true</pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-options">Configuration options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This table and the <code>values.yaml</code> file, which is part of the Helm chart, provide the list of keys and their default values.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<img src="/us-en/trident/images/note.svg" alt="Note">
-</td>
-<td class="content">
-The <code>values.yaml</code> file, which is part of the Helm chart provides the list of keys and their default values.
-</td>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node labels for pod assignment</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>podAnnotations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pod annotations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deploymentAnnotations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deployment annotations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tolerations for pod assignment</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>affinity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Affinity for pod assignment</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentControllerPluginNodeSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Additional node selectors for pods. Refer to <a href="#understanding-controller-pods-and-node-pods">Understanding controller pods and node pods</a> for details.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentControllerPluginTolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides Kubernetes tolerations for pods. Refer to <a href="#understanding-controller-pods-and-node-pods">Understanding controller pods and node pods</a> for details.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentNodePluginNodeSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Additional node selectors for pods. Refer to <a href="#understanding-controller-pods-and-node-pods">Understanding controller pods and node pods</a> for details.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentNodePluginTolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides Kubernetes tolerations for pods. Refer to <a href="#understanding-controller-pods-and-node-pods">Understanding controller pods and node pods</a> for details.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imageRegistry</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifies the registry for the <code>trident-operator</code>, <code>trident</code>, and other images.  Leave empty to accept the default.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imagePullPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the image pull policy for the <code>trident-operator</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IfNotPresent</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imagePullSecrets</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the image pull secrets for the <code>trident-operator</code>, <code>trident</code>, and other images.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>kubeletDir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows overriding the host location of kubelet&#8217;s internal state.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'"/var/lib/kubelet"`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>operatorLogLevel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the log level of the Trident operator to be set to: <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, or <code>fatal</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"info"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>operatorDebug</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the log level of the Trident operator to be set to debug.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>operatorImage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the complete override of the image for <code>trident-operator</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>operatorImageTag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows overriding the tag of the <code>trident-operator</code> image.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentIPv6</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows enabling Astra Trident to work in IPv6 clusters.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentK8sTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides the default 30-second timeout for most Kubernetes API operations (if non-zero, in seconds).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentHttpRequestTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides the default 90-second timeout for the HTTP requests, with <code>0s</code> being an infinite duration for the timeout. Negative values are not allowed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"90s"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentSilenceAutosupport</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows disabling Astra Trident periodic AutoSupport reporting.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentAutosupportImageTag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows overriding the tag of the image for Astra Trident AutoSupport container.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;version&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentAutosupportProxy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows Astra Trident AutoSupport container to phone home via an HTTP proxy.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentLogFormat</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the Astra Trident logging format (<code>text</code> or <code>json</code>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"text"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentDisableAuditLog</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disables Astra Trident audit logger.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentLogLevel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the log level of Astra Trident to be set to: <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, or <code>fatal</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"info"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentDebug</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the log level of Astra Trident to be set to <code>debug</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentLogWorkflows</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows specific Astra Trident workflows to be enabled for trace logging or log suppression.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentLogLayers</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows specific Astra Trident layers to be enabled for trace logging or log suppression.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentImage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the complete override of the image for Astra Trident.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentImageTag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows overriding the tag of the image for Astra Trident.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tridentProbePort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows overriding the default port used for Kubernetes liveness/readiness probes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">""</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windows</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows Astra Trident to be installed on Windows worker node.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableForceDetach</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows enabling the force detach feature.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>excludePodSecurityPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Excludes the operator pod security policy from creation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+</tr>
+</tbody>
 </table>
+<div class="sect2">
+<h3 id="understanding-controller-pods-and-node-pods">Understanding controller pods and node pods</h3>
+<div class="paragraph">
+<p>Astra Trident runs as a single controller pod, plus a node pod on each worker node in the cluster. The node pod must be running on any host where you want to potentially mount an Astra Trident volume.</p>
+</div>
+<div class="paragraph">
+<p>Kubernetes <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/" target="_blank" rel="noopener">node selectors</a> and <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/" target="_blank" rel="noopener">tolerations and taints</a> are used to constrain a pod to run on a specific or preferred node. Using the`ControllerPlugin` and <code>NodePlugin</code>, you can specify constraints and overrides.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The controller plugin handles volume provisioning and management, such as snapshots and resizing.</p>
+</li>
+<li>
+<p>The node plugin handles attaching the storage to the node.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
